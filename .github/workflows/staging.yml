@@ -26,14 +26,16 @@ jobs:
       # Deploy to Vercel Preview
       - name: Deploy to Staging
         id: deploy
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}   # <-- Make token available
         run: |
-          # Deploy with Vercel CLI
-          url=$(vercel --token $VERCEL_TOKEN --confirm --prod=false)
+          # Deploy with Vercel CLI as Preview
+          url=$(vercel --token $VERCEL_TOKEN --confirm --prod=false --yes)
           echo "preview_url=$url" >> $GITHUB_OUTPUT
 
       # Alias deployment to staging.myapp.vercel.app
       - name: Alias deployment
-        run: |
-          npx vercel alias set ${{ steps.deploy.outputs.preview_url }} staging-portfolio-charlie-virid.vercel.app --token $VERCEL_TOKEN
         env:
           VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+        run: |
+          npx vercel alias set ${{ steps.deploy.outputs.preview_url }} staging-portfolio-charlie-virid.vercel.app --token $VERCEL_TOKEN
