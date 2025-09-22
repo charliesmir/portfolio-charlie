@@ -9,8 +9,31 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Trigger Vercel Staging Deployment
+      # Checkout repo
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # Install Node.js
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: "20"
+
+      # Install Vercel CLI
+      - name: Install Vercel CLI
+        run: npm install -g vercel
+
+      # Deploy to Vercel Preview
+      - name: Deploy to Staging
+        id: deploy
         run: |
-          curl -X POST "$VERCEL_STAGING_HOOK_URL"
+          # Deploy with Vercel CLI
+          url=$(vercel --token $VERCEL_TOKEN --confirm --prod=false)
+          echo "preview_url=$url" >> $GITHUB_OUTPUT
+
+      # Alias deployment to staging.myapp.vercel.app
+      - name: Alias deployment
+        run: |
+          npx vercel alias set ${{ steps.deploy.outputs.preview_url }} staging-portfolio-charlie-virid.vercel.app --token $VERCEL_TOKEN
         env:
-          VERCEL_STAGING_HOOK_URL: ${{ secrets.VERCEL_STAGING_HOOK_URL }}
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
