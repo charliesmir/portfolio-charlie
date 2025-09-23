@@ -1,0 +1,12 @@
+.placeholderButtonBox {
+  background-color: yellow;
+  transition: background-color 0.3s ease; /* Making animation to be more smooth */
+}
+
+.placeholderButtonBox:hover {
+  background-color: greenyellow;
+}
+
+.placeholderButtonBox:active {
+  background-color: yellowgreen;
+}

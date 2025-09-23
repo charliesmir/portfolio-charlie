@@ -1,5 +1,6 @@
 "use client";
 
+import { PlaceholderButton } from "@/components/placeholders/button";
 import { useRef } from "react";
 
 export default function Home() {
@@ -25,38 +26,22 @@ export default function Home() {
       </div>
       <div className="Intro" style={{ height: "600px" }}>
         Intro
-        <button
-          style={{
-            backgroundColor: "yellow",
-          }}
+        <PlaceholderButton
+          title={"Projects"}
           onClick={() => scrollToSection(projectsRef)}
-        >
-          Projects
-        </button>
-        <button
-          style={{
-            backgroundColor: "yellow",
-          }}
+        />
+        <PlaceholderButton
+          title={"Experience"}
           onClick={() => scrollToSection(experienceRef)}
-        >
-          Experience
-        </button>
-        <button
-          style={{
-            backgroundColor: "yellow",
-          }}
+        />
+        <PlaceholderButton
+          title={"Education"}
           onClick={() => scrollToSection(educationRef)}
-        >
-          Education
-        </button>
-        <button
-          style={{
-            backgroundColor: "yellow",
-          }}
+        />
+        <PlaceholderButton
+          title={"Contacts"}
           onClick={() => scrollToSection(contactsRef)}
-        >
-          Contacts
-        </button>
+        />
       </div>
       <div
         className="Projects"
