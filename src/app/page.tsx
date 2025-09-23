@@ -27,7 +27,7 @@ export default function Home() {
         Intro
         <button
           style={{
-            backgroundColor: "green",
+            backgroundColor: "yellow",
           }}
           onClick={() => scrollToSection(projectsRef)}
         >
@@ -35,7 +35,7 @@ export default function Home() {
         </button>
         <button
           style={{
-            backgroundColor: "green",
+            backgroundColor: "yellow",
           }}
           onClick={() => scrollToSection(experienceRef)}
         >
@@ -43,7 +43,7 @@ export default function Home() {
         </button>
         <button
           style={{
-            backgroundColor: "green",
+            backgroundColor: "yellow",
           }}
           onClick={() => scrollToSection(educationRef)}
         >
@@ -51,7 +51,7 @@ export default function Home() {
         </button>
         <button
           style={{
-            backgroundColor: "green",
+            backgroundColor: "yellow",
           }}
           onClick={() => scrollToSection(contactsRef)}
         >
