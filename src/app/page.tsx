@@ -1,9 +1,15 @@
 "use client";
 
 import { PlaceholderButton } from "@/components/placeholders/button";
+import { PlaceholderProjectCardProps } from "@/components/placeholders/projectCard";
+import { PlaceholderProjectCardsCarousel } from "@/components/placeholders/projectCardsCarousel";
+import { useRouter } from "next/navigation";
 import { useRef } from "react";
 
 export default function Home() {
+  // Basic settings
+  const router = useRouter();
+
   // Using refs to make automatic scroll to the needed section
   const projectsRef = useRef<HTMLDivElement>(null);
   const experienceRef = useRef<HTMLDivElement>(null);
@@ -14,6 +20,19 @@ export default function Home() {
   const scrollToSection = (ref: React.RefObject<HTMLElement | null>) => {
     ref.current?.scrollIntoView({ behavior: "smooth" });
   };
+
+  // Project Cards
+  const mockCards: PlaceholderProjectCardProps[] = [
+    {
+      title: "Project 1",
+      description: "Project 1 Description",
+      onClick: () => router.push("/projects/1"),
+    },
+    { title: "Project 2", description: "Project 2 Description" },
+    { title: "Project 3", description: "Project 3 Description" },
+    { title: "Project 4", description: "Project 4 Description" },
+    { title: "Project 5", description: "Project 5 Description" },
+  ];
 
   return (
     <div className="HomePage">
@@ -49,6 +68,7 @@ export default function Home() {
         style={{ height: "600px", backgroundColor: "green" }}
       >
         Projects
+        <PlaceholderProjectCardsCarousel cards={mockCards} />
       </div>
       <div
         className="Experience"
