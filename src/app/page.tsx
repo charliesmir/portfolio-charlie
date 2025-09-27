@@ -21,29 +21,45 @@ export default function Home() {
     ref.current?.scrollIntoView({ behavior: "smooth" });
   };
 
-  // Project Cards
+  // Mock project cards
   const mockCards: PlaceholderProjectCardProps[] = [
     {
       title: "Project 1",
       description: "Project 1 Description",
       onClick: () => router.push("/projects/1"),
     },
-    { title: "Project 2", description: "Project 2 Description" },
-    { title: "Project 3", description: "Project 3 Description" },
-    { title: "Project 4", description: "Project 4 Description" },
-    { title: "Project 5", description: "Project 5 Description" },
+    {
+      title: "Fox Airlines",
+      description: "Fox Airlines lorem ipsum",
+      onClick: () => router.push("/projects/airlines"),
+    },
+    {
+      title: "F. Project assets",
+      description: "Something here",
+      onClick: () => router.push("/projects/f-project-assets"),
+    },
+    {
+      title: "Recipes app",
+      description: "In development",
+      onClick: () => router.push("/projects/recipes-app"),
+    },
+    {
+      title: "Test Project",
+      description: "Just to test carousel",
+      onClick: () => router.push("/projects/test"),
+    },
   ];
 
   return (
-    <div className="HomePage">
+    <div className="homePage">
       {/* Placeholders with different colors for setting the navigation*/}
       <div
-        className="Header"
+        className="header"
         style={{ height: "600px", backgroundColor: "green" }}
       >
         Header
       </div>
-      <div className="Intro" style={{ height: "600px" }}>
+      <div className="intro" style={{ height: "600px" }}>
         Intro
         <PlaceholderButton
           title={"Projects"}
@@ -63,7 +79,7 @@ export default function Home() {
         />
       </div>
       <div
-        className="Projects"
+        className="projects"
         ref={projectsRef}
         style={{ height: "600px", backgroundColor: "green" }}
       >
@@ -71,23 +87,23 @@ export default function Home() {
         <PlaceholderProjectCardsCarousel cards={mockCards} />
       </div>
       <div
-        className="Experience"
+        className="experience"
         ref={experienceRef}
         style={{ height: "600px" }}
       >
         Experience
       </div>
-      <div className="Education" ref={educationRef} style={{ height: "600px" }}>
+      <div className="education" ref={educationRef} style={{ height: "600px" }}>
         Education
       </div>
       <div
-        className="Contacts"
+        className="contacts"
         ref={contactsRef}
         style={{ height: "600px", backgroundColor: "green" }}
       >
         Contacts
       </div>
-      <div className="Copyright">Copyright</div>
+      <div className="copyright">Copyright</div>
     </div>
   );
 }
