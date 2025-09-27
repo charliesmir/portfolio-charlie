@@ -1,0 +1,88 @@
+name: Build & Deploy
+
+on:
+  push:
+    tags:
+      - 'v*.*.*'    # triggers staging automatically
+  workflow_dispatch: # allows manual trigger for production
+
+jobs:
+  build:
+    name: Build Project
+    runs-on: ubuntu-latest
+    outputs:
+      build-folder: ${{ steps.set-output.outputs.build-folder }}
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: "20"
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build
+        run: npm run build
+
+      - name: Set build output
+        id: set-output
+        run: echo "build-folder=." >> $GITHUB_OUTPUT  # set your build folder path if needed
+
+  deploy-staging:
+    name: Deploy Staging
+    needs: build
+    if: startsWith(github.ref, 'refs/tags/v')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Install Node & Vercel CLI
+        run: |
+          npm install -g vercel
+          npm install
+
+      - name: Deploy to Staging
+        id: deploy-staging
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+        run: |
+          url=$(vercel --token $VERCEL_TOKEN --confirm --prod=false --yes)
+          echo "preview_url=$url" >> $GITHUB_OUTPUT
+
+      - name: Alias Staging
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+        run: |
+          npx vercel alias set ${{ steps.deploy-staging.outputs.preview_url }} staging-portfolio-charlie-virid.vercel.app --token $VERCEL_TOKEN
+
+  deploy-production:
+    name: Deploy Production
+    needs: build
+    if: github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Install Node & Vercel CLI
+        run: |
+          npm install -g vercel
+          npm install
+
+      - name: Deploy to Production
+        id: deploy-prod
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+        run: |
+          url=$(vercel --token $VERCEL_TOKEN --confirm --prod --yes)
+          echo "prod_url=$url" >> $GITHUB_OUTPUT
+
+      - name: Alias Production
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+        run: |
+          npx vercel alias set ${{ steps.deploy-prod.outputs.prod_url }} portfolio-charlie-virid.vercel.app --token $VERCEL_TOKEN
