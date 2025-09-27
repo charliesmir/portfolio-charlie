@@ -45,7 +45,7 @@ export default function Home() {
     },
     {
       title: "Test Project",
-      description: "Just to test carousel and workflow",
+      description: "Just to test carousel",
       onClick: () => router.push("/projects/test"),
     },
   ];
