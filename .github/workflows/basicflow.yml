@@ -3,7 +3,7 @@ name: Build & Deploy
 on:
   push:
     tags:
-      - 'v*.*.*'    # triggers staging automatically
+      - 'test*.*.*'    # triggers staging automatically
   workflow_dispatch: # allows manual trigger for production
 
 jobs:
