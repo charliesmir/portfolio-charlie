@@ -1,8 +1,15 @@
 "use client";
 
+import { PlaceholderButton } from "@/components/placeholders/button";
+import { PlaceholderProjectCardProps } from "@/components/placeholders/projectCard";
+import { PlaceholderProjectCardsCarousel } from "@/components/placeholders/projectCardsCarousel";
+import { useRouter } from "next/navigation";
 import { useRef } from "react";
 
 export default function Home() {
+  // Basic settings
+  const router = useRouter();
+
   // Using refs to make automatic scroll to the needed section
   const projectsRef = useRef<HTMLDivElement>(null);
   const experienceRef = useRef<HTMLDivElement>(null);
@@ -14,75 +21,89 @@ export default function Home() {
     ref.current?.scrollIntoView({ behavior: "smooth" });
   };
 
+  // Mock project cards
+  const mockCards: PlaceholderProjectCardProps[] = [
+    {
+      title: "Project 1",
+      description: "Project 1 Description",
+      onClick: () => router.push("/projects/1"),
+    },
+    {
+      title: "Fox Airlines",
+      description: "Fox Airlines lorem ipsum",
+      onClick: () => router.push("/projects/airlines"),
+    },
+    {
+      title: "F. Project assets",
+      description: "Something here",
+      onClick: () => router.push("/projects/f-project-assets"),
+    },
+    {
+      title: "Recipes app",
+      description: "In development",
+      onClick: () => router.push("/projects/recipes-app"),
+    },
+    {
+      title: "Test Project",
+      description: "Just to test carousel",
+      onClick: () => router.push("/projects/test"),
+    },
+  ];
+
   return (
-    <div className="HomePage">
+    <div className="homePage">
       {/* Placeholders with different colors for setting the navigation*/}
       <div
-        className="Header"
+        className="header"
         style={{ height: "600px", backgroundColor: "green" }}
       >
         Header
       </div>
-      <div className="Intro" style={{ height: "600px" }}>
+      <div className="intro" style={{ height: "600px" }}>
         Intro
-        <button
-          style={{
-            backgroundColor: "yellow",
-          }}
+        <PlaceholderButton
+          title={"Projects"}
           onClick={() => scrollToSection(projectsRef)}
-        >
-          Projects
-        </button>
-        <button
-          style={{
-            backgroundColor: "yellow",
-          }}
+        />
+        <PlaceholderButton
+          title={"Experience"}
           onClick={() => scrollToSection(experienceRef)}
-        >
-          Experience
-        </button>
-        <button
-          style={{
-            backgroundColor: "yellow",
-          }}
+        />
+        <PlaceholderButton
+          title={"Education"}
           onClick={() => scrollToSection(educationRef)}
-        >
-          Education
-        </button>
-        <button
-          style={{
-            backgroundColor: "yellow",
-          }}
+        />
+        <PlaceholderButton
+          title={"Contacts"}
           onClick={() => scrollToSection(contactsRef)}
-        >
-          Contacts
-        </button>
+        />
       </div>
       <div
-        className="Projects"
+        className="projects"
         ref={projectsRef}
         style={{ height: "600px", backgroundColor: "green" }}
       >
         Projects
+        <PlaceholderProjectCardsCarousel cards={mockCards} />
       </div>
       <div
-        className="Experience"
+        className="experience"
         ref={experienceRef}
         style={{ height: "600px" }}
       >
         Experience
       </div>
-      <div className="Education" ref={educationRef} style={{ height: "600px" }}>
+      <div className="education" ref={educationRef} style={{ height: "600px" }}>
         Education
       </div>
       <div
-        className="Contacts"
+        className="contacts"
         ref={contactsRef}
         style={{ height: "600px", backgroundColor: "green" }}
       >
         Contacts
       </div>
-      <div className="Copyright">Copyright</div>
+      <div className="copyright">Copyright</div>
     </div>
   );
 }

@@ -1,0 +1,21 @@
+.placeholderProjectCardBox {
+  background-color: aqua;
+  width: 470px;
+  flex: 0 0 auto;
+}
+
+.placeholderProjectCardBox:hover {
+  cursor: pointer;
+}
+
+.placeholderProjectCardImage {
+  width: 100%;
+  aspect-ratio: 1/1;
+}
+.placeholderProjectCardTitle {
+  font-size: large;
+}
+
+.placeholderProjectCardDescription {
+  font-size: medium;
+}
