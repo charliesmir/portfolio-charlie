@@ -57,7 +57,7 @@ export default function Home() {
         className="header"
         style={{ height: "600px", backgroundColor: "green" }}
       >
-        Staging Test
+        Header
       </div>
       <div className="intro" style={{ height: "600px" }}>
         Intro
