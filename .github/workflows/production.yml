@@ -34,4 +34,4 @@ jobs:
         env:
           VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
         run: |
-          npx vercel alias set ${{ steps.deploy-prod.outputs.prod_url }} portfolio-charlie-virid.vercel.app --token $VERCEL_TOKEN
+          npx vercel alias set ${{ steps.deploy-prod.outputs.prod_url }} portfolio-charlie-eight.vercel.app --token $VERCEL_TOKEN
