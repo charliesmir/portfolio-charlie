@@ -57,7 +57,7 @@ export default function Home() {
         className="header"
         style={{ height: "600px", backgroundColor: "green" }}
       >
-        Header
+        Header, check the tag creation
       </div>
       <div className="intro" style={{ height: "600px" }}>
         Intro
