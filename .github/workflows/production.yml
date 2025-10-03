@@ -1,25 +1,30 @@
-name: Deploy Production
-
+name: Production Deployment
+env:
+  VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+  VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
 on:
   workflow_dispatch:  # Manual trigger
 
 jobs:
-  deploy-production:
+  Deploy-Staging:
     runs-on: ubuntu-latest
     steps:
-      # Checkout repo
       - name: Checkout code
-        uses: actions/checkout@v3
+      - uses: actions/checkout@v3
 
-      # Install Node.js
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
           node-version: "20"
 
-      # Install Vercel CLI
       - name: Install Vercel CLI
-        run: npm install -g vercel
+        run: npm install --global vercel@latest
+
+      - name: Pull Vercel Environment Information
+        run: vercel pull --yes --environment=production --token=${{ secrets.VERCEL_TOKEN }} # This could be changed to staging in Pro plan
+
+      - name: Build Project Artifacts
+        run: vercel build --prod --token=${{ secrets.VERCEL_TOKEN }}
 
       # Deploy to Vercel Production
       - name: Deploy to Production
@@ -27,7 +32,7 @@ jobs:
         env:
           VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
         run: |
-          url=$(vercel --token $VERCEL_TOKEN --confirm --prod --yes)
+          url=$(vercel --token --prebuild $VERCEL_TOKEN --confirm --prod --yes)
           echo "prod_url=$url" >> $GITHUB_OUTPUT
 
       - name: Alias Production
