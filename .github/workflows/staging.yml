@@ -46,6 +46,9 @@ jobs:
           name: node_modules
           path: node_modules
 
+      - name: Add local binaries to PATH
+        run: echo "$PWD/node_modules/.bin" >> $GITHUB_PATH
+
       - name: Build project
         run: npm run build
 
