@@ -1,0 +1,16 @@
+@import url("../../styles/designTokens.css");
+
+.ProfileFlag {
+    width: 588px;
+    height: 775px;
+    background: var(--Primary);
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    border-radius: 0 0 588px 588px;
+}
+
+.ProfileImage {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+}

@@ -1,10 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Kulim+Park:ital,wght@0,200;0,300;0,400;0,600;0,700;1,200;1,300;1,400;1,600;1,700&display=swap');
+
 :root {
   /* Colors */
-  --color-primary: #131d0e;
-  --color-secondary: #253512;
-  --color-accent: #eab764;
-  --color-basic: #ffffff;
+  --PrimaryDark: #131d0e;
+  --Primary: #253512;
+  --Accent: #eab764;
+  --AccentLight: EDC27B;
+  --White: #ffffff;
 
-  /* Font sizes */
-  --font-size-regular: 24px;
+  /* Font families */
+  --Font-heading: "Krona One";
+  --Font-primary: "Kulim Park";
+
+  /* Text styles */
+  --H1-desktop: {
+    font-family: var(--Font-heading);
+    font-size: 96px;
+    font-weight: 400;
+  };
+  --H1-mobile: {
+    font-family: var(--Font-heading);
+    font-size: 48px;
+    font-weight: 400;
+  };
+  --H2plus-mobile: {
+    font-family: var(--Font-heading);
+    font-size: 16px;
+    font-weight: 400;
+  };
+  --H2-desktop: {
+    font-family: var(--Font-heading);
+    font-size: 40px;
+    font-weight: 400;
+  };
+  --H2-mobile: {
+    font-family: var(--Font-heading);
+    font-size: 24px;
+    font-weight: 400;
+  };
+  --H3: {
+    font-family: var(--Font-heading);
+    font-size: 24px;
+    font-weight: 400;
+  };
+  --H4: {
+    font-family: var(--Font-primary);
+    font-size: 24px;
+    font-weight: 400;
+  };
+  --H4plus: {
+    font-family: var(--Font-primary);
+    font-size: 24px;
+    font-weight: 600;
+  };
+  --Text-desktop: {
+    font-family: var(--Font-primary);
+    font-size: 24px;
+    font-weight: 400;
+  };
+  --Text-mobile: {
+    font-family: var(--Font-primary);
+    font-size: 20px;
+    font-weight: 400;
+  };
+
+
 }
