@@ -23,8 +23,8 @@ export const PlaceholderProjectCard = ({
     <div className="placeholderProjectCardBox" onClick={onClick}>
       <CardMedia
         className="placeholderProjectCardImage"
-        component="img"
-        image={image || "/images/imagePlaceholder.png"}
+        component="svg"
+        image={image || "/images/portrait.svg"}
       />
       <div className="placeholderProjectCardTitle">{title}</div>
       <div className="placeholderProjectCardDescription">{description}</div>

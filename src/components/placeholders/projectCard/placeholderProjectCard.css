@@ -1,3 +1,5 @@
+@import url("../../styles/designTokens.css");
+
 .placeholderProjectCardBox {
   background-color: aqua;
   width: 470px;
@@ -13,7 +15,7 @@
   aspect-ratio: 1/1;
 }
 .placeholderProjectCardTitle {
-  font-size: large;
+  font: var(--H4plus);
 }
 
 .placeholderProjectCardDescription {
