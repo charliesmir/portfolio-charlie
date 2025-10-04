@@ -1,3 +1,3 @@
 export interface Test {
-  title: string
+  title: string;
 }
