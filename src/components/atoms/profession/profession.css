@@ -1,0 +1,10 @@
+@import url("../../styles/designTokens.css");
+
+.Profession {
+    font-family: var(--family-H2-desktop);
+    font-size: var(--size-H2-desktop);
+    font-weight: var(--weight-H2-desktop);
+    color: var(--Accent);
+    width: 435px; /*devides text into three lines*/
+    text-align: right;
+}

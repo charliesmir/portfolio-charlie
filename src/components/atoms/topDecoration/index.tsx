@@ -1,11 +1,11 @@
 
 import "./topDecoration.css";
 
-export const topDecoration = () => {
+export const TopDecoration = () => {
   return (
     <div className="topDecoration">
-      <div className="topDecorationLeft"></div>
-      <div className="topDecorationRight"></div>
+      <div className="topDecorationLeft"/>
+      <div className="topDecorationRight"/>
     </div>
   );
 };

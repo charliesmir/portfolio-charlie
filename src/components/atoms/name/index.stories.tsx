@@ -1,15 +1,17 @@
 import type { Meta, StoryObj } from "@storybook/nextjs";
 
-import { TopDecoration } from "./index";
+import { Name } from "./index";
 
 const meta = {
-  title: "Atoms/TopDecoration",
-  component: TopDecoration,
-} satisfies Meta<typeof TopDecoration>;
+  title: "Atoms/Name",
+  component: Name,
+} satisfies Meta<typeof Name>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = {
-  args: {},
+  args: {
+    title: "CHARLIE SMIRNOVA",
+  },
 };
