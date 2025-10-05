@@ -1,10 +1,14 @@
 "use client";
 
+import { adapters } from "@/adapters/adapters";
+import { Test } from "@/adapters/types";
 import { PlaceholderButton } from "@/components/placeholders/button";
 import { PlaceholderProjectCardProps } from "@/components/placeholders/projectCard";
 import { PlaceholderProjectCardsCarousel } from "@/components/placeholders/projectCardsCarousel";
 import { useRouter } from "next/navigation";
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
+
+const { getTests } = adapters.cms();
 
 export default function Home() {
   // Basic settings
@@ -20,6 +24,16 @@ export default function Home() {
   const scrollToSection = (ref: React.RefObject<HTMLElement | null>) => {
     ref.current?.scrollIntoView({ behavior: "smooth" });
   };
+
+  // Test Sanity
+  const [testStrings, setTestStrings] = useState<Test[]>([]);
+  useEffect(() => {
+    const fetchTests = async () => {
+      const tests = await getTests();
+      setTestStrings(tests);
+    };
+    fetchTests();
+  }, []);
 
   // Mock project cards
   const mockCards: PlaceholderProjectCardProps[] = [
@@ -58,6 +72,20 @@ export default function Home() {
         style={{ height: "600px", backgroundColor: "green" }}
       >
         Header
+        {/* Test fetching */}
+        <div style={{ backgroundColor: "lightgray" }}>
+          <div>Tests Sanity:</div>
+          {testStrings.length > 0 ? (
+            <ul>
+              {testStrings.map((str, idx) => (
+                <li key={idx}>{str.title}</li>
+              ))}
+            </ul>
+          ) : (
+            <div>Loading...</div>
+          )}
+        </div>
+        {/* End of Test fetching */}
       </div>
       <div className="intro" style={{ height: "600px" }}>
         Intro
