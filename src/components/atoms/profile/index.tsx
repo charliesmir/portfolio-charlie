@@ -5,9 +5,7 @@ export interface ProfileProps {
   image?: string;
 }
 
-export const Profile = ({
-  image,
-}: ProfileProps) => {
+export const Profile = ({ image }: ProfileProps) => {
   return (
     <div className="ProfileFlag">
       <CardMedia
