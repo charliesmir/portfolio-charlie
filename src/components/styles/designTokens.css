@@ -1,15 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Kulim+Park:ital,wght@0,200;0,300;0,400;0,600;0,700;1,200;1,300;1,400;1,600;1,700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Krona+One&family=Kulim+Park:ital,wght@0,200;0,300;0,400;0,600;0,700;1,200;1,300;1,400;1,600;1,700&display=swap");
 
 :root {
   /* Colors */
-  --PrimaryDark: #131d0e;
+  --BackgroundDark: #131d0e;
   --Primary: #253512;
   --Accent: #eab764;
   --AccentLight: EDC27B;
   --White: #ffffff;
 
   /* Font families */
-  --family-H1-desktop: "Krona One"; 
+  --family-H1-desktop: "Krona One";
   --family-H1-mobile: "Krona One";
   --family-H2plus-mobile: "Krona One";
   --family-H2-desktop: "Krona One";
@@ -21,7 +21,7 @@
   --family-text-mobile: "Kulim Park";
 
   /* Font sizes */
-  --size-H1-desktop: 96px; 
+  --size-H1-desktop: 96px;
   --size-H1-mobile: 48px;
   --size-H2plus-mobile: 16px;
   --size-H2-desktop: 40px;
@@ -33,7 +33,7 @@
   --size-text-mobile: 20px;
 
   /* Font weight */
-  --weight-H1-desktop: 400; 
+  --weight-H1-desktop: 400;
   --weight-H1-mobile: 400;
   --weight-H2plus-mobile: 400;
   --weight-H2-desktop: 400;
@@ -43,5 +43,4 @@
   --weight-H4plus: 600;
   --weight-text-desktop: 400;
   --weight-text-mobile: 400;
-
 }

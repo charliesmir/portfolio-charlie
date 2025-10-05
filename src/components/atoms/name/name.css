@@ -1,9 +1,9 @@
 @import url("../../styles/designTokens.css");
 
 .Name {
-    font-family: var(--family-H1-desktop);
-    font-size: var(--size-H1-desktop);
-    font-weight: var(--weight-H1-desktop);
-    color: var(--Accent);
-    width: 695px; /*devides text into two lines*/
+  font-family: var(--family-H1-desktop);
+  font-size: var(--size-H1-desktop);
+  font-weight: var(--weight-H1-desktop);
+  color: var(--Accent);
+  width: 695px; /*devides text into two lines*/
 }

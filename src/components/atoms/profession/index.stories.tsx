@@ -12,6 +12,6 @@ type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = {
   args: {
-    title: "UI/UX Designer, Illustrator and Architect"
+    title: "UI/UX Designer, Illustrator and Architect",
   },
 };

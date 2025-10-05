@@ -10,15 +10,13 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-
-
 export const Primary: Story = {
   args: {
-    name:{
-        title:"CHARLIE SMIRNOVA"
+    name: {
+      title: "CHARLIE SMIRNOVA",
     },
-    profession:{
-        title:"UI/UX Designer, Illustrator and Architect"
+    profession: {
+      title: "UI/UX Designer, Illustrator and Architect",
     },
   },
 };

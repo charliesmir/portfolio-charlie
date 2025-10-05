@@ -1,0 +1,49 @@
+.Flag {
+  font-family: var(--family-H2-desktop);
+  font-size: var(--size-H2-desktop);
+  font-weight: var(--weight-H2-desktop);
+  height: 270px;
+  display: flex;
+  align-items: center;
+  filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.25));
+}
+
+.Flag.primary {
+  color: var(--Accent);
+  background-color: var(--Primary);
+}
+.Flag.accent {
+  color: var(--BackgroundDark);
+  background-color: var(--Accent);
+}
+.Flag.backgroundDark {
+  color: var(--Accent);
+  background-color: var(--BackgroundDark);
+}
+
+.Flag.right {
+  margin-left: 325px;
+  border-radius: 270px 0 0 270px;
+  justify-content: flex-start;
+}
+
+.Flag.left {
+  margin-right: 325px;
+  border-radius: 0 270px 270px 0;
+  justify-content: flex-end;
+}
+
+.Circle {
+  background-color: var(--White);
+  height: 217px;
+  width: 217px;
+  border-radius: 100%;
+}
+
+.Circle.right {
+  margin: 25px 105px 25px 25px;
+}
+
+.Circle.left {
+  margin: 25px 25px 25px 105px;
+}
