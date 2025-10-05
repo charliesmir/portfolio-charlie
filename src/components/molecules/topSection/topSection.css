@@ -1,0 +1,26 @@
+.TopSection {
+    width: 1308px;
+    position: relative;
+}
+
+.TopSectionInfo {
+    display: flex;
+    justify-content: space-between;
+}
+
+.TopDecorationBox {
+    position: absolute;
+    top: 0;
+    left: 410px;
+}
+
+.TextBox {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 180px;
+    z-index: 1;
+}
+.ProfileBox{
+    z-index: 1;
+}

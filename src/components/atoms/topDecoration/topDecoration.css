@@ -2,7 +2,7 @@
 
 .topDecoration {
     display: flex;
-    width: 925px; /* Flow width stays the same */
+    width: 927px; /* Flow width stays the same */
     height: 573px;
     justify-content: space-between;
 }

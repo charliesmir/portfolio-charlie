@@ -9,60 +9,39 @@
   --White: #ffffff;
 
   /* Font families */
-  --Font-heading: "Krona One";
-  --Font-primary: "Kulim Park";
+  --family-H1-desktop: "Krona One"; 
+  --family-H1-mobile: "Krona One";
+  --family-H2plus-mobile: "Krona One";
+  --family-H2-desktop: "Krona One";
+  --family-H2-mobile: "Krona One";
+  --family-H3: "Krona One";
+  --family-H4: "Kulim Park";
+  --family-H4plus: "Kulim Park";
+  --family-text-desktop: "Kulim Park";
+  --family-text-mobile: "Kulim Park";
 
-  /* Text styles */
-  --H1-desktop: {
-    font-family: var(--Font-heading);
-    font-size: 96px;
-    font-weight: 400;
-  };
-  --H1-mobile: {
-    font-family: var(--Font-heading);
-    font-size: 48px;
-    font-weight: 400;
-  };
-  --H2plus-mobile: {
-    font-family: var(--Font-heading);
-    font-size: 16px;
-    font-weight: 400;
-  };
-  --H2-desktop: {
-    font-family: var(--Font-heading);
-    font-size: 40px;
-    font-weight: 400;
-  };
-  --H2-mobile: {
-    font-family: var(--Font-heading);
-    font-size: 24px;
-    font-weight: 400;
-  };
-  --H3: {
-    font-family: var(--Font-heading);
-    font-size: 24px;
-    font-weight: 400;
-  };
-  --H4: {
-    font-family: var(--Font-primary);
-    font-size: 24px;
-    font-weight: 400;
-  };
-  --H4plus: {
-    font-family: var(--Font-primary);
-    font-size: 24px;
-    font-weight: 600;
-  };
-  --Text-desktop: {
-    font-family: var(--Font-primary);
-    font-size: 24px;
-    font-weight: 400;
-  };
-  --Text-mobile: {
-    font-family: var(--Font-primary);
-    font-size: 20px;
-    font-weight: 400;
-  };
+  /* Font sizes */
+  --size-H1-desktop: 96px; 
+  --size-H1-mobile: 48px;
+  --size-H2plus-mobile: 16px;
+  --size-H2-desktop: 40px;
+  --size-H2-mobile: 24px;
+  --size-H3: 24px;
+  --size-H4: 24px;
+  --size-H4plus: 24px;
+  --size-text-desktop: 24px;
+  --size-text-mobile: 20px;
 
+  /* Font weight */
+  --weight-H1-desktop: 400; 
+  --weight-H1-mobile: 400;
+  --weight-H2plus-mobile: 400;
+  --weight-H2-desktop: 400;
+  --weight-H2-mobile: 400;
+  --weight-H3: 400;
+  --weight-H4: 400;
+  --weight-H4plus: 600;
+  --weight-text-desktop: 400;
+  --weight-text-mobile: 400;
 
 }

@@ -15,9 +15,13 @@
   aspect-ratio: 1/1;
 }
 .placeholderProjectCardTitle {
-  font: var(--H4plus);
+  font-family: var(--family-H4plus);
+  font-size: var(--size-H4plus);
+  font-weight: var(--weight-H4plus);
 }
 
 .placeholderProjectCardDescription {
-  font-size: medium;
+  font-family: var(--family-text-desktop);
+  font-size: var(--size-text-desktop);
+  font-weight: var(--weight-text-desktop);
 }
