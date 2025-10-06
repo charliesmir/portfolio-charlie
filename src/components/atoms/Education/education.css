@@ -1,0 +1,17 @@
+@import url("../../styles/designTokens.css");
+
+.EducationBox {
+  display: flex;
+  flex-direction: column;
+  line-height: 40px;
+  color: var(--BackgroundDark);
+  font-family: var(--family-text-desktop);
+  font-size: var(--size-text-desktop);
+  font-weight: var(--weight-text-desktop);
+}
+
+.Title {
+  font-family: var(--family-H3);
+  font-size: var(--size-H3);
+  font-weight: var(--weight-H3);
+}
