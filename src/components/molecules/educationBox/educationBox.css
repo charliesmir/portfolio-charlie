@@ -1,0 +1,12 @@
+.EducationBox {
+  height: 1208px;
+  width: 520px;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--Accent);
+  border-radius: 520px;
+}
+
+.EducationText {
+  margin-top: 280px;
+}
