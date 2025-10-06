@@ -1,4 +1,4 @@
-import { Education, EducationProps } from "@/components/atoms/education";
+import { Education, EducationProps } from "@/components/atoms/educationasfsaf";
 import "./educationBox.css";
 
 interface Props {
