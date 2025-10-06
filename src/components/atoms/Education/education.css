@@ -1,6 +1,6 @@
 @import url("../../styles/designTokens.css");
 
-.EducationBox {
+.Education {
   display: flex;
   flex-direction: column;
   line-height: 40px;

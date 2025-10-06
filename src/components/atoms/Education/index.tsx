@@ -8,7 +8,7 @@ export interface EducationProps {
 
 export const Education = ({ title, dates, university }: EducationProps) => {
   return (
-    <div className="EducationBox">
+    <div className="Education">
       <div>{dates}</div>
       <div>{university}</div>
       <div className="Title">{title}</div>
