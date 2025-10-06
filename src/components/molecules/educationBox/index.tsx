@@ -1,6 +1,6 @@
 import "./educationBox.css";
 
-import { Education, EducationProps } from "@/components/atoms/Education";
+import { Education, EducationProps } from "@/components/atoms/education";
 
 interface Props {
   educationCards: EducationProps[];
