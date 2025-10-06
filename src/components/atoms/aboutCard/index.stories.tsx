@@ -41,5 +41,16 @@ export const Tools: Story = {
   args: {
     title: "Tools",
     type: "image",
+    images: [
+      { image: "/images/icons/CSS.png", altText: "CSS" },
+      { image: "/images/icons/Illustrator.png", altText: "Illustrator" },
+      { image: "/images/icons/Indesign.png", altText: "Indesign" },
+      { image: "/images/icons/Photoshop.png", altText: "Photoshop" },
+      { image: "/images/icons/Sanity.png", altText: "Sanity" },
+      { image: "/images/icons/Sketchup.png", altText: "SketchUp" },
+      { image: "/images/icons/Storybook.png", altText: "Storybook" },
+      { image: "/images/icons/Unity.png", altText: "Unity" },
+      { image: "", altText: "" },
+    ],
   },
 };

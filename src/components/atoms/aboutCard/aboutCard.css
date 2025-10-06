@@ -20,4 +20,20 @@
   font-family: var(--family-H3);
   font-size: var(--size-H3);
   font-weight: var(--weight-H3);
+  justify-self: flex-end;
+}
+
+.AboutCardIcons {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-column-gap: 35px;
+  grid-row-gap: 35px;
+  width: 250px;
+  padding: 75px 28px 75px 75px;
+}
+
+.AboutCardImage {
+  height: 60px;
+  width: 60px;
 }
