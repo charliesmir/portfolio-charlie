@@ -1,0 +1,27 @@
+@import url("../../styles/designTokens.css");
+
+.Contact {
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+  color: var(--BackgroundDark);
+  width: 400px;
+  align-items: center;
+}
+.ContactsImage {
+  height: 50px;
+  width: 50px;
+}
+.ContactsLink {
+  font-family: var(--family-text-desktop);
+  font-size: var(--size-text-desktop);
+  font-weight: var(--weight-text-desktop);
+  text-decoration: none;
+  color: var(--BackgroundDark);
+}
+.ContactsLink:hover {
+  font-weight: 600;
+}
+.ContactsLink:active {
+  color: var(--BackgroundDark);
+}

@@ -7,6 +7,7 @@ export interface AboutCardProps {
   type: "image" | "text";
   description?: string;
   images?: SanityImage[];
+  isActive?: boolean;
 }
 
 export const AboutCard = ({
@@ -14,14 +15,15 @@ export const AboutCard = ({
   description,
   type,
   images,
+  isActive,
 }: AboutCardProps) => {
   return type == "text" ? (
-    <div className="AboutCard">
+    <div className={`AboutCard ${isActive ? "active" : ""}`}>
       {description}
       <div className="AboutCardTitle">{title}</div>
     </div>
   ) : (
-    <div className="AboutCard">
+    <div className={`AboutCard ${isActive ? "active" : ""}`}>
       <div className="AboutCardIcons">
         {images?.map((i, index) => (
           <CardMedia

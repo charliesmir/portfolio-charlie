@@ -54,3 +54,32 @@ export const Tools: Story = {
     ],
   },
 };
+
+export const ProcessActive: Story = {
+  args: {
+    title: "My design process ",
+    type: "text",
+    isActive: true,
+    description:
+      "I start projects by defining the tech stack to make sure that my design will suite not only esthetical, but technical trajectory of the client. It is also useful to know the business strategy of the project to better tailor design solutions to certain target audiences. After careful analysis I create several design variations showcasing different approaches",
+  },
+};
+
+export const ToolsActive: Story = {
+  args: {
+    title: "Tools",
+    type: "image",
+    isActive: true,
+    images: [
+      { image: "/images/icons/CSS.png", altText: "CSS" },
+      { image: "/images/icons/Illustrator.png", altText: "Illustrator" },
+      { image: "/images/icons/Indesign.png", altText: "Indesign" },
+      { image: "/images/icons/Photoshop.png", altText: "Photoshop" },
+      { image: "/images/icons/Sanity.png", altText: "Sanity" },
+      { image: "/images/icons/Sketchup.png", altText: "SketchUp" },
+      { image: "/images/icons/Storybook.png", altText: "Storybook" },
+      { image: "/images/icons/Unity.png", altText: "Unity" },
+      { image: "", altText: "" },
+    ],
+  },
+};
