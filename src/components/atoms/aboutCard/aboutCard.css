@@ -3,7 +3,7 @@
 .AboutCard {
   height: 405px;
   width: 405px;
-  background-color: var(--Accent);
+  background-color: var(--AccentLight);
   border-radius: 20px;
   padding: 30px;
   font-family: var(--family-text-desktop);
@@ -12,7 +12,14 @@
   display: flex;
   flex-direction: row;
   gap: 22px;
+  cursor: pointer;
+  filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.25));
   /* uneven gap ensures correct hypernation */
+}
+
+.AboutCard.active {
+  background-color: var(--Accent);
+  cursor: default;
 }
 
 .AboutCardTitle {
