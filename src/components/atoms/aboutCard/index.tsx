@@ -8,6 +8,7 @@ export interface AboutCardProps {
   description?: string;
   images?: SanityImage[];
   isActive?: boolean;
+  onClick?: () => void;
 }
 
 export const AboutCard = ({

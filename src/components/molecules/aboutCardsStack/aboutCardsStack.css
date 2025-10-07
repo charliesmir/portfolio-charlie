@@ -1,0 +1,4 @@
+.AboutCardsCarousel {
+  display: flex;
+  flex-direction: row;
+}
