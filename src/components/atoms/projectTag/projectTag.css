@@ -14,6 +14,7 @@
   font-size: var(--size-H4plus);
   font-weight: var(--weight-H4plus);
   color: var(--White);
+  filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.25));
 }
 .ProjectTagText {
   width: 305px;

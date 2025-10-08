@@ -16,6 +16,7 @@ export const Primary: Story = {
       title: "F-project branding",
       image: "/images/icons/S.png",
     },
+    image: "/images/FProjectImage.png",
     description:
       "A cohesive brand identity uniting two distinct target audiences. Welcoming posters and print materials encourage participation in new art-related activities, with typography playing a central role as a design element to create a warm, approachable atmosphere.",
     onClick: () => null,
