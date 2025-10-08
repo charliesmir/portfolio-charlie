@@ -1,0 +1,24 @@
+@import url("../../styles/designTokens.css");
+
+.ProjectTag {
+  width: 400px;
+  min-height: 60px;
+  background-color: var(--Primary);
+  border-radius: 0 60px 60px 0;
+  padding-right: 15px;
+  padding-left: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: var(--family-H4plus);
+  font-size: var(--size-H4plus);
+  font-weight: var(--weight-H4plus);
+  color: var(--White);
+}
+.ProjectTagText {
+  width: 305px;
+}
+.ProjectTagImage {
+  height: 37px;
+  width: 30px;
+}
