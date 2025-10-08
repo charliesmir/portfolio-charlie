@@ -1,0 +1,29 @@
+@import url("../../styles/designTokens.css");
+
+.ProjectCardBox {
+  width: 470px;
+  flex: 0 0 auto;
+}
+
+.ProjectCardBox:hover {
+  cursor: pointer;
+}
+
+.ProjectCardImage {
+  width: 470px;
+  height: 470px;
+  position: relative;
+}
+
+.ProjectCardTag {
+  position: absolute;
+  top: 380px;
+  z-index: 1;
+}
+
+.ProjectCardDescription {
+  margin-top: 20px;
+  font-family: var(--family-text-desktop);
+  font-size: var(--size-text-desktop);
+  font-weight: var(--weight-text-desktop);
+}
