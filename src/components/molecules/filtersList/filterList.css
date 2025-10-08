@@ -1,0 +1,11 @@
+@import url("../../styles/designTokens.css");
+
+.FilterList {
+  display: flex;
+  flex-direction: column;
+}
+
+.FilterListText {
+  display: flex;
+  flex-direction: column;
+}

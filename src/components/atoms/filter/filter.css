@@ -1,0 +1,18 @@
+@import url("../../styles/designTokens.css");
+
+.Filter {
+  display: flex;
+  gap: 20px;
+}
+.FilterImage {
+  height: 37px;
+  width: 30px;
+}
+
+.FilterText {
+  font-family: var(--family-text-desktop);
+  font-size: var(--size-text-desktop);
+  font-weight: var(--weight-text-desktop);
+  padding-top: 6px; /*exact padding centers only the top line of text*/
+  width: 170px;
+}
