@@ -2,6 +2,7 @@ import type { Meta, StoryObj } from "@storybook/nextjs";
 
 import { AboutCardsStack } from "./index";
 import { AboutCardProps } from "@/components/atoms/aboutCard";
+import { useState } from "react";
 
 const meta = {
   title: "Molecules/AboutCardsStack",
@@ -47,8 +48,42 @@ const cards: AboutCardProps[] = [
   },
 ];
 
-export const Primary: Story = {
+export const Default: Story = {
   args: {
     aboutCards: cards,
+  },
+};
+
+// export const Interactive: Story = {
+//   args: {
+//     aboutCards: cards.map((card, index) => ({ ...card, onClick: () => null })),
+//   },
+//   render: (args) => {
+//     const [changedCards, setChangedCards] = useState(cards);
+//     const onCardClick = (cardIndex: number) => {
+//       const updatedCards = changedCards.map((card, index) => ({
+//         ...card,
+//         isActive: index == cardIndex,
+//       }));
+//       setChangedCards(updatedCards);
+//     };
+//     return (
+//       <AboutCardsStack
+//         aboutCards={changedCards.map((card, index) => ({
+//           ...card,
+//           onClick: () => onCardClick(index),
+//         }))}
+//       />
+//     );
+//   },
+// };
+
+export const Interactive: Story = {
+  args: {
+    aboutCards: cards.map((card, index) => ({
+      ...card,
+      onClick: () => null,
+      isActive: index === 0,
+    })),
   },
 };
