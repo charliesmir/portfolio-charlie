@@ -2,3 +2,6 @@
   display: flex;
   flex-direction: row;
 }
+.AboutCardBox {
+  transition: rotate 0.3s ease;
+}
