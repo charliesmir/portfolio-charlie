@@ -1,11 +1,11 @@
 import { Contacts, ContactsProps } from "@/components/atoms/contacts";
 import "./contactsBox.css";
 
-interface Props {
+export interface ContactsBoxProps {
   contactsCards: ContactsProps[];
 }
 
-export const ContactsBox = ({ contactsCards }: Props) => {
+export const ContactsBox = ({ contactsCards }: ContactsBoxProps) => {
   return (
     <div className="ContactsBox">
       <div className="ContactsMainBox">

@@ -1,0 +1,23 @@
+.Arrow {
+  height: 50px;
+  width: 50px;
+  background-color: var(--Accent);
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.ArrowIcon {
+  height: 24px;
+  width: 15px;
+}
+
+.ArrowIcon.left {
+  rotate: 180deg;
+}
+
+.ArrowIcon.top {
+  rotate: -90deg;
+}

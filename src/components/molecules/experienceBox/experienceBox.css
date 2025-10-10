@@ -1,0 +1,10 @@
+@import url("../../styles/designTokens.css");
+
+.ExperienceBox {
+  width: 1190px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 145px;
+  flex-direction: row;
+}
