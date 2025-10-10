@@ -1,0 +1,35 @@
+.FooterBox {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: var(--family-text-desktop);
+  font-size: var(--size-text-desktop);
+  font-weight: var(--weight-text-desktop);
+  color: var(--Accent);
+  background-color: var(--Primary);
+  padding: 0 60px;
+}
+.FooterText {
+  display: flex;
+  flex-direction: row;
+}
+
+.FooterLinkText {
+  text-decoration: none;
+  color: var(--Accent);
+}
+.FooterLinkText:hover {
+  text-decoration: none;
+  color: var(--White);
+}
+
+.FooterLinkText:visited {
+  text-decoration: none;
+  color: var(--Accent);
+}
+
+.FooterLinkText:visited:hover {
+  text-decoration: none;
+  color: var(--White);
+}
