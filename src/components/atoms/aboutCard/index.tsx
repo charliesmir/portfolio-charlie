@@ -17,14 +17,15 @@ export const AboutCard = ({
   type,
   images,
   isActive,
+  onClick,
 }: AboutCardProps) => {
   return type == "text" ? (
-    <div className={`AboutCard ${isActive ? "active" : ""}`}>
+    <div className={`AboutCard ${isActive ? "active" : ""}`} onClick={onClick}>
       {description}
       <div className="AboutCardTitle">{title}</div>
     </div>
   ) : (
-    <div className={`AboutCard ${isActive ? "active" : ""}`}>
+    <div className={`AboutCard ${isActive ? "active" : ""}`} onClick={onClick}>
       <div className="AboutCardIcons">
         {images?.map((i, index) => (
           <CardMedia

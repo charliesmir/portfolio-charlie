@@ -54,36 +54,37 @@ export const Default: Story = {
   },
 };
 
-// export const Interactive: Story = {
-//   args: {
-//     aboutCards: cards.map((card, index) => ({ ...card, onClick: () => null })),
-//   },
-//   render: (args) => {
-//     const [changedCards, setChangedCards] = useState(cards);
-//     const onCardClick = (cardIndex: number) => {
-//       const updatedCards = changedCards.map((card, index) => ({
-//         ...card,
-//         isActive: index == cardIndex,
-//       }));
-//       setChangedCards(updatedCards);
-//     };
-//     return (
-//       <AboutCardsStack
-//         aboutCards={changedCards.map((card, index) => ({
-//           ...card,
-//           onClick: () => onCardClick(index),
-//         }))}
-//       />
-//     );
-//   },
-// };
-
 export const Interactive: Story = {
   args: {
     aboutCards: cards.map((card, index) => ({
       ...card,
-      onClick: () => null,
       isActive: index === 0,
     })),
+  },
+  render: (args) => {
+    const [changedCards, setChangedCards] = useState(
+      args.aboutCards.map((card, index) => ({
+        ...card,
+        isActive: index === 0,
+      })),
+    );
+
+    const onCardClick = (cardIndex: number) => {
+      setChangedCards((prevCards) =>
+        prevCards.map((card, index) => ({
+          ...card,
+          isActive: index === cardIndex,
+        })),
+      );
+    };
+
+    return (
+      <AboutCardsStack
+        aboutCards={changedCards.map((card, index) => ({
+          ...card,
+          onClick: () => onCardClick(index),
+        }))}
+      />
+    );
   },
 };

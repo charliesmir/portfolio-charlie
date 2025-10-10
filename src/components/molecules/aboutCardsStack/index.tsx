@@ -21,8 +21,8 @@ export const AboutCardsStack = ({ aboutCards }: Props) => {
               className="AboutCardBox"
               style={{
                 transform: `translate(${xOffset}px, ${yOffset}px)`,
-                rotate: `${rotation}deg`,
-                zIndex: 5 - index, // zIndex is semihardcoded because the negative value makes cards unclickable
+                rotate: card.isActive ? "" : `${rotation}deg`,
+                zIndex: card.isActive ? "10" : 5 - index, // zIndex is semihardcoded because the negative value makes cards unclickable
               }}
             >
               <AboutCard key={index} {...card} />
