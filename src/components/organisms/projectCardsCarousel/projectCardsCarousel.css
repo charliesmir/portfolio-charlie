@@ -11,14 +11,16 @@
   display: flex;
 }
 
+.ProjectCardsCarouselBox:hover .ProjectCardsCarouselButton {
+  visibility: visible;
+}
+
 .ProjectCardsCarouselButton {
-  height: 100px;
-  width: 100px;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   z-index: 10;
-  cursor: pointer;
+  visibility: hidden;
 }
 
 .prevButton {
