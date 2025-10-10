@@ -1,11 +1,11 @@
 import { Education, EducationProps } from "@/components/atoms/education";
 import "./educationBox.css";
 
-interface Props {
+export interface EducationBoxProps {
   educationCards: EducationProps[];
 }
 
-export const EducationBox = ({ educationCards }: Props) => {
+export const EducationBox = ({ educationCards }: EducationBoxProps) => {
   return (
     <div className="EducationBox">
       <div className="EducationText">
