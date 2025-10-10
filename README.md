@@ -1,36 +1,72 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 📔Charlie's Portfolio
 
-## Getting Started
+This project is a code source for personal portfolio created to showcase both design expertise and growing frontend development skills. It contains projects, experience and education in a modern, clean and unique interface.
 
-First, run the development server:
+The website was created in collaboration with another developer, who assisted with CMS integration, CI/CD setup, and technical guidance, demonstrating the designer’s ability to collaborate effectively with developers and work across disciplines.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+The project is hosted by [Vercel](https://www.vercel.com/). Here is the link to the website: [Charlie's Portfolio](https://portfolio-charlie-eight.vercel.app/).
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🏗️ The Architecture of the App
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 💻 Languages
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+[![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![CSS](https://img.shields.io/badge/CSS-1572B6?logo=css3&logoColor=white)](https://developer.mozilla.org/docs/Web/CSS)
 
-## Learn More
+### 📂 Project structure
 
-To learn more about Next.js, take a look at the following resources:
+TBA
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 🧭 App Navigation Structure
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+TBA
 
-## Deploy on Vercel
+### 🎨 Design
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+The design is created in [Figma](https://www.figma.com/). The implementation is mostly unique with a little usage of the [MUI compnents](https://mui.com/) but they are also styled to fit the overall design vision. Assets created in Adobe Illustrator and Adobe Photoshop.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Colors used in project:
+
+Background Dark: #131d0e  
+Primary: #253512  
+Accent: #eab764  
+Accent Light: #edc27b  
+White: #ffffff
+
+### 📘 Storybook
+
+The project's components were developed using [Storybook](https://storybook.js.org/), located in the `/src/components` directory.
+
+- The design system follows **Atomic Design** methodology (Atoms → Molecules → Organisms).
+- Each level contains a set of components categorized by size and complexity.
+- Each component includes 3 files:
+  1. `index.tsx` – the component implementation
+  2. `index.stories.tsx` – the Storybook configuration and preview
+  3. `component.css` – custom styles specific to the component
+
+## 🛠️ Tools
+
+This project is built using the following technologies:
+
+[![Figma](https://img.shields.io/badge/Figma-F24E1E?logo=figma&logoColor=white)](https://www.figma.com/)
+[![Storybook](https://img.shields.io/badge/Storybook-FF4785?logo=storybook&logoColor=white)](https://storybook.js.org/)
+[![Sanity](https://img.shields.io/badge/Sanity-EF2D5E?logo=sanity&logoColor=white)](https://www.sanity.io/)
+[![Vercel](https://img.shields.io/badge/Vercel-000000?logo=vercel&logoColor=white)](https://vercel.com/)
+[![Next.js](https://img.shields.io/badge/Next.js-000000?logo=nextdotjs&logoColor=white)](https://nextjs.org/)
+[![React](https://img.shields.io/badge/React-20232A?logo=react&logoColor=61DAFB)](https://reactjs.org/)
+
+## 🎅 Credits
+
+- **Charlie**  
+  _UI/UX Designer & Frontend Stylist_  
+  Owner of the repositiry, designed the user interface and created the custom components in Storybook.
+
+  [GitHub](https://github.com/charliesmir)  
+  [Portfolio](https://portfolio-charlie-eight.vercel.app/)
+
+- **GudokVlad**  
+  _Technical Architect & Developer_  
+  Configured core technologies, including Sanity integration and Vercel deployment.
+
+  [GitHub](https://github.com/GudokVlad-Pilot)  
+  [Portfolio](https://gudokvlad.com/)
