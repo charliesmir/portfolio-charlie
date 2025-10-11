@@ -1,14 +1,11 @@
 "use client";
+import "./homePage.css";
 
-import { adapters } from "@/adapters/adapters";
-import { Test } from "@/adapters/types";
 import { PlaceholderButton } from "@/components/placeholders/button";
-import { PlaceholderProjectCardProps } from "@/components/placeholders/projectCard";
-import { PlaceholderProjectCardsCarousel } from "@/components/placeholders/projectCardsCarousel";
 import { useRouter } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
-
-const { getTests } = adapters.cms();
+import { TopSection } from "@/components/organisms/topSection";
+import { SanityMain } from "@/adapters/types";
 
 export default function Home() {
   // Basic settings
@@ -25,67 +22,21 @@ export default function Home() {
     ref.current?.scrollIntoView({ behavior: "smooth" });
   };
 
-  // Test Sanity
-  const [testStrings, setTestStrings] = useState<Test[]>([]);
-  useEffect(() => {
-    const fetchTests = async () => {
-      const tests = await getTests();
-      setTestStrings(tests);
-    };
-    fetchTests();
-  }, []);
-
-  // Mock project cards
-  const mockCards: PlaceholderProjectCardProps[] = [
-    {
-      title: "Project 1",
-      description: "Project 1 Description",
-      onClick: () => router.push("/projects/1"),
-    },
-    {
-      title: "Fox Airlines",
-      description: "Fox Airlines lorem ipsum",
-      onClick: () => router.push("/projects/airlines"),
-    },
-    {
-      title: "F. Project assets",
-      description: "Something here",
-      onClick: () => router.push("/projects/f-project-assets"),
-    },
-    {
-      title: "Recipes app",
-      description: "In development",
-      onClick: () => router.push("/projects/recipes-app"),
-    },
-    {
-      title: "Test Project",
-      description: "Just to test carousel",
-      onClick: () => router.push("/projects/test"),
-    },
-  ];
+  const sanityImport: SanityMain = {
+    name: { title: "CHARLIE SMIRNOVA" },
+    profession: { title: "UI/UX Designer, Illustrator and Architect" },
+    profile: { image: "/images/portrait.svg" },
+  };
 
   return (
     <div className="homePage">
       {/* Placeholders with different colors for setting the navigation*/}
-      <div
-        className="header"
-        style={{ height: "600px", backgroundColor: "green" }}
-      >
-        Header
-        {/* Test fetching */}
-        <div style={{ backgroundColor: "lightgray" }}>
-          <div>Tests Sanity:</div>
-          {testStrings.length > 0 ? (
-            <ul>
-              {testStrings.map((str, idx) => (
-                <li key={idx}>{str.title}</li>
-              ))}
-            </ul>
-          ) : (
-            <div>Loading...</div>
-          )}
-        </div>
-        {/* End of Test fetching */}
+      <div className="header">
+        <TopSection
+          name={sanityImport.name}
+          profession={sanityImport.profession}
+          profile={sanityImport.profile}
+        />
       </div>
       <div className="intro" style={{ height: "600px" }}>
         Intro
@@ -112,7 +63,6 @@ export default function Home() {
         style={{ height: "600px", backgroundColor: "green" }}
       >
         Projects
-        <PlaceholderProjectCardsCarousel cards={mockCards} />
       </div>
       <div
         className="experience"
