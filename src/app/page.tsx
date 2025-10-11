@@ -5,7 +5,9 @@ import { PlaceholderButton } from "@/components/placeholders/button";
 import { useRouter } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import { TopSection } from "@/components/organisms/topSection";
+import { NavigationButtonsBox } from "@/components/molecules/navigationButtonsBox";
 import { SanityMain } from "@/adapters/types";
+import { NavigationButtonProps } from "@/components/atoms/button";
 
 export default function Home() {
   // Basic settings
@@ -22,6 +24,29 @@ export default function Home() {
     ref.current?.scrollIntoView({ behavior: "smooth" });
   };
 
+  const navButtons: NavigationButtonProps[] = [
+    {
+      title: "Projects",
+      colorVersion: "light",
+      onClick: () => scrollToSection(projectsRef),
+    },
+    {
+      title: "Experience",
+      colorVersion: "dark",
+      onClick: () => scrollToSection(experienceRef),
+    },
+    {
+      title: "Education",
+      colorVersion: "light",
+      onClick: () => scrollToSection(educationRef),
+    },
+    {
+      title: "Contacts",
+      colorVersion: "dark",
+      onClick: () => scrollToSection(contactsRef),
+    },
+  ];
+
   const sanityImport: SanityMain = {
     name: { title: "CHARLIE SMIRNOVA" },
     profession: { title: "UI/UX Designer, Illustrator and Architect" },
@@ -29,33 +54,17 @@ export default function Home() {
   };
 
   return (
-    <div className="homePage">
+    <div className="HomePage">
       {/* Placeholders with different colors for setting the navigation*/}
-      <div className="header">
+      <div className="HomeHeader">
         <TopSection
           name={sanityImport.name}
           profession={sanityImport.profession}
           profile={sanityImport.profile}
         />
       </div>
-      <div className="intro" style={{ height: "600px" }}>
-        Intro
-        <PlaceholderButton
-          title={"Projects"}
-          onClick={() => scrollToSection(projectsRef)}
-        />
-        <PlaceholderButton
-          title={"Experience"}
-          onClick={() => scrollToSection(experienceRef)}
-        />
-        <PlaceholderButton
-          title={"Education"}
-          onClick={() => scrollToSection(educationRef)}
-        />
-        <PlaceholderButton
-          title={"Contacts"}
-          onClick={() => scrollToSection(contactsRef)}
-        />
+      <div className="HomeIntro" style={{ height: "600px" }}>
+        <NavigationButtonsBox buttons={navButtons} />
       </div>
       <div
         className="projects"

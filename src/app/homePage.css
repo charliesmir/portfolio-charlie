@@ -1,14 +1,21 @@
-.homePage {
+.HomePage {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
 }
 
-.header {
+.HomeHeader {
   height: 650px;
   background-color: var(--BackgroundDark);
   width: 100%;
   display: flex;
   justify-content: center;
+}
+
+.HomeIntro {
+  margin-top: 200px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
 }
