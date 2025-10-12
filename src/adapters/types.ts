@@ -20,4 +20,16 @@ export interface SanityMain {
     description?: string;
     images?: SanityImage[];
   }[];
+  filters: {
+    title: string;
+    image: string;
+  }[];
+  projectCards: {
+    description: string;
+    image?: string;
+    projectTag: {
+      title: string;
+      image: string;
+    };
+  }[];
 }

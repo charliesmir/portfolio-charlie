@@ -9,6 +9,9 @@ import { NavigationButtonsBox } from "@/components/molecules/navigationButtonsBo
 import { SanityMain } from "@/adapters/types";
 import { NavigationButtonProps } from "@/components/atoms/button";
 import { AboutCardsStack } from "@/components/molecules/aboutCardsStack";
+import { Flag } from "@/components/atoms/flags";
+import { FilterList } from "@/components/molecules/filtersList";
+import { ProjectCardsCarousel } from "@/components/organisms/projectCardsCarousel";
 
 export default function Home() {
   // Basic settings
@@ -87,6 +90,44 @@ export default function Home() {
         ],
       },
     ],
+    filters: [
+      {
+        title: "UI/UX design",
+        image: "/images/icons/U.png",
+      },
+      {
+        title: "Assets",
+        image: "/images/icons/A.png",
+      },
+      {
+        title: "Social Media & Advertising",
+        image: "/images/icons/S.png",
+      },
+      {
+        title: "Other",
+        image: "/images/icons/O.png",
+      },
+    ],
+    projectCards: [
+      {
+        projectTag: {
+          title: "F-Project: Brand Identity & Campaign Design",
+          image: "/images/icons/S.png",
+        },
+        image: "/images/FProjectImage.png",
+        description:
+          "A cohesive brand identity uniting two distinct target audiences. Welcoming posters and print materials encourage participation in new art-related activities, with typography playing a central role as a design element to create a warm, approachable atmosphere.",
+      },
+      {
+        projectTag: {
+          title: "Helsinki Urban Planning Guide",
+          image: "/images/icons/O.png",
+        },
+        image: "/images/HelsinkiGuideImage.png",
+        description:
+          "A multi-day excursion guide focused on urban planning in Helsinki. Rich photography and carefully structured layouts make the guide engaging both at home and during on-site visits, combining education with visual storytelling.",
+      },
+    ],
   };
 
   const [changedAboutCards, setChangedAboutCards] = useState(
@@ -124,12 +165,18 @@ export default function Home() {
           }))}
         />
       </div>
+      <Flag
+        title={navButtons[0].title}
+        colorVersion={"primary"}
+        orientationVersion={"left"}
+      />
       <div
-        className="projects"
+        className="HomeProjects"
         ref={projectsRef}
         style={{ height: "600px", backgroundColor: "green" }}
       >
-        Projects
+        <FilterList filterCards={sanityImport.filters} />
+        <ProjectCardsCarousel cards={sanityImport.projectCards} />
       </div>
       <div
         className="experience"
