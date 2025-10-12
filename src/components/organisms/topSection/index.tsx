@@ -11,7 +11,7 @@ interface Props {
   profile?: ProfileProps;
 }
 
-export const topSection = ({ name, profession, profile }: Props) => {
+export const TopSection = ({ name, profession, profile }: Props) => {
   return (
     <div className="TopSection">
       <div className="TopSectionInfo">

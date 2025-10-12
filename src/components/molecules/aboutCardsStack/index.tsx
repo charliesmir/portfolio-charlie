@@ -18,6 +18,7 @@ export const AboutCardsStack = ({ aboutCards }: Props) => {
           const rotation = rotations[index % rotations.length];
           return (
             <div
+              key={index}
               className="AboutCardBox"
               style={{
                 transform: `translate(${xOffset}px, ${yOffset}px)`,

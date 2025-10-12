@@ -1,11 +1,11 @@
 import type { Meta, StoryObj } from "@storybook/nextjs";
 
-import { topSection } from "./index";
+import { TopSection } from "./index";
 
 const meta = {
   title: "Molecules/TopSection",
-  component: topSection,
-} satisfies Meta<typeof topSection>;
+  component: TopSection,
+} satisfies Meta<typeof TopSection>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;

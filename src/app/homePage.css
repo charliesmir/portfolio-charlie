@@ -1,0 +1,30 @@
+.HomePage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.HomeHeader {
+  height: 650px;
+  background-color: var(--BackgroundDark);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.HomeIntro {
+  margin-top: 200px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.HomeProjects {
+  width: 100%;
+}
+.HomeEducation {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}

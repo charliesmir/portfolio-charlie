@@ -13,6 +13,7 @@
   color: var(--Accent);
   border: none;
   border-radius: 0 45px 45px 0;
+  cursor: pointer;
 }
 
 .NavigationButtonText {
