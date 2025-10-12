@@ -32,4 +32,10 @@ export interface SanityMain {
       image: string;
     };
   }[];
+  experienceCards: {
+    title: string;
+    company?: string;
+    dates: string;
+    description: string;
+  }[];
 }

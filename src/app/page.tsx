@@ -12,6 +12,7 @@ import { AboutCardsStack } from "@/components/molecules/aboutCardsStack";
 import { Flag } from "@/components/atoms/flags";
 import { FilterList } from "@/components/molecules/filtersList";
 import { ProjectCardsCarousel } from "@/components/organisms/projectCardsCarousel";
+import { ExperienceBox } from "@/components/molecules/experienceBox";
 
 export default function Home() {
   // Basic settings
@@ -128,6 +129,28 @@ export default function Home() {
           "A multi-day excursion guide focused on urban planning in Helsinki. Rich photography and carefully structured layouts make the guide engaging both at home and during on-site visits, combining education with visual storytelling.",
       },
     ],
+    experienceCards: [
+      {
+        title: "Designer",
+        company: "RKB AS",
+        dates: "2016-2019",
+        description:
+          "Worked on branding for small businesses as well as advertisements, business cards and merchandise for companies of different scales. Worked closely with clients and provided assistance on determining needs and tastes of their potential customers, later adapting the designs to the findings ",
+      },
+      {
+        title: "Creative director",
+        company: "F-project",
+        dates: "2023-2024",
+        description:
+          "Created brand’s visual identity. Determined two potential audience groups and adapted advertisement materials to each of them. Designed visuals for all the project’s events including art fairs and painting workshops. ",
+      },
+      {
+        title: "Freelance",
+        dates: "2024-now",
+        description:
+          "Worked on branding for small businesses as well as advertisements, business cards and merchandise for companies of different scales. Worked closely with clients and provided assistance on determining needs and tastes of their potential customers, later adapting the designs to the findings ",
+      },
+    ],
   };
 
   const [changedAboutCards, setChangedAboutCards] = useState(
@@ -173,17 +196,22 @@ export default function Home() {
       <div
         className="HomeProjects"
         ref={projectsRef}
-        style={{ height: "600px", backgroundColor: "green" }}
+        style={{ height: "900px", backgroundColor: "green" }}
       >
         <FilterList filterCards={sanityImport.filters} />
         <ProjectCardsCarousel cards={sanityImport.projectCards} />
       </div>
+      <Flag
+        title={navButtons[1].title}
+        colorVersion={"accent"}
+        orientationVersion={"right"}
+      />
       <div
         className="experience"
         ref={experienceRef}
         style={{ height: "600px" }}
       >
-        Experience
+        <ExperienceBox experienceCards={sanityImport.experienceCards} />
       </div>
       <div className="education" ref={educationRef} style={{ height: "600px" }}>
         Education
