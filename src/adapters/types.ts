@@ -38,4 +38,16 @@ export interface SanityMain {
     dates: string;
     description: string;
   }[];
+  educationCards: {
+    title: string;
+    university: string;
+    dates: string;
+  }[];
+  contactBox: {
+    contactsCards: {
+      link: SanityLink;
+      image: string;
+    }[];
+  };
+  quote: { title?: string };
 }

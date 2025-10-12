@@ -13,6 +13,10 @@ import { Flag } from "@/components/atoms/flags";
 import { FilterList } from "@/components/molecules/filtersList";
 import { ProjectCardsCarousel } from "@/components/organisms/projectCardsCarousel";
 import { ExperienceBox } from "@/components/molecules/experienceBox";
+import { EducationBox } from "@/components/molecules/educationBox";
+import { EducationDecoration } from "@/components/atoms/educationDecoration";
+import { ContactsSection } from "@/components/organisms/contactsSection";
+import { Footer } from "@/components/atoms/footer";
 
 export default function Home() {
   // Basic settings
@@ -151,6 +155,61 @@ export default function Home() {
           "Worked on branding for small businesses as well as advertisements, business cards and merchandise for companies of different scales. Worked closely with clients and provided assistance on determining needs and tastes of their potential customers, later adapting the designs to the findings ",
       },
     ],
+    educationCards: [
+      {
+        title: "Bc. Construction Architecture",
+        university: "Metropolia University of Applied Sciences",
+        dates: "2019-2025",
+      },
+      {
+        title: "Academic arts. Architecture",
+        university: "Lyceum Iogansona",
+        dates: "2017-2019",
+      },
+    ],
+    contactBox: {
+      contactsCards: [
+        {
+          link: {
+            title: "+358465391323",
+            url: "https://wa.me/358465391323",
+          },
+          image: "",
+        },
+        {
+          link: {
+            title: "charlie.smirnova@gmail.com",
+            url: "mailto:charlie.smirnova@gmail.com",
+          },
+          image: "",
+        },
+        {
+          link: {
+            title: "charlieandarchitecture",
+            url: "https://www.instagram.com/charlieandarchitecture",
+          },
+          image: "",
+        },
+        {
+          link: {
+            title: "Charlie Smirnova",
+            url: "https://www.linkedin.com/in/charliesmirnova/",
+          },
+          image: "",
+        },
+        {
+          link: {
+            title: "charliesmir",
+            url: "https://github.com/charliesmir",
+          },
+          image: "",
+        },
+      ],
+    },
+    quote: {
+      title:
+        "I am always open to new projects and challenges. Feel free to reach out!",
+    },
   };
 
   const [changedAboutCards, setChangedAboutCards] = useState(
@@ -207,23 +266,41 @@ export default function Home() {
         orientationVersion={"right"}
       />
       <div
-        className="experience"
+        className="HomeExperience"
         ref={experienceRef}
         style={{ height: "600px" }}
       >
         <ExperienceBox experienceCards={sanityImport.experienceCards} />
       </div>
-      <div className="education" ref={educationRef} style={{ height: "600px" }}>
-        Education
-      </div>
+      <Flag
+        title={navButtons[2].title}
+        colorVersion={"backgroundDark"}
+        orientationVersion={"left"}
+      />
       <div
-        className="contacts"
+        className="HomeEducation"
+        ref={educationRef}
+        style={{ height: "960px" }}
+      >
+        <EducationDecoration />
+        <EducationBox educationCards={sanityImport.educationCards} />
+      </div>
+      <Flag
+        title={navButtons[3].title}
+        colorVersion={"primary"}
+        orientationVersion={"right"}
+      />
+      <div
+        className="HomeContacts"
         ref={contactsRef}
         style={{ height: "600px", backgroundColor: "green" }}
       >
-        Contacts
+        <ContactsSection
+          contactBox={sanityImport.contactBox}
+          quote={sanityImport.quote}
+        />
       </div>
-      <div className="copyright">Copyright</div>
+      <Footer />
     </div>
   );
 }

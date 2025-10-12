@@ -23,3 +23,8 @@
 .HomeProjects {
   width: 100%;
 }
+.HomeEducation {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
