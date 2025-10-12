@@ -1,7 +1,6 @@
 "use client";
 import "./homePage.css";
 
-import { PlaceholderButton } from "@/components/placeholders/button";
 import { useRouter } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import { TopSection } from "@/components/organisms/topSection";
@@ -17,6 +16,10 @@ import { EducationBox } from "@/components/molecules/educationBox";
 import { EducationDecoration } from "@/components/atoms/educationDecoration";
 import { ContactsSection } from "@/components/organisms/contactsSection";
 import { Footer } from "@/components/atoms/footer";
+import { adapters } from "@/adapters/adapters";
+import { AboutCardProps } from "@/components/atoms/aboutCard";
+
+const { getSanityMain } = adapters.cms();
 
 export default function Home() {
   // Basic settings
@@ -32,6 +35,16 @@ export default function Home() {
   const scrollToSection = (ref: React.RefObject<HTMLElement | null>) => {
     ref.current?.scrollIntoView({ behavior: "smooth" });
   };
+
+  // Fetch from Sanity
+  const [sanityImport, setSanityImport] = useState<SanityMain | null>(null);
+  useEffect(() => {
+    const fetchSanityMain = async () => {
+      const sanityMain = await getSanityMain();
+      setSanityImport(sanityMain);
+    };
+    fetchSanityMain();
+  }, []);
 
   const navButtons: NavigationButtonProps[] = [
     {
@@ -56,177 +69,34 @@ export default function Home() {
     },
   ];
 
-  const sanityImport: SanityMain = {
-    name: { title: "CHARLIE SMIRNOVA" },
-    profession: { title: "UI/UX Designer, Illustrator and Architect" },
-    profile: { image: "/images/portrait.svg" },
-    aboutCards: [
-      {
-        title: "About",
-        type: "text",
-        description:
-          "I bring attention to detail, functionality, and user needs from architecture into digital design. I create intuitive, user-centered interfaces, using Figma, Illustrator, and implement them in CSS. My designs balance aesthetics and practicality, adapting easily to different brands and user requirements.",
-      },
-      {
-        title: "How I work with clients",
-        type: "text",
-        description:
-          "With my architectural background, I am used to adapting not only to client’s taste, but also to technical and budgetary constrains. Close communication on every design stage ensures smooth and easy to follow workflow for everyone involved.",
-      },
-      {
-        title: "My design process ",
-        type: "text",
-        description:
-          "I start projects by defining the tech stack to make sure that my design will suite not only esthetical, but technical trajectory of the client. It is also useful to know the business strategy of the project to better tailor design solutions to certain target audiences. After careful analysis I create several design variations showcasing different approaches",
-      },
-      {
-        title: "Tools",
-        type: "image",
-        images: [
-          { image: "/images/icons/CSS.png", altText: "CSS" },
-          { image: "/images/icons/Illustrator.png", altText: "Illustrator" },
-          { image: "/images/icons/Indesign.png", altText: "Indesign" },
-          { image: "/images/icons/Photoshop.png", altText: "Photoshop" },
-          { image: "/images/icons/Sanity.png", altText: "Sanity" },
-          { image: "/images/icons/Sketchup.png", altText: "SketchUp" },
-          { image: "/images/icons/Storybook.png", altText: "Storybook" },
-          { image: "/images/icons/Unity.png", altText: "Unity" },
-          { image: "", altText: "" },
-        ],
-      },
-    ],
-    filters: [
-      {
-        title: "UI/UX design",
-        image: "/images/icons/U.png",
-      },
-      {
-        title: "Assets",
-        image: "/images/icons/A.png",
-      },
-      {
-        title: "Social Media & Advertising",
-        image: "/images/icons/S.png",
-      },
-      {
-        title: "Other",
-        image: "/images/icons/O.png",
-      },
-    ],
-    projectCards: [
-      {
-        projectTag: {
-          title: "F-Project: Brand Identity & Campaign Design",
-          image: "/images/icons/S.png",
-        },
-        image: "/images/FProjectImage.png",
-        description:
-          "A cohesive brand identity uniting two distinct target audiences. Welcoming posters and print materials encourage participation in new art-related activities, with typography playing a central role as a design element to create a warm, approachable atmosphere.",
-      },
-      {
-        projectTag: {
-          title: "Helsinki Urban Planning Guide",
-          image: "/images/icons/O.png",
-        },
-        image: "/images/HelsinkiGuideImage.png",
-        description:
-          "A multi-day excursion guide focused on urban planning in Helsinki. Rich photography and carefully structured layouts make the guide engaging both at home and during on-site visits, combining education with visual storytelling.",
-      },
-    ],
-    experienceCards: [
-      {
-        title: "Designer",
-        company: "RKB AS",
-        dates: "2016-2019",
-        description:
-          "Worked on branding for small businesses as well as advertisements, business cards and merchandise for companies of different scales. Worked closely with clients and provided assistance on determining needs and tastes of their potential customers, later adapting the designs to the findings ",
-      },
-      {
-        title: "Creative director",
-        company: "F-project",
-        dates: "2023-2024",
-        description:
-          "Created brand’s visual identity. Determined two potential audience groups and adapted advertisement materials to each of them. Designed visuals for all the project’s events including art fairs and painting workshops. ",
-      },
-      {
-        title: "Freelance",
-        dates: "2024-now",
-        description:
-          "Worked on branding for small businesses as well as advertisements, business cards and merchandise for companies of different scales. Worked closely with clients and provided assistance on determining needs and tastes of their potential customers, later adapting the designs to the findings ",
-      },
-    ],
-    educationCards: [
-      {
-        title: "Bc. Construction Architecture",
-        university: "Metropolia University of Applied Sciences",
-        dates: "2019-2025",
-      },
-      {
-        title: "Academic arts. Architecture",
-        university: "Lyceum Iogansona",
-        dates: "2017-2019",
-      },
-    ],
-    contactBox: {
-      contactsCards: [
-        {
-          link: {
-            title: "+358465391323",
-            url: "https://wa.me/358465391323",
-          },
-          image: "",
-        },
-        {
-          link: {
-            title: "charlie.smirnova@gmail.com",
-            url: "mailto:charlie.smirnova@gmail.com",
-          },
-          image: "",
-        },
-        {
-          link: {
-            title: "charlieandarchitecture",
-            url: "https://www.instagram.com/charlieandarchitecture",
-          },
-          image: "",
-        },
-        {
-          link: {
-            title: "Charlie Smirnova",
-            url: "https://www.linkedin.com/in/charliesmirnova/",
-          },
-          image: "",
-        },
-        {
-          link: {
-            title: "charliesmir",
-            url: "https://github.com/charliesmir",
-          },
-          image: "",
-        },
-      ],
-    },
-    quote: {
-      title:
-        "I am always open to new projects and challenges. Feel free to reach out!",
-    },
-  };
-
-  const [changedAboutCards, setChangedAboutCards] = useState(
-    sanityImport.aboutCards.map((card, index) => ({
-      ...card,
-      isActive: index === 0,
-    })),
+  const [changedAboutCards, setChangedAboutCards] = useState<AboutCardProps[]>(
+    []
   );
 
+  useEffect(() => {
+    if (sanityImport) {
+      setChangedAboutCards(
+        sanityImport.aboutCards.map((card, index) => ({
+          ...card, // includes title, type, description, etc.
+          isActive: index === 0, // add the extra field if your component supports it
+        }))
+      );
+    }
+  }, [sanityImport]);
+
   const onAboutCardClick = (cardIndex: number) => {
-    setChangedAboutCards((prevCards) =>
-      prevCards.map((card, index) => ({
+    setChangedAboutCards((prevCards) => {
+      if (!prevCards) return prevCards; // still null, do nothing
+      return prevCards.map((card, index) => ({
         ...card,
         isActive: index === cardIndex,
-      })),
-    );
+      }));
+    });
   };
+
+  if (!sanityImport) {
+    return <div>Loading...</div>;
+  }
 
   return (
     <div className="HomePage">
@@ -240,12 +110,14 @@ export default function Home() {
       </div>
       <div className="HomeIntro" style={{ height: "600px" }}>
         <NavigationButtonsBox buttons={navButtons} />
-        <AboutCardsStack
-          aboutCards={changedAboutCards.map((card, index) => ({
-            ...card,
-            onClick: () => onAboutCardClick(index),
-          }))}
-        />
+        {changedAboutCards && (
+          <AboutCardsStack
+            aboutCards={changedAboutCards.map((card, index) => ({
+              ...card,
+              onClick: () => onAboutCardClick(index),
+            }))}
+          />
+        )}
       </div>
       <Flag
         title={navButtons[0].title}
