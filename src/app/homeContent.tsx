@@ -111,16 +111,14 @@ export default function HomeContent({ sanityImport }: HomeContentProps) {
           <ProjectCardsCarousel cards={sanityImport.projectCards} />
         </div>
       </div>
-      <Flag
-        title={navButtons[1].title}
-        colorVersion="accent"
-        orientationVersion="right"
-      />
-      <div
-        className="HomeExperience"
-        ref={experienceRef}
-        style={{ height: "600px" }}
-      >
+      <div className="HomeExperienceFlag">
+        <Flag
+          title={navButtons[1].title}
+          colorVersion="accent"
+          orientationVersion="right"
+        />
+      </div>
+      <div className="HomeExperience" ref={experienceRef}>
         <ExperienceBox experienceCards={sanityImport.experienceCards} />
       </div>
       <Flag

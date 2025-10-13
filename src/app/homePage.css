@@ -43,11 +43,16 @@
   margin-top: 70px;
   margin-bottom: 270px;
 }
-
+.HomeExperienceFlag {
+  position: relative;
+  bottom: 185px;
+}
 .HomeExperience {
   width: 100%;
   display: flex;
   justify-content: center;
+  position: relative;
+  bottom: 110px;
 }
 
 .HomeEducation {
