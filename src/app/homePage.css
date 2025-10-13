@@ -59,4 +59,11 @@
   display: flex;
   flex-direction: row;
   width: 100%;
+  gap: 130px;
+  margin-top: 60px;
+}
+
+.HomeEducationBox {
+  position: relative;
+  bottom: 220px;
 }

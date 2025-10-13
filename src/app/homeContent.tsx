@@ -131,8 +131,12 @@ export default function HomeContent({ sanityImport }: HomeContentProps) {
         ref={educationRef}
         style={{ height: "960px" }}
       >
-        <EducationDecoration />
-        <EducationBox educationCards={sanityImport.educationCards} />
+        <div className="HomeEducationDecoration">
+          <EducationDecoration />
+        </div>
+        <div className="HomeEducationBox">
+          <EducationBox educationCards={sanityImport.educationCards} />
+        </div>
       </div>
       <Flag
         title={navButtons[3].title}
