@@ -88,7 +88,9 @@ export default function HomeContent({ sanityImport }: HomeContentProps) {
         />
       </div>
       <div className="HomeIntro">
-        <NavigationButtonsBox buttons={navButtons} />
+        <div className="HomeNavButtons">
+          <NavigationButtonsBox buttons={navButtons} />
+        </div>
         <div className="HomeIntroCardBox">
           <AboutCardsStack
             aboutCards={changedAboutCards.map((card, index) => ({
@@ -123,16 +125,14 @@ export default function HomeContent({ sanityImport }: HomeContentProps) {
       <div className="HomeExperience" ref={experienceRef}>
         <ExperienceBox experienceCards={sanityImport.experienceCards} />
       </div>
-      <Flag
-        title={navButtons[2].title}
-        colorVersion="backgroundDark"
-        orientationVersion="left"
-      />
-      <div
-        className="HomeEducation"
-        ref={educationRef}
-        style={{ height: "960px" }}
-      >
+      <div className="HomeEducationFlag">
+        <Flag
+          title={navButtons[2].title}
+          colorVersion="backgroundDark"
+          orientationVersion="left"
+        />
+      </div>
+      <div className="HomeEducation" ref={educationRef}>
         <EducationDecoration />
         <div className="HomeEducationBox">
           <EducationBox educationCards={sanityImport.educationCards} />
@@ -146,13 +146,17 @@ export default function HomeContent({ sanityImport }: HomeContentProps) {
         />
       </div>
       <div className="HomeContacts" ref={contactsRef}>
-        <ContactsSection
-          contactBox={sanityImport.contactBox}
-          quote={sanityImport.quote}
-        />
+        <div className="HomeContactsContents">
+          <ContactsSection
+            contactBox={sanityImport.contactBox}
+            quote={sanityImport.quote}
+          />
+        </div>
         <div className="HomeContactsBackground" />
       </div>
-      <Footer />
+      <div className="LayoutFooter">
+        <Footer />
+      </div>
     </div>
   );
 }
