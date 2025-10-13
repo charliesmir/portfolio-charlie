@@ -1,6 +1,7 @@
 .AboutCardsCarousel {
   display: flex;
   flex-direction: row;
+  margin-right: -600px;
 }
 .AboutCardBox {
   transition: rotate 0.3s ease;

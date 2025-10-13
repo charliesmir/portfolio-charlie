@@ -89,12 +89,14 @@ export default function HomeContent({ sanityImport }: HomeContentProps) {
       </div>
       <div className="HomeIntro">
         <NavigationButtonsBox buttons={navButtons} />
-        <AboutCardsStack
-          aboutCards={changedAboutCards.map((card, index) => ({
-            ...card,
-            onClick: () => onAboutCardClick(index),
-          }))}
-        />
+        <div className="HomeIntroCardBox">
+          <AboutCardsStack
+            aboutCards={changedAboutCards.map((card, index) => ({
+              ...card,
+              onClick: () => onAboutCardClick(index),
+            }))}
+          />
+        </div>
       </div>
       <div className="HomeProjectsFlag">
         <Flag
