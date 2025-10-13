@@ -66,7 +66,7 @@ export default function HomeContent({ sanityImport }: HomeContentProps) {
     sanityImport.aboutCards.map((card, index) => ({
       ...card,
       isActive: index === 0,
-    }))
+    })),
   );
 
   const onAboutCardClick = (cardIndex: number) => {
@@ -74,7 +74,7 @@ export default function HomeContent({ sanityImport }: HomeContentProps) {
       prevCards.map((card, index) => ({
         ...card,
         isActive: index === cardIndex,
-      }))
+      })),
     );
   };
 
@@ -96,18 +96,20 @@ export default function HomeContent({ sanityImport }: HomeContentProps) {
           }))}
         />
       </div>
-      <Flag
-        title={navButtons[0].title}
-        colorVersion="primary"
-        orientationVersion="left"
-      />
-      <div
-        className="HomeProjects"
-        ref={projectsRef}
-        style={{ height: "900px", backgroundColor: "green" }}
-      >
-        <FilterList filterCards={sanityImport.filters} />
-        <ProjectCardsCarousel cards={sanityImport.projectCards} />
+      <div className="HomeProjectsFlag">
+        <Flag
+          title={navButtons[0].title}
+          colorVersion="primary"
+          orientationVersion="left"
+        />
+      </div>
+      <div className="HomeProjects" ref={projectsRef}>
+        <div className="HomeFilterList">
+          <FilterList filterCards={sanityImport.filters} />
+        </div>
+        <div className="HomeProjectList">
+          <ProjectCardsCarousel cards={sanityImport.projectCards} />
+        </div>
       </div>
       <Flag
         title={navButtons[1].title}

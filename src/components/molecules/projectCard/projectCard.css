@@ -3,6 +3,7 @@
 .ProjectCardBox {
   width: 470px;
   flex: 0 0 auto;
+  color: var(--White);
 }
 
 .ProjectCardBox:hover {

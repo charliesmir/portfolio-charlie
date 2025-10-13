@@ -1,7 +1,7 @@
 .HomePage {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  justify-content: center;
   width: 100%;
 }
 
@@ -19,10 +19,37 @@
   display: flex;
   justify-content: space-between;
 }
+.HomeProjectsFlag {
+  position: relative;
+  top: 188px;
+}
 
 .HomeProjects {
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  background-color: var(--BackgroundDark);
 }
+
+.HomeFilterList {
+  display: flex;
+  flex-direction: row;
+  align-content: end;
+  margin-top: 30px;
+}
+.HomeProjectList {
+  position: relative;
+  margin-top: 70px;
+  margin-bottom: 270px;
+}
+
+.HomeExperience {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
 .HomeEducation {
   display: flex;
   flex-direction: row;

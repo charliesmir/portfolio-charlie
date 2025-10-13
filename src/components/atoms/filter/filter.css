@@ -3,6 +3,7 @@
 .Filter {
   display: flex;
   gap: 20px;
+  color: var(--White);
 }
 .FilterImage {
   height: 37px;
