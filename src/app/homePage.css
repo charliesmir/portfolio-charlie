@@ -14,10 +14,12 @@
 }
 
 .HomeIntro {
-  margin-top: 200px;
+  margin-top: 90px;
+  margin-bottom: -100px;
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  flex-direction: row;
+  gap: 115px;
 }
 .HomeProjectsFlag {
   position: relative;
@@ -37,6 +39,7 @@
   flex-direction: row;
   align-content: end;
   margin-top: 30px;
+  margin-right: 70px;
 }
 .HomeProjectList {
   position: relative;
@@ -58,6 +61,7 @@
 .HomeEducation {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   width: 100%;
   gap: 130px;
   margin-top: 60px;
@@ -66,4 +70,29 @@
 .HomeEducationBox {
   position: relative;
   bottom: 220px;
+  margin-right: 180px;
+  z-index: 5;
+}
+
+.HomeContactsFlag {
+  position: relative;
+  bottom: 400px;
+  z-index: 10;
+}
+
+.HomeContacts {
+  background-color: var(--BackgroundDark);
+  position: relative;
+  bottom: 135px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: -135px;
+}
+
+.HomeContactsBackground {
+  background-color: var(--BackgroundDark);
+  position: absolute;
+  bottom: 661px;
+  width: 100%;
+  height: 340px;
 }

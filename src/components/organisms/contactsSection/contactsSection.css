@@ -2,8 +2,10 @@
   display: flex;
   align-items: flex-start;
   gap: 255px;
+  justify-content: space-between;
 }
 
 .QuoteBox {
   margin-bottom: 420px;
+  margin-right: 160px;
 }
