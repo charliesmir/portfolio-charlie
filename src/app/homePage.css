@@ -1,8 +1,14 @@
+.HomePageLeft {
+  display: flex;
+  flex-direction: column;
+}
+
 .HomePage {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  width: 100%;
+  /* width: 1308px; */
 }
 
 .HomeHeader {
@@ -13,18 +19,117 @@
   justify-content: center;
 }
 
+.HomeTopSection {
+}
+
 .HomeIntro {
-  margin-top: 200px;
-  width: 100%;
+  margin-top: 90px;
+  margin-bottom: -100px;
+  width: 1308px;
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
+}
+
+.HomeNavButtons {
+  margin-left: -75px;
+  margin-top: 50px;
+}
+
+.HomeIntroCardBox {
+  margin-right: -40px;
+}
+
+.HomeProjectsFlag {
+  position: relative;
+  top: 188px;
+  align-self: flex-start;
+  width: 100%;
 }
 
 .HomeProjects {
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--BackgroundDark);
 }
+
+.HomeFilterList {
+  display: flex;
+  flex-direction: row;
+  align-self: flex-end;
+  margin-top: 30px;
+  margin-right: 40px;
+}
+.HomeProjectList {
+  position: relative;
+  margin-top: 70px;
+  margin-bottom: 270px;
+}
+.HomeExperienceFlag {
+  position: relative;
+  bottom: 185px;
+  width: 100%;
+}
+.HomeExperience {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  bottom: 110px;
+}
+
+.HomeEducationFlag {
+  width: 100%;
+  z-index: 10;
+}
+
 .HomeEducation {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  gap: 130px;
+  margin-top: 60px;
+}
+
+.HomeEducationBox {
+  position: relative;
+  bottom: 220px;
+  margin-right: 180px;
+  z-index: 5;
+}
+
+.HomeContactsFlag {
+  position: relative;
+  bottom: 400px;
+  z-index: 10;
+  width: 100%;
+}
+
+.HomeContacts {
+  background-color: var(--BackgroundDark);
+  position: relative;
+  bottom: 135px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: -135px;
+  width: 100%;
+}
+
+.HomeContactsContents {
+  width: 1308px;
+  align-self: center;
+}
+
+.HomeContactsBackground {
+  background-color: var(--BackgroundDark);
+  position: absolute;
+  bottom: 661px;
+  width: 100%;
+  height: 340px;
+}
+
+.LayoutFooter {
   width: 100%;
 }

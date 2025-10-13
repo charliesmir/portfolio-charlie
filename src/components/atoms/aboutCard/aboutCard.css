@@ -1,17 +1,17 @@
 @import url("../../styles/designTokens.css");
 
 .AboutCard {
-  height: 405px;
-  width: 405px;
+  height: 355px;
+  width: 355px;
   background-color: var(--AccentLight);
   border-radius: 20px;
-  padding: 30px;
+  padding: 25px;
   font-family: var(--family-text-desktop);
   font-size: var(--size-text-desktop);
   font-weight: var(--weight-text-desktop);
   display: flex;
   flex-direction: row;
-  gap: 22px;
+  gap: 10px;
   cursor: pointer;
   filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.25));
   /* uneven gap ensures correct hypernation */
@@ -37,7 +37,7 @@
   grid-column-gap: 35px;
   grid-row-gap: 35px;
   width: 250px;
-  padding: 75px 28px 75px 75px;
+  padding: 45px 20px 45px 45px;
 }
 
 .AboutCardImage {
