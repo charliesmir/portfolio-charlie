@@ -1,0 +1,18 @@
+.ProjectTools {
+  font-family: var(--family-text-desktop);
+  font-size: var(--size-text-desktop);
+  font-weight: var(--weight-text-desktop);
+  width: 420px;
+}
+.ProjectToolsIcons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 180px;
+}
+
+.ProjectToolsImage {
+  height: 60px;
+  width: 60px;
+  margin: 5px;
+}
