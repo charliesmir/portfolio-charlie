@@ -66,7 +66,7 @@ export default function HomeContent({ sanityImport }: HomeContentProps) {
     sanityImport.aboutCards.map((card, index) => ({
       ...card,
       isActive: index === 0,
-    })),
+    }))
   );
 
   const onAboutCardClick = (cardIndex: number) => {
@@ -74,7 +74,7 @@ export default function HomeContent({ sanityImport }: HomeContentProps) {
       prevCards.map((card, index) => ({
         ...card,
         isActive: index === cardIndex,
-      })),
+      }))
     );
   };
 
@@ -112,7 +112,12 @@ export default function HomeContent({ sanityImport }: HomeContentProps) {
           <FilterList filterCards={sanityImport.filters} />
         </div>
         <div className="HomeProjectList">
-          <ProjectCardsCarousel cards={sanityImport.projectCards} />
+          <ProjectCardsCarousel
+            cards={sanityImport.projectCards.map((card) => ({
+              ...card,
+              onClick: () => router.push(`/projects/${card.slug}`),
+            }))}
+          />
         </div>
       </div>
       <div className="HomeExperienceFlag">
