@@ -1,0 +1,30 @@
+.ProjectFlag {
+  background-color: var(--Primary);
+  height: 555px;
+  width: 370px;
+  overflow: visible;
+  border-radius: 0 0 370px 370px;
+  padding-top: 170px;
+}
+.ProjectFlagText {
+  width: 280px;
+  height: 460px;
+  margin-left: 60px;
+  font-family: var(--family-text-desktop);
+  font-size: var(--size-text-desktop);
+  font-weight: var(--weight-text-desktop);
+  color: var(--White);
+}
+
+.ProjectFlagTitle {
+  font-family: var(--family-H2-desktop);
+  font-size: var(--size-H2-desktop);
+  font-weight: var(--weight-H2-desktop);
+  color: var(--Accent);
+  margin-bottom: 35px;
+  width: 380px;
+}
+
+.ProjectFlagStatus {
+  margin-bottom: 15px;
+}

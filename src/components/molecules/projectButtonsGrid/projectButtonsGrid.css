@@ -1,0 +1,7 @@
+.ProjectButtonsGrid {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  width: 420px;
+  gap: 30px;
+}

@@ -1,0 +1,27 @@
+.BackHomeButtonBox {
+  width: 300px;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+  background-color: transparent;
+  border: none;
+}
+.BackHomeButtonArrow {
+  width: 48px;
+  height: 48px;
+}
+.BackHomeButtonText {
+  font-family: var(--family-H3);
+  font-size: var(--size-H3);
+  font-weight: var(--weight-H3);
+  text-wrap: nowrap;
+  color: var(--Accent);
+}
+.BackHomeButtonBox:hover .BackHomeButtonText {
+  margin-right: 20px;
+}
+.BackHomeButtonBox:active .BackHomeButtonText {
+  margin-right: 20px;
+}
