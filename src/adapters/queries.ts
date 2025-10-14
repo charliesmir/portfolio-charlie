@@ -24,11 +24,12 @@ export const mainQuery = `
     },
     "projectCards": projectCards[]->{
       description,
-      "image": imagePrimary.asset->url,
+      "image": imagePrimary.asset->url + "?fm=webp",
       "projectTag": {
         "title": title,
         "image": filter->image.asset->url
-      }
+      },
+      slug
     },
     "experienceCards": experienceCards[]->{
       title,

@@ -31,6 +31,7 @@ export interface SanityMain {
       title: string;
       image: string;
     };
+    slug: string;
   }[];
   experienceCards: {
     title: string;
