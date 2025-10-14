@@ -1,0 +1,17 @@
+.PPBottomSection {
+  width: 1290px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.PPBottomSectionImage {
+  width: 850px;
+  min-height: 400px;
+}
+
+.PPBottomSectionInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
