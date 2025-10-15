@@ -9,7 +9,7 @@ import { CardMedia } from "@mui/material";
 interface Props {
   flag: ProjectFlagProps;
   button: BackHomeButtonProps;
-  image: string;
+  image?: string;
 }
 
 export const ProjectPageTopSection = ({ flag, button, image }: Props) => {

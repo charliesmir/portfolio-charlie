@@ -52,3 +52,22 @@ export interface SanityMain {
   };
   quote: { title?: string };
 }
+
+export interface SanityProjectPage {
+  flag: {
+    title: string;
+    status: string;
+    highlights: string;
+  };
+  tools?: {
+    images: { image: string; altText: string }[];
+  };
+  primaryImage?: string;
+  secondaryImage?: string;
+  buttons: {
+    link: {
+      title: string;
+      url: string;
+    };
+  }[];
+}

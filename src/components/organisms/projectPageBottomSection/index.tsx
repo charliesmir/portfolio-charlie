@@ -8,7 +8,7 @@ import { CardMedia } from "@mui/material";
 import { ProjectButtonsGrid } from "@/components/molecules/projectButtonsGrid";
 
 interface Props {
-  image: string;
+  image?: string;
   tools?: ProjectToolsProps;
   buttons: ProjectButtonProps[];
 }
