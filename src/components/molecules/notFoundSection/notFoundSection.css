@@ -6,6 +6,8 @@
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
+  position: relative;
+  z-index: 5;
 }
 .NFSectionQuote {
   margin-top: 520px;
@@ -20,5 +22,4 @@
   position: absolute;
   top: 0;
   left: 400px;
-  z-index: -1;
 }
