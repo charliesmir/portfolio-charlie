@@ -1,0 +1,19 @@
+.PPTopSection {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 1290px;
+}
+
+.PPTopSectionRight {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-top: 60px;
+  gap: 60px;
+}
+
+.PPBottomSectionImage {
+  width: 800px;
+  height: 650px;
+}

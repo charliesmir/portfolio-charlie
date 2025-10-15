@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from "@storybook/nextjs";
 import { ProjectPageBottomSection } from "./index";
 
 const meta = {
-  title: "Molecules/ProjectPageBottomSection",
+  title: "Organisms/ProjectPageBottomSection",
   component: ProjectPageBottomSection,
 } satisfies Meta<typeof ProjectPageBottomSection>;
 
