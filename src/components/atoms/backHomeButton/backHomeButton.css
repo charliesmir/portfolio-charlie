@@ -7,6 +7,8 @@
   gap: 20px;
   background-color: transparent;
   border: none;
+  cursor: pointer;
+  transition: 0.3s ease;
 }
 .BackHomeButtonArrow {
   width: 48px;
@@ -21,7 +23,9 @@
 }
 .BackHomeButtonBox:hover .BackHomeButtonText {
   margin-right: 20px;
+  transition: 0.3s ease;
 }
 .BackHomeButtonBox:active .BackHomeButtonText {
   margin-right: 20px;
+  transition: 0.3s ease;
 }
