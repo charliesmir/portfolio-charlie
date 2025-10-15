@@ -11,7 +11,7 @@ export default function ProjectContent() {
   return (
     <div className="ProjectPage">
       Project id: {params.id}
-      <ProjectPageTopSection flag={undefined} button={undefined} image={""} />
+      {/* <ProjectPageTopSection flag={undefined} button={undefined} image={""} /> */}
       <ProjectPageBottomSection image={""} buttons={[]} />
       <Footer />
     </div>
