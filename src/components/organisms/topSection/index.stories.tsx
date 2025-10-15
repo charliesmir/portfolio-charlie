@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from "@storybook/nextjs";
 import { TopSection } from "./index";
 
 const meta = {
-  title: "Molecules/TopSection",
+  title: "Organisms/TopSection",
   component: TopSection,
 } satisfies Meta<typeof TopSection>;
 

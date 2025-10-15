@@ -1,11 +1,11 @@
 import type { Meta, StoryObj } from "@storybook/nextjs";
 
-import { NotFoundFlag } from "./index";
+import { NotFoundQuote } from "./index";
 
 const meta = {
-  title: "Atoms/NotFound",
-  component: NotFoundFlag,
-} satisfies Meta<typeof NotFoundFlag>;
+  title: "Atoms/NotFoundQuote",
+  component: NotFoundQuote,
+} satisfies Meta<typeof NotFoundQuote>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;

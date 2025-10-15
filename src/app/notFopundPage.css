@@ -1,0 +1,13 @@
+.NFPage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--BackgroundDark);
+  height: 100vh;
+  width: 100%;
+}
+
+.NFFooter {
+  width: 100%;
+}

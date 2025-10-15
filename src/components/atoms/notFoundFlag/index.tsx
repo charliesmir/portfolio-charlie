@@ -1,14 +1,9 @@
-import { CardMedia } from "@mui/material";
 import "./notFoundFlag.css";
 
-export interface NotFoundFlagProps {
-  title: string;
-}
-
-export const NotFoundFlag = ({ title }: NotFoundFlagProps) => {
+export const NotFoundFlag = () => {
   return (
     <div className="NotFoundFlag">
-      <div className="NotFoundText">{title}</div>
+      <div className="NotFoundText">404</div>
     </div>
   );
 };

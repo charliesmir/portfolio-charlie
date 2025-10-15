@@ -1,0 +1,25 @@
+.NFSection {
+  width: 1290px;
+  position: relative;
+}
+.NFSectionMainBox {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  position: relative;
+  z-index: 5;
+}
+.NFSectionQuote {
+  margin-top: 520px;
+  margin-left: 50px;
+}
+
+.NFSectionButton {
+  margin-top: 35px;
+}
+
+.NFSectionDecoration {
+  position: absolute;
+  top: 0;
+  left: 400px;
+}
