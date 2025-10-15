@@ -19,8 +19,6 @@ export const Primary: Story = {
       highlights:
         "Integrating existing brand identity. Bright colors and descriptive graphics to catch attention in Kide.app feed",
     },
-    button: {
-      title: "Back to home",
-    },
+    button: {},
   },
 };
