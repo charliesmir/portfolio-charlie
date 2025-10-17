@@ -1,5 +1,6 @@
 "use client";
 
+import "./projectPage.css";
 import { SanityProjectPage } from "@/adapters/types";
 import { Footer } from "@/components/atoms/footer";
 import { ProjectPageTopSection } from "@/components/molecules/projectPageTopSection";
@@ -45,7 +46,6 @@ export default function ProjectContent() {
 
   return (
     <div className="ProjectPage">
-      Project id: {params.id}
       <ProjectPageTopSection
         flag={project.flag}
         button={{
@@ -58,7 +58,9 @@ export default function ProjectContent() {
         image={project.secondaryImage}
         buttons={project.buttons}
       />
-      <Footer />
+      <div className="LayoutFooter">
+        <Footer />
+      </div>
     </div>
   );
 }

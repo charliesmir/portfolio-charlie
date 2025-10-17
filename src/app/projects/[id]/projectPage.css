@@ -1,0 +1,11 @@
+.ProjectPage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+  background-color: var(--BackgroundDark);
+  color: var(--White);
+}
+.LayoutFooter {
+  width: 100%;
+}
