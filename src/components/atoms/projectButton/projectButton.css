@@ -1,3 +1,5 @@
+@import url("../../styles/designTokens.css");
+
 .ProjectButtonBox {
   font-family: var(--family-text-desktop);
   font-size: var(--size-text-desktop);
