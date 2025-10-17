@@ -8,7 +8,7 @@ export const Footer = () => {
         Created by&nbsp;
         <a
           className="FooterLinkText"
-          href="https://www.instagram.com/charlieandarchitecture"
+          href="https://github.com/charliesmir"
           target="blank"
           rel="noopener noreferrer"
         >

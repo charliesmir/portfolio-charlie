@@ -1,3 +1,5 @@
+@import url("../../styles/designTokens.css");
+
 .NotFoundQuote {
   font-family: var(--family-H2-desktop);
   font-size: var(--size-H2-desktop);
