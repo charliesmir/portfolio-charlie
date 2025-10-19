@@ -19,7 +19,9 @@ export const TopSection = ({ name, profession, profile }: Props) => {
           <Profile {...profile} />
         </div>
         <div className="TextBox">
-          <Profession {...profession} />
+          <div className="TopSectionProfession">
+            <Profession {...profession} />
+          </div>
           <Name {...name} />
         </div>
       </div>

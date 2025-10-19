@@ -17,6 +17,7 @@
   --family-H3: "Krona One";
   --family-H4: "Kulim Park";
   --family-H4plus: "Kulim Park";
+  --family-H4plus-mobile: "Kulim Park";
   --family-text-desktop: "Kulim Park";
   --family-text-mobile: "Kulim Park";
 
@@ -29,8 +30,9 @@
   --size-H3: 24px;
   --size-H4: 24px;
   --size-H4plus: 24px;
+  --size-H4plus-mobile: 20px;
   --size-text-desktop: 24px;
-  --size-text-mobile: 20px;
+  --size-text-mobile: 16px;
 
   /* Font weight */
   --weight-H1-desktop: 400;
@@ -41,6 +43,7 @@
   --weight-H3: 400;
   --weight-H4: 400;
   --weight-H4plus: 600;
+  --weight-H4plus-mobile: 600;
   --weight-text-desktop: 400;
   --weight-text-mobile: 400;
 }

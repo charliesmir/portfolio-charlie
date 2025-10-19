@@ -1,27 +1,55 @@
 @import url("../../styles/designTokens.css");
 
-.Contact {
-  display: flex;
-  flex-direction: row;
-  gap: 50px;
-  color: var(--BackgroundDark);
-  width: 400px;
-  align-items: center;
+@media only screen and (min-width: 1305px) {
+  .Contact {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    color: var(--BackgroundDark);
+    width: 400px;
+    align-items: center;
+  }
+  .ContactsImage {
+    height: 50px;
+    width: 50px;
+  }
+  .ContactsLink {
+    font-family: var(--family-text-desktop);
+    font-size: var(--size-text-desktop);
+    font-weight: var(--weight-text-desktop);
+    text-decoration: none;
+    color: var(--BackgroundDark);
+  }
+  .ContactsLink:hover {
+    font-weight: 600;
+  }
+  .ContactsLink:active {
+    color: var(--BackgroundDark);
+  }
 }
-.ContactsImage {
-  height: 50px;
-  width: 50px;
-}
-.ContactsLink {
-  font-family: var(--family-text-desktop);
-  font-size: var(--size-text-desktop);
-  font-weight: var(--weight-text-desktop);
-  text-decoration: none;
-  color: var(--BackgroundDark);
-}
-.ContactsLink:hover {
-  font-weight: 600;
-}
-.ContactsLink:active {
-  color: var(--BackgroundDark);
+
+@media only screen and (max-width: 1304px) {
+  .Contact {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    color: var(--BackgroundDark);
+  }
+  .ContactsImage {
+    height: 50px;
+    width: 50px;
+  }
+  .ContactsLink {
+    font-family: var(--family-text-mobile);
+    font-size: var(--size-text-mobile);
+    font-weight: var(--weight-text-mobile);
+    text-decoration: none;
+    color: var(--BackgroundDark);
+  }
+  .ContactsLink:hover {
+    font-weight: 600;
+  }
+  .ContactsLink:active {
+    color: var(--BackgroundDark);
+  }
 }

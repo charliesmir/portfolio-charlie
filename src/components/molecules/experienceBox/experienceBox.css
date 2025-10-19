@@ -1,10 +1,22 @@
 @import url("../../styles/designTokens.css");
 
-.ExperienceBox {
-  width: 1190px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  gap: 145px;
-  flex-direction: row;
+@media only screen and (min-width: 1305px) {
+  .ExperienceBox {
+    width: 1190px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 145px;
+    flex-direction: row;
+  }
+}
+@media only screen and (max-width: 1304px) {
+  .ExperienceBox {
+    width: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 145px;
+    flex-direction: row;
+  }
 }

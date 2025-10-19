@@ -1,29 +1,67 @@
 @import url("../../styles/designTokens.css");
 
-.TopSection {
-  width: 1308px;
-  position: relative;
+@media only screen and (min-width: 1305px) {
+  .TopSection {
+    width: 1308px;
+    position: relative;
+  }
+
+  .TopSectionInfo {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .TopDecorationBox {
+    position: absolute;
+    top: 0;
+    left: 410px;
+  }
+
+  .TextBox {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 180px;
+    z-index: 1;
+    margin-top: 60px;
+  }
+  .ProfileBox {
+    z-index: 1;
+  }
 }
 
-.TopSectionInfo {
-  display: flex;
-  justify-content: space-between;
-}
+@media only screen and (max-width: 1304px) {
+  .TopSection {
+    position: relative;
+    min-width: 412px;
+    overflow-x: hidden;
+  }
 
-.TopDecorationBox {
-  position: absolute;
-  top: 0;
-  left: 410px;
-}
+  .TopSectionInfo {
+    display: flex;
+    justify-content: space-between;
+  }
 
-.TextBox {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  gap: 180px;
-  z-index: 1;
-  margin-top: 60px;
-}
-.ProfileBox {
-  z-index: 1;
+  .TopDecorationBox {
+    visibility: hidden;
+  }
+
+  .TextBox {
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+    padding: 10px 200px 0 20px;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+
+  .TopSectionProfession {
+    align-self: flex-end;
+    padding-right: 30px;
+  }
+
+  .ProfileBox {
+    margin-right: 35px;
+  }
 }

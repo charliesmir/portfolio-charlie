@@ -1,52 +1,107 @@
 @import url("../../styles/designTokens.css");
 
-.Flag {
-  z-index: 10;
-  font-family: var(--family-H2-desktop);
-  font-size: var(--size-H2-desktop);
-  font-weight: var(--weight-H2-desktop);
-  height: 270px;
-  display: flex;
-  align-items: center;
-  filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.25));
+@media only screen and (min-width: 1305px) {
+  .Flag {
+    z-index: 10;
+    font-family: var(--family-H2-desktop);
+    font-size: var(--size-H2-desktop);
+    font-weight: var(--weight-H2-desktop);
+    height: 270px;
+    display: flex;
+    align-items: center;
+    filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.25));
+  }
+
+  .Flag.primary {
+    color: var(--Accent);
+    background-color: var(--Primary);
+  }
+  .Flag.accent {
+    color: var(--BackgroundDark);
+    background-color: var(--Accent);
+  }
+  .Flag.backgroundDark {
+    color: var(--Accent);
+    background-color: var(--BackgroundDark);
+  }
+
+  .Flag.right {
+    margin-left: 325px;
+    border-radius: 270px 0 0 270px;
+    justify-content: flex-start;
+  }
+
+  .Flag.left {
+    margin-right: 325px;
+    border-radius: 0 270px 270px 0;
+    justify-content: flex-end;
+  }
+
+  .Circle {
+    background-color: var(--White);
+    height: 217px;
+    width: 217px;
+    border-radius: 100%;
+  }
+
+  .Circle.right {
+    margin: 25px 105px 25px 25px;
+  }
+
+  .Circle.left {
+    margin: 25px 25px 25px 105px;
+  }
 }
 
-.Flag.primary {
-  color: var(--Accent);
-  background-color: var(--Primary);
-}
-.Flag.accent {
-  color: var(--BackgroundDark);
-  background-color: var(--Accent);
-}
-.Flag.backgroundDark {
-  color: var(--Accent);
-  background-color: var(--BackgroundDark);
-}
+@media only screen and (max-width: 1304px) {
+  .Flag {
+    z-index: 10;
+    font-family: var(--family-H2-mobile);
+    font-size: var(--size-H2-mobile);
+    font-weight: var(--weight-H2-mobile);
+    height: 145px;
+    display: flex;
+    align-items: center;
+    filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.25));
+  }
 
-.Flag.right {
-  margin-left: 325px;
-  border-radius: 270px 0 0 270px;
-  justify-content: flex-start;
-}
+  .Flag.primary {
+    color: var(--Accent);
+    background-color: var(--Primary);
+  }
+  .Flag.accent {
+    color: var(--BackgroundDark);
+    background-color: var(--Accent);
+  }
+  .Flag.backgroundDark {
+    color: var(--Accent);
+    background-color: var(--BackgroundDark);
+  }
 
-.Flag.left {
-  margin-right: 325px;
-  border-radius: 0 270px 270px 0;
-  justify-content: flex-end;
-}
+  .Flag.right {
+    margin-left: 40px;
+    border-radius: 145px 0 0 145px;
+    justify-content: flex-start;
+  }
 
-.Circle {
-  background-color: var(--White);
-  height: 217px;
-  width: 217px;
-  border-radius: 100%;
-}
+  .Flag.left {
+    margin-right: 40px;
+    border-radius: 0 145px 145px 0;
+    justify-content: flex-end;
+  }
 
-.Circle.right {
-  margin: 25px 105px 25px 25px;
-}
+  .Circle {
+    background-color: var(--White);
+    height: 116px;
+    width: 116px;
+    border-radius: 100%;
+  }
 
-.Circle.left {
-  margin: 25px 25px 25px 105px;
+  .Circle.right {
+    margin: 15px 25px 15px 15px;
+  }
+
+  .Circle.left {
+    margin: 15px 15px 15px 25px;
+  }
 }

@@ -1,17 +1,39 @@
 @import url("../../styles/designTokens.css");
 
-.Education {
-  display: flex;
-  flex-direction: column;
-  line-height: 40px;
-  color: var(--BackgroundDark);
-  font-family: var(--family-text-desktop);
-  font-size: var(--size-text-desktop);
-  font-weight: var(--weight-text-desktop);
+@media only screen and (min-width: 1305px) {
+  .Education {
+    display: flex;
+    flex-direction: column;
+    line-height: 40px;
+    color: var(--BackgroundDark);
+    font-family: var(--family-text-desktop);
+    font-size: var(--size-text-desktop);
+    font-weight: var(--weight-text-desktop);
+  }
+
+  .Title {
+    font-family: var(--family-H3);
+    font-size: var(--size-H3);
+    font-weight: var(--weight-H3);
+  }
 }
 
-.Title {
-  font-family: var(--family-H3);
-  font-size: var(--size-H3);
-  font-weight: var(--weight-H3);
+@media only screen and (max-width: 1304px) {
+  .Education {
+    display: flex;
+    flex-direction: column;
+
+    color: var(--BackgroundDark);
+    font-family: var(--family-text-mobile);
+    font-size: var(--size-text-mobile);
+    font-weight: var(--weight-text-mobile);
+    width: 270px;
+  }
+
+  .Title {
+    margin-top: 10px;
+    font-family: var(--family-H3);
+    font-size: var(--size-H3);
+    font-weight: var(--weight-H3);
+  }
 }

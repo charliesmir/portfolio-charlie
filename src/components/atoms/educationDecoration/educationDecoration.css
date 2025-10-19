@@ -1,24 +1,33 @@
 @import url("../../styles/designTokens.css");
 
-.EducationDecoration {
-  display: flex;
-  flex-direction: column;
-  height: 700px;
-  justify-content: space-between;
- 
+@media only screen and (min-width: 1305px) {
+  .EducationDecoration {
+    display: flex;
+    flex-direction: column;
+    height: 700px;
+    justify-content: space-between;
+  }
+
+  .EducationDecorationTop {
+    min-width: 630px;
+    height: 395px;
+    background: var(--Primary);
+    border-radius: 0 370px 370px 0;
+  }
+
+  .EducationDecorationBottom {
+    min-width: 295px;
+    height: 250px;
+    margin-right: 335px;
+    background: var(--Accent);
+    border-radius: 0 370px 370px 0;
+  }
 }
 
-.EducationDecorationTop {
-  min-width: 630px;
-  height: 395px;
-  background: var(--Primary);
-  border-radius: 0 370px 370px 0;
-}
-
-.EducationDecorationBottom {
-  min-width: 295px;
-  height: 250px;
-  margin-right: 335px;
-  background: var(--Accent);
-  border-radius: 0 370px 370px 0;
+@media only screen and (max-width: 1304px) {
+  .EducationDecoration {
+    background-color: var(--Primary);
+    height: 280px;
+    margin-right: 290px;
+  }
 }
