@@ -1,38 +1,79 @@
 @import url("../../styles/designTokens.css");
 
-.NavigationButtonBox {
-  font-family: var(--family-H3);
-  font-size: var(--size-H3);
-  font-weight: var(--weight-H3);
-  height: 45px;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  padding-right: 20px;
-  filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.25));
-  color: var(--Accent);
-  border: none;
-  border-radius: 0 45px 45px 0;
-  cursor: pointer;
+@media only screen and (min-width: 1305px) {
+  .NavigationButtonBox {
+    font-family: var(--family-H3);
+    font-size: var(--size-H3);
+    font-weight: var(--weight-H3);
+    height: 45px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 20px;
+    filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.25));
+    color: var(--Accent);
+    border: none;
+    border-radius: 0 45px 45px 0;
+    cursor: pointer;
+  }
+
+  .NavigationButtonText {
+    margin-left: 75px;
+    transition: margin-left 0.3s ease; /* Making animation to be more smooth */
+  }
+
+  .NavigationButtonBox.light {
+    background-color: var(--Primary);
+  }
+
+  .NavigationButtonBox.dark {
+    background-color: var(--BackgroundDark);
+  }
+
+  .NavigationButtonBox:hover .NavigationButtonText {
+    margin-left: 100px;
+  }
+
+  .NavigationButtonBox:active .NavigationButtonText {
+    margin-left: 100px;
+  }
 }
 
-.NavigationButtonText {
-  margin-left: 75px;
-  transition: margin-left 0.3s ease; /* Making animation to be more smooth */
-}
+@media only screen and (max-width: 1304px) {
+  .NavigationButtonBox {
+    font-family: var(--family-H3);
+    font-size: var(--size-H3);
+    font-weight: var(--weight-H3);
+    height: 45px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 20px;
+    filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.25));
+    color: var(--Accent);
+    border: none;
+    border-radius: 0 45px 45px 0;
+    cursor: pointer;
+  }
 
-.NavigationButtonBox.light {
-  background-color: var(--Primary);
-}
+  .NavigationButtonText {
+    margin-left: 25px;
+    transition: margin-left 0.3s ease; /* Making animation to be more smooth */
+  }
 
-.NavigationButtonBox.dark {
-  background-color: var(--BackgroundDark);
-}
+  .NavigationButtonBox.light {
+    background-color: var(--Primary);
+  }
 
-.NavigationButtonBox:hover .NavigationButtonText {
-  margin-left: 100px;
-}
+  .NavigationButtonBox.dark {
+    background-color: var(--BackgroundDark);
+  }
 
-.NavigationButtonBox:active .NavigationButtonText {
-  margin-left: 100px;
+  .NavigationButtonBox:hover .NavigationButtonText {
+    margin-left: 50px;
+  }
+
+  .NavigationButtonBox:active .NavigationButtonText {
+    margin-left: 25px;
+  }
 }
