@@ -1,33 +1,71 @@
 @import url("../../styles/designTokens.css");
 
-.ContactsBox {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-end;
-  position: relative;
-}
-.ContactsMainBox {
-  height: 670px;
-  width: 520px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: var(--Accent);
-  border-radius: 520px 520px 0 0;
-  z-index: 1;
+@media only screen and (min-width: 1305px) {
+  .ContactsBox {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    position: relative;
+  }
+  .ContactsMainBox {
+    height: 670px;
+    width: 520px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--Accent);
+    border-radius: 520px 520px 0 0;
+    z-index: 1;
+  }
+
+  .ContactsList {
+    margin-top: 215px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  .ContactsDecorativeBox {
+    height: 395px;
+    width: 395px;
+    border-radius: 395px 395px 0 0;
+    background-color: var(--Primary);
+    position: absolute;
+    left: 365px;
+  }
 }
 
-.ContactsList {
-  margin-top: 215px;
-  display: flex;
-  flex-direction: column;
-  gap: 25px;
-}
-.ContactsDecorativeBox {
-  height: 395px;
-  width: 395px;
-  border-radius: 395px 395px 0 0;
-  background-color: var(--Primary);
-  position: absolute;
-  left: 365px;
+@media only screen and (max-width: 1304px) {
+  .ContactsBox {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    position: relative;
+  }
+  .ContactsMainBox {
+    height: 620px;
+    width: 285px;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--Accent);
+    border-radius: 320px 320px 0 0;
+    padding-left: 35px;
+    z-index: 1;
+  }
+
+  .ContactsList {
+    margin-top: 120px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .ContactsDecorativeBox {
+    height: 450px;
+    width: 240px;
+    border-radius: 240px 240px 0 0;
+    background-color: var(--Primary);
+    position: absolute;
+    left: 150px;
+  }
 }

@@ -1,13 +1,21 @@
 @import url("../../styles/designTokens.css");
 
-.ContactsSection {
-  display: flex;
-  align-items: flex-start;
-  gap: 255px;
-  justify-content: space-between;
+@media only screen and (min-width: 1305px) {
+  .ContactsSection {
+    display: flex;
+    align-items: flex-start;
+    gap: 255px;
+    justify-content: space-between;
+  }
+
+  .QuoteBox {
+    margin-bottom: 420px;
+    margin-right: 160px;
+  }
 }
 
-.QuoteBox {
-  margin-bottom: 420px;
-  margin-right: 160px;
+@media only screen and (max-width: 1304px) {
+  .QuoteBox {
+    visibility: hidden;
+  }
 }
