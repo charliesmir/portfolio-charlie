@@ -1,9 +1,20 @@
 @import url("../../styles/designTokens.css");
 
-.Name {
-  font-family: var(--family-H1-desktop);
-  font-size: var(--size-H1-desktop);
-  font-weight: var(--weight-H1-desktop);
-  color: var(--Accent);
-  width: 695px; /*devides text into two lines*/
+@media only screen and (min-width: 1305px) {
+  .Name {
+    font-family: var(--family-H1-desktop);
+    font-size: var(--size-H1-desktop);
+    font-weight: var(--weight-H1-desktop);
+    color: var(--Accent);
+    width: 695px; /*devides text into two lines*/
+  }
+}
+@media only screen and (max-width: 1304px) {
+  .Name {
+    font-family: var(--family-H1-mobile);
+    font-size: var(--size-H1-mobile);
+    font-weight: var(--weight-H1-mobile);
+    color: var(--Accent);
+    width: 345px; /*devides text into two lines*/
+  }
 }
