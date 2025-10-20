@@ -19,8 +19,8 @@ export const ProjectFlag = ({
         <div className="ProjectFlagHighlights">
           Highlights:
           {highlights.split("\n").map((line, i) => (
-            <p key={i}>{line}</p>
-          ))}{" "}
+            <div key={i}>{line}</div>
+          ))}
         </div>
       </div>
     </div>
