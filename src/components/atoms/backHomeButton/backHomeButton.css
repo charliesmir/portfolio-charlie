@@ -1,33 +1,73 @@
 @import url("../../styles/designTokens.css");
 
-.BackHomeButtonBox {
-  width: 300px;
-  height: 50px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 20px;
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  transition: 0.3s ease;
+@media only screen and (min-width: 1305px) {
+  .BackHomeButtonBox {
+    width: 280px;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 20px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s ease;
+  }
+  .BackHomeButtonArrow {
+    width: 48px;
+    height: 48px;
+    aspect-ratio: 1/1;
+  }
+  .BackHomeButtonText {
+    font-family: var(--family-H3);
+    font-size: var(--size-H3);
+    font-weight: var(--weight-H3);
+    text-wrap: nowrap;
+    color: var(--Accent);
+  }
+  .BackHomeButtonBox:hover {
+    padding-right: 20px;
+    transition: 0.3s ease;
+  }
+  .BackHomeButtonBox:active {
+    padding-right: 20px;
+    transition: 0.3s ease;
+  }
 }
-.BackHomeButtonArrow {
-  width: 48px;
-  height: 48px;
-}
-.BackHomeButtonText {
-  font-family: var(--family-H3);
-  font-size: var(--size-H3);
-  font-weight: var(--weight-H3);
-  text-wrap: nowrap;
-  color: var(--Accent);
-}
-.BackHomeButtonBox:hover .BackHomeButtonText {
-  margin-right: 20px;
-  transition: 0.3s ease;
-}
-.BackHomeButtonBox:active .BackHomeButtonText {
-  margin-right: 20px;
-  transition: 0.3s ease;
+
+@media only screen and (max-width: 1304px) {
+  .BackHomeButtonBox {
+    width: 180px;
+    height: 24px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s ease;
+  }
+  .BackHomeButtonArrow {
+    width: 24px;
+    height: 24px;
+    aspect-ratio: 1/1;
+  }
+  .BackHomeButtonText {
+    font-family: var(--family-H2plus-mobile);
+    font-size: var(--size-H2plus-mobile);
+    font-weight: var(--weight-H2plus-mobile);
+    text-wrap: nowrap;
+    color: var(--Accent);
+  }
+  .BackHomeButtonBox:hover {
+    padding-right: 20px;
+    transition: 0.3s ease;
+  }
+  .BackHomeButtonBox:active {
+    padding-right: 20px;
+    transition: 0.3s ease;
+  }
 }

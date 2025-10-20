@@ -1,9 +1,21 @@
 @import url("../../styles/designTokens.css");
 
-.ProjectButtonsGrid {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  width: 420px;
-  gap: 30px;
+@media only screen and (min-width: 1305px) {
+  .ProjectButtonsGrid {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 420px;
+    gap: 30px;
+  }
+}
+
+@media only screen and (max-width: 1304px) {
+  .ProjectButtonsGrid {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 355px;
+    gap: 25px;
+  }
 }
