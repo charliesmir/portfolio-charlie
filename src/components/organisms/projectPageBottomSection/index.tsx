@@ -18,7 +18,6 @@ export const ProjectPageBottomSection = ({ buttons, tools, image }: Props) => {
     <div className="PPBottomSection ">
       <CardMedia
         className="PPBottomSectionImage"
-        component="svg"
         image={image || "/images/projectImagePlaceholder.png"}
       />
       <div className="PPBottomSectionInfo">
