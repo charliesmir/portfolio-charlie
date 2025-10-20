@@ -1,21 +1,50 @@
 @import url("../../styles/designTokens.css");
 
-.PPTopSection {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 1290px;
-}
+@media only screen and (min-width: 1305px) {
+  .PPTopSection {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 1290px;
+  }
 
-.PPTopSectionRight {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  margin-top: 60px;
-  gap: 60px;
-}
+  .PPTopSectionRight {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-top: 60px;
+    gap: 60px;
+  }
 
-.PPBottomSectionImage {
-  width: 800px;
-  height: 650px;
+  .PPBottomSectionImage {
+    width: 800px;
+    height: 650px;
+  }
+}
+@media only screen and (max-width: 1304px) {
+  .PPTopSection {
+    display: flex;
+    flex-direction: column;
+    width: 385px;
+    position: relative;
+  }
+
+  .PPTopSectionRight {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-top: 60px;
+    gap: 60px;
+  }
+
+  .PPTopSectionButton {
+    position: absolute;
+    top: 30px;
+    left: 35px;
+  }
+
+  .PPBottomSectionImage {
+    width: 355px;
+    height: 275px;
+  }
 }

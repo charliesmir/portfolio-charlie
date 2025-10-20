@@ -17,7 +17,9 @@ export const ProjectPageTopSection = ({ flag, button, image }: Props) => {
     <div className="PPTopSection">
       <ProjectFlag {...flag} />
       <div className="PPTopSectionRight">
-        <BackHomeButton {...button} />
+        <div className="PPTopSectionButton">
+          <BackHomeButton {...button} />
+        </div>
         <CardMedia
           className="PPBottomSectionImage"
           image={image || "/images/projectImagePlaceholder.png"}

@@ -25,7 +25,7 @@
     font-family: var(--family-text-mobile);
     font-size: var(--size-text-mobile);
     font-weight: var(--weight-text-mobile);
-    width: 350px;
+    width: 355px;
   }
   .ProjectToolsIcons {
     display: flex;
