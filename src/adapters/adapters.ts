@@ -1,3 +1,4 @@
+import { toPlainText } from "@portabletext/react";
 import { sanityClient } from "./clients/sanity";
 import { mainQuery, projectQuery, testQuery } from "./queries";
 import { SanityMain, SanityProjectPage, Test } from "./types";
@@ -31,12 +32,21 @@ export const adapters = {
         slug: string,
       ): Promise<SanityProjectPage | null> => {
         try {
-          const result = (await sanityClient.fetch(projectQuery, {
+          const result = await sanityClient.fetch(projectQuery, {
             slug,
-          })) as SanityProjectPage;
-          console.log(result);
+          });
+          const highlightsString = toPlainText(result.flag?.highlights);
+
+          const formatted: SanityProjectPage = {
+            ...result,
+            flag: {
+              ...result.flag,
+              highlights: highlightsString,
+            },
+          };
+          console.log(formatted);
           console.log("I am getProjectPage from Sanity");
-          return result;
+          return formatted;
         } catch (error) {
           console.error("Failed to fetch project Sanity:", error);
           return null;
