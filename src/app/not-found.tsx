@@ -9,14 +9,16 @@ export default function GlobalNotFound() {
   const router = useRouter();
 
   return (
-    <div className="NFPage">
-      <NotFoundSection
-        button={{
-          onClick: () => router.push("/"),
-        }}
-      />
-      <div className="NFFooter">
-        <Footer />
+    <div className="NFPagecrop">
+      <div className="NFPage">
+        <NotFoundSection
+          button={{
+            onClick: () => router.push("/"),
+          }}
+        />
+        <div className="NFFooter">
+          <Footer />
+        </div>
       </div>
     </div>
   );

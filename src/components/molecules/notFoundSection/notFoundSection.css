@@ -1,27 +1,65 @@
 @import url("../../styles/designTokens.css");
 
-.NFSection {
-  width: 1290px;
-  position: relative;
-}
-.NFSectionMainBox {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  position: relative;
-  z-index: 5;
-}
-.NFSectionQuote {
-  margin-top: 520px;
-  margin-left: 50px;
+@media only screen and (min-width: 1305px) {
+  .NFSection {
+    width: 1290px;
+    position: relative;
+  }
+  .NFSectionMainBox {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    position: relative;
+    z-index: 5;
+  }
+  .NFSectionQuote {
+    margin-top: 520px;
+    margin-left: 50px;
+  }
+
+  .NFSectionButton {
+    margin-top: 35px;
+  }
+
+  .NFSectionDecoration {
+    position: absolute;
+    top: 0;
+    left: 400px;
+  }
 }
 
-.NFSectionButton {
-  margin-top: 35px;
-}
+@media only screen and (max-width: 1304px) {
+  .NFSection {
+    position: relative;
+  }
+  .NFSectionMainBox {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    position: relative;
+    z-index: 5;
+  }
+  .NFSectionQuote {
+    margin-top: 570px;
+    margin-top: 570px;
+    position: relative;
+    right: 120px;
+  }
 
-.NFSectionDecoration {
-  position: absolute;
-  top: 0;
-  left: 400px;
+  .NFSectionButton {
+    margin: 30px;
+    position: absolute;
+    top: 0;
+    left: 50px;
+  }
+
+  .NFSectionDecoration {
+    position: absolute;
+    top: 0;
+    left: 285px;
+    background-color: var(--Accent);
+    width: 250px;
+    height: 230px;
+    border-radius: 0 0 250px 250px;
+  }
 }

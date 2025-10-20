@@ -1,13 +1,39 @@
-.NFPage {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  background-color: var(--BackgroundDark);
-  height: 100vh;
-  width: 100%;
+@media only screen and (min-width: 1305px) {
+  .NFPage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--BackgroundDark);
+    height: 100vh;
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  .NFFooter {
+    width: 100%;
+  }
 }
 
-.NFFooter {
-  width: 100%;
+@media only screen and (max-width: 1304px) {
+  .NFPagecrop {
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    background-color: var(--BackgroundDark);
+  }
+
+  .NFPage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100vh;
+    width: 100%;
+  }
+
+  .NFFooter {
+    width: 100%;
+  }
 }
