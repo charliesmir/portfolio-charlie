@@ -1,20 +1,42 @@
 @import url("../../styles/designTokens.css");
 
-.NotFoundFlag {
-  width: 588px;
-  height: 840px;
-  background: var(--Primary);
-  display: flex;
-  flex-direction: column;
-  justify-content: end;
-  border-radius: 0 0 588px 588px;
-}
+@media only screen and (min-width: 1305px) {
+  .NotFoundFlag {
+    width: 588px;
+    height: 840px;
+    background: var(--Primary);
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    border-radius: 0 0 588px 588px;
+  }
 
-.NotFoundText {
-  font-family: var(--family-H1-desktop);
-  font-size: var(--size-H1-desktop);
-  font-weight: var(--weight-H1-desktop);
-  align-self: center;
-  margin-bottom: 210px;
-  color: var(--Accent);
+  .NotFoundText {
+    font-family: var(--family-H1-desktop);
+    font-size: var(--size-H1-desktop);
+    font-weight: var(--weight-H1-desktop);
+    align-self: center;
+    margin-bottom: 210px;
+    color: var(--Accent);
+  }
+}
+@media only screen and (max-width: 1304px) {
+  .NotFoundFlag {
+    width: 395px;
+    height: 515px;
+    background: var(--Primary);
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    border-radius: 0 0 588px 588px;
+  }
+
+  .NotFoundText {
+    font-family: var(--family-H1-mobile);
+    font-size: var(--size-H1-mobile);
+    font-weight: var(--weight-H1-mobile);
+    align-self: center;
+    margin-bottom: 150px;
+    color: var(--Accent);
+  }
 }
