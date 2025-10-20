@@ -54,3 +54,27 @@ export const mainQuery = `
     "quote": { "title": quote },
   }
 `;
+
+export const projectQuery = `
+  *[_type == "project" && slug==$slug][0]{
+    "flag": { 
+      "title": title,
+      "status": status->title,
+      "highlights": highlights
+      },
+    "tools": {
+      "images": tools[]->{
+        "image": image.asset->url,
+        altText
+      }
+    },
+    "primaryImage": imagePrimary.asset->url + "?fm=webp",
+    "secondaryImage": imageSecondary.asset->url + "?fm=webp",
+    "buttons": links[]->{ "link": {
+      title,
+      url
+    }
+        
+    }
+  }
+`;

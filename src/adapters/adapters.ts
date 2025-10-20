@@ -1,6 +1,6 @@
 import { sanityClient } from "./clients/sanity";
-import { mainQuery, testQuery } from "./queries";
-import { SanityMain, Test } from "./types";
+import { mainQuery, projectQuery, testQuery } from "./queries";
+import { SanityMain, SanityProjectPage, Test } from "./types";
 
 export const adapters = {
   cms: () => {
@@ -24,6 +24,21 @@ export const adapters = {
           return result;
         } catch (error) {
           console.error("Failed to fetch main Sanity:", error);
+          return null;
+        }
+      },
+      getSanityProjectPage: async (
+        slug: string,
+      ): Promise<SanityProjectPage | null> => {
+        try {
+          const result = (await sanityClient.fetch(projectQuery, {
+            slug,
+          })) as SanityProjectPage;
+          console.log(result);
+          console.log("I am getProjectPage from Sanity");
+          return result;
+        } catch (error) {
+          console.error("Failed to fetch project Sanity:", error);
           return null;
         }
       },
