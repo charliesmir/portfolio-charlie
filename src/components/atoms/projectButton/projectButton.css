@@ -1,29 +1,61 @@
 @import url("../../styles/designTokens.css");
 
-.ProjectButtonBox {
-  font-family: var(--family-text-desktop);
-  font-size: var(--size-text-desktop);
-  font-weight: var(--weight-text-desktop);
-  height: 65px;
-  width: 195px;
-  display: flex;
-  align-items: center;
-  color: var(--BackgroundDark);
-  background-color: var(--Accent);
-  border: none;
-  border-radius: 20px;
-  cursor: pointer;
-  text-decoration: none;
+@media only screen and (min-width: 1305px) {
+  .ProjectButtonBox {
+    font-family: var(--family-text-desktop);
+    font-size: var(--size-text-desktop);
+    font-weight: var(--weight-text-desktop);
+    height: 65px;
+    width: 195px;
+    display: flex;
+    align-items: center;
+    color: var(--BackgroundDark);
+    background-color: var(--Accent);
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  .ProjectButtonArrow {
+    width: 24px;
+    height: 24px;
+    margin: 20px;
+  }
+
+  .ProjectButtonText {
+    display: flex;
+    justify-content: center;
+    width: 120px;
+  }
 }
 
-.ProjectButtonArrow {
-  width: 24px;
-  height: 24px;
-  margin: 20px;
-}
+@media only screen and (max-width: 1304px) {
+  .ProjectButtonBox {
+    font-family: var(--family-text-mobile);
+    font-size: var(--size-text-mobile);
+    font-weight: var(--weight-text-mobile);
+    height: 55px;
+    width: 165px;
+    display: flex;
+    align-items: center;
+    color: var(--BackgroundDark);
+    background-color: var(--Accent);
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    text-decoration: none;
+  }
 
-.ProjectButtonText {
-  display: flex;
-  justify-content: center;
-  width: 120px;
+  .ProjectButtonArrow {
+    width: 20px;
+    height: 20px;
+    margin: 20px;
+  }
+
+  .ProjectButtonText {
+    display: flex;
+    justify-content: center;
+    width: 120px;
+  }
 }

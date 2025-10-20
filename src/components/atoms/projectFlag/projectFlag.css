@@ -1,32 +1,63 @@
 @import url("../../styles/designTokens.css");
 
-.ProjectFlag {
-  background-color: var(--Primary);
-  height: 555px;
-  width: 370px;
-  overflow: visible;
-  border-radius: 0 0 370px 370px;
-  padding-top: 170px;
-}
-.ProjectFlagText {
-  width: 280px;
-  height: 460px;
-  margin-left: 60px;
-  font-family: var(--family-text-desktop);
-  font-size: var(--size-text-desktop);
-  font-weight: var(--weight-text-desktop);
-  color: var(--White);
+@media only screen and (min-width: 1305px) {
+  .ProjectFlag {
+    background-color: var(--Primary);
+    height: 555px;
+    width: 370px;
+    border-radius: 0 0 370px 370px;
+    padding-top: 170px;
+  }
+  .ProjectFlagText {
+    width: 305px;
+    height: 460px;
+    margin-left: 35px;
+    font-family: var(--family-text-desktop);
+    font-size: var(--size-text-desktop);
+    font-weight: var(--weight-text-desktop);
+    color: var(--White);
+  }
+
+  .ProjectFlagTitle {
+    font-family: var(--family-H2-desktop);
+    font-size: var(--size-H2-desktop);
+    font-weight: var(--weight-H2-desktop);
+    color: var(--Accent);
+    margin-bottom: 35px;
+  }
+
+  .ProjectFlagStatus {
+    margin-bottom: 15px;
+  }
 }
 
-.ProjectFlagTitle {
-  font-family: var(--family-H2-desktop);
-  font-size: var(--size-H2-desktop);
-  font-weight: var(--weight-H2-desktop);
-  color: var(--Accent);
-  margin-bottom: 35px;
-  width: 380px;
-}
+@media only screen and (max-width: 1304px) {
+  .ProjectFlag {
+    background-color: var(--Primary);
+    height: 515px;
+    width: 370px;
+    border-radius: 0 0 370px 370px;
+    padding-top: 85px;
+  }
+  .ProjectFlagText {
+    width: 305px;
+    height: 460px;
+    margin-left: 35px;
+    font-family: var(--family-text-mobile);
+    font-size: var(--size-text-mobile);
+    font-weight: var(--weight-text-mobile);
+    color: var(--White);
+  }
 
-.ProjectFlagStatus {
-  margin-bottom: 15px;
+  .ProjectFlagTitle {
+    font-family: var(--family-H2-mobile);
+    font-size: var(--size-H2-mobile);
+    font-weight: var(--weight-H2-mobile);
+    color: var(--Accent);
+    margin-bottom: 35px;
+  }
+
+  .ProjectFlagStatus {
+    margin-bottom: 15px;
+  }
 }
