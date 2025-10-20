@@ -17,13 +17,13 @@ export default function ProjectContent({ project }: Props) {
 
   return (
     <div className="ProjectPage">
-      {/* <ProjectPageTopSection
+      <ProjectPageTopSection
         flag={project.flag}
         button={{
           onClick: () => router.push("/"),
         }}
         image={project.primaryImage}
-      /> */}
+      />
       <ProjectPageBottomSection
         tools={project.tools}
         image={project.secondaryImage}
