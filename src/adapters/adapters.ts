@@ -35,15 +35,33 @@ export const adapters = {
           const result = await sanityClient.fetch(projectQuery, {
             slug,
           });
-          const highlightsString = toPlainText(result.flag?.highlights);
+          const highlightsArray = result.flag?.highlights || [];
+
+          const formattedHighlights = highlightsArray
+            .map((block: any) => {
+              if (block._type === "block" && block.listItem === "bullet") {
+                const text =
+                  block.children?.map((child: any) => child.text).join("") ||
+                  "";
+                return `• ${text}`;
+              } else if (block._type === "block") {
+                const text =
+                  block.children?.map((child: any) => child.text).join("") ||
+                  "";
+                return text;
+              }
+              return "";
+            })
+            .join("\n");
 
           const formatted: SanityProjectPage = {
             ...result,
             flag: {
               ...result.flag,
-              highlights: highlightsString,
+              highlights: formattedHighlights,
             },
           };
+
           console.log(formatted);
           console.log("I am getProjectPage from Sanity");
           return formatted;
