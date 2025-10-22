@@ -34,7 +34,7 @@
   .TopSection {
     position: relative;
     min-width: 412px;
-    overflow-x: hidden;
+    overflow-x: visible;
   }
 
   .TopSectionInfo {

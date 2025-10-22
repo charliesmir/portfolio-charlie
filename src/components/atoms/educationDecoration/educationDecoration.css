@@ -28,6 +28,7 @@
   .EducationDecoration {
     background-color: var(--Primary);
     height: 280px;
-    margin-right: 290px;
+    width: 100%;
+    min-width: 300px;
   }
 }

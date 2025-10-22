@@ -1,130 +1,256 @@
-.HomePageLeft {
-  display: flex;
-  flex-direction: column;
+@media only screen and (min-width: 1305px) {
+  .HomePageLeft {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .HomePage {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* width: 1308px; */
+  }
+
+  .HomeHeader {
+    height: 650px;
+    background-color: var(--BackgroundDark);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .HomeIntro {
+    margin-top: 90px;
+    margin-bottom: -100px;
+    width: 1308px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .HomeNavButtons {
+    margin-left: -75px;
+    margin-top: 50px;
+  }
+
+  .HomeIntroCardBox {
+    margin-right: -40px;
+  }
+
+  .HomeProjectsFlag {
+    position: relative;
+    top: 188px;
+    align-self: flex-start;
+    width: 100%;
+  }
+
+  .HomeProjects {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--BackgroundDark);
+  }
+
+  .HomeFilterList {
+    align-self: flex-end;
+    margin-top: 30px;
+    margin-right: 40px;
+  }
+  .HomeProjectList {
+    position: relative;
+    margin-top: 70px;
+    margin-bottom: 270px;
+  }
+  .HomeExperienceFlag {
+    position: relative;
+    bottom: 185px;
+    width: 100%;
+  }
+  .HomeExperience {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    bottom: 110px;
+  }
+
+  .HomeEducationFlag {
+    width: 100%;
+    z-index: 10;
+  }
+
+  .HomeEducation {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    gap: 130px;
+    margin-top: 60px;
+  }
+
+  .HomeEducationBox {
+    position: relative;
+    bottom: 220px;
+    margin-right: 180px;
+    z-index: 5;
+  }
+
+  .HomeContactsFlag {
+    position: relative;
+    bottom: 400px;
+    z-index: 10;
+    width: 100%;
+  }
+
+  .HomeContacts {
+    background-color: var(--BackgroundDark);
+    position: relative;
+    bottom: 135px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: -135px;
+    width: 100%;
+  }
+
+  .HomeContactsContents {
+    width: 1308px;
+    align-self: center;
+  }
+
+  .HomeContactsBackground {
+    background-color: var(--BackgroundDark);
+    position: absolute;
+    bottom: 661px;
+    width: 100%;
+    height: 340px;
+  }
+
+  .LayoutFooter {
+    width: 100%;
+  }
 }
 
-.HomePage {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  /* width: 1308px; */
-}
+@media only screen and (max-width: 1304px) {
+  .HomePageLeft {
+    display: flex;
+    flex-direction: column;
+  }
 
-.HomeHeader {
-  height: 650px;
-  background-color: var(--BackgroundDark);
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
+  .HomePage {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* width: 1308px; */
+  }
 
-.HomeIntro {
-  margin-top: 90px;
-  margin-bottom: -100px;
-  width: 1308px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
+  .HomeHeader {
+    height: 440px;
+    background-color: var(--BackgroundDark);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
 
-.HomeNavButtons {
-  margin-left: -75px;
-  margin-top: 50px;
-}
+  .HomeIntro {
+    margin-top: 150px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
 
-.HomeIntroCardBox {
-  margin-right: -40px;
-}
+  .HomeNavButtons {
+    margin-top: 50px;
+  }
 
-.HomeProjectsFlag {
-  position: relative;
-  top: 188px;
-  align-self: flex-start;
-  width: 100%;
-}
+  .HomeIntroCardBox {
+    margin-right: -40px;
+  }
 
-.HomeProjects {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  background-color: var(--BackgroundDark);
-}
+  .HomeProjectsFlag {
+    position: relative;
+    top: 60px;
+    align-self: flex-start;
+    width: 100%;
+  }
 
-.HomeFilterList {
-  align-self: flex-end;
-  margin-top: 30px;
-  margin-right: 40px;
-}
-.HomeProjectList {
-  position: relative;
-  margin-top: 70px;
-  margin-bottom: 270px;
-}
-.HomeExperienceFlag {
-  position: relative;
-  bottom: 185px;
-  width: 100%;
-}
-.HomeExperience {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  position: relative;
-  bottom: 110px;
-}
+  .HomeProjects {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--BackgroundDark);
+  }
 
-.HomeEducationFlag {
-  width: 100%;
-  z-index: 10;
-}
+  .HomeProjectList {
+    position: relative;
+    margin-bottom: 115px;
+    margin-top: -50px;
+  }
+  .HomeExperienceFlag {
+    position: relative;
+    bottom: 70px;
+    width: 100%;
+  }
+  .HomeExperience {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin-bottom: 90px;
+  }
 
-.HomeEducation {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 100%;
-  gap: 130px;
-  margin-top: 60px;
-}
+  .HomeEducationFlag {
+    width: 100%;
+    z-index: 10;
+  }
 
-.HomeEducationBox {
-  position: relative;
-  bottom: 220px;
-  margin-right: 180px;
-  z-index: 5;
-}
+  .HomeEducation {
+    display: flex;
+    flex-direction: row;
+    margin-top: 35px;
+    width: 100%;
+    gap: 0px;
+  }
 
-.HomeContactsFlag {
-  position: relative;
-  bottom: 400px;
-  z-index: 10;
-  width: 100%;
-}
+  .HomeEducationBox {
+    position: relative;
+    bottom: 120px;
+    right: 185px;
+    margin-right: -50px;
+    z-index: 5;
+  }
 
-.HomeContacts {
-  background-color: var(--BackgroundDark);
-  position: relative;
-  bottom: 135px;
-  display: flex;
-  flex-direction: column;
-  margin-bottom: -135px;
-  width: 100%;
-}
+  .HomeContactsFlag {
+    position: relative;
+    bottom: 345px;
+    z-index: 10;
+    width: 100%;
+  }
 
-.HomeContactsContents {
-  width: 1308px;
-  align-self: center;
-}
+  .HomeContacts {
+    background-color: var(--BackgroundDark);
+    position: relative;
+    bottom: 240px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: -240px;
+    width: 100%;
+  }
 
-.HomeContactsBackground {
-  background-color: var(--BackgroundDark);
-  position: absolute;
-  bottom: 661px;
-  width: 100%;
-  height: 340px;
-}
+  .HomeContactsContents {
+    align-self: center;
+  }
 
-.LayoutFooter {
-  width: 100%;
+  .HomeContactsBackground {
+    background-color: var(--BackgroundDark);
+    position: absolute;
+    bottom: 620px;
+    width: 100%;
+    height: 183px;
+  }
+
+  .LayoutFooter {
+    width: 100%;
+  }
 }
