@@ -16,7 +16,12 @@ export const ProjectFlag = ({
       <div className="ProjectFlagText">
         <div className="ProjectFlagTitle">{title}</div>
         <div className="ProjectFlagStatus"> Status: {status} </div>
-        <div className="ProjectFlagHighlights"> Highlights: {highlights} </div>
+        <div className="ProjectFlagHighlights">
+          Highlights:
+          {highlights.split("\n").map((line, i) => (
+            <div key={i}>{line}</div>
+          ))}
+        </div>
       </div>
     </div>
   );
