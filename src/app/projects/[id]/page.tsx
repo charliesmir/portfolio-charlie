@@ -8,6 +8,7 @@ interface Props {
 }
 
 export default async function ProjectPage({ params }: Props) {
+  // Getting the params
   const { id } = await params;
   const project = await getSanityProjectPage(id);
 
