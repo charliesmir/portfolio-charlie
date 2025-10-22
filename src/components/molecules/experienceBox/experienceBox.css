@@ -16,7 +16,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
-    gap: 145px;
+    gap: 70px;
     flex-direction: row;
   }
 }
