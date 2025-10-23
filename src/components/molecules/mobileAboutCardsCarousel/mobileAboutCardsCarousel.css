@@ -1,0 +1,19 @@
+@import url("../../styles/designTokens.css");
+
+.MobileAboutCardsCarouselCards {
+  width: 100%;
+  display: flex;
+  gap: 20px;
+  overflow-x: scroll;
+  padding-left: 20px;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+}
+
+.MobileAboutCardsCarouselBox {
+  display: flex;
+}
+
+.MobileAboutCarouselBox:hover .MobileAboutCardsCarouselButton {
+  visibility: visible;
+}
