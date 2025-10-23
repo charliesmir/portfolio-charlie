@@ -1,0 +1,26 @@
+.NavigationDot {
+  height: 12px;
+  aspect-ratio: 1/1;
+  background-color: var(--White);
+  border: none;
+  border-radius: 12px;
+  cursor: pointer; /*for small screens*/
+}
+
+.NavigationDot.true {
+  background-color: var(--Primary);
+}
+
+.NavigationDot:hover {
+  /*for small screens*/
+  height: 14px;
+}
+
+.NavigationDot:active {
+  height: 12px;
+  aspect-ratio: 1/1;
+  color: var(--White);
+  border: none;
+  border-radius: 12px;
+  cursor: pointer; /*for small screens*/
+}
