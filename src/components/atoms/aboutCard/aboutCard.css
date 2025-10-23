@@ -1,46 +1,94 @@
 @import url("../../styles/designTokens.css");
 
-.AboutCard {
-  height: 355px;
-  width: 355px;
-  background-color: var(--AccentLight);
-  border-radius: 20px;
-  padding: 25px;
-  font-family: var(--family-text-desktop);
-  font-size: var(--size-text-desktop);
-  font-weight: var(--weight-text-desktop);
-  display: flex;
-  flex-direction: row;
-  gap: 10px;
-  cursor: pointer;
-  filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.25));
-  /* uneven gap ensures correct hypernation */
-}
+@media only screen and (min-width: 1305px) {
+  .AboutCard {
+    height: 355px;
+    width: 355px;
+    background-color: var(--AccentLight);
+    border-radius: 20px;
+    padding: 25px;
+    font-family: var(--family-text-desktop);
+    font-size: var(--size-text-desktop);
+    font-weight: var(--weight-text-desktop);
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    cursor: pointer;
+    filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.25));
+    /* uneven gap ensures correct hypernation */
+  }
 
-.AboutCard.active {
-  background-color: var(--Accent);
-  cursor: default;
-}
+  .AboutCard.active {
+    background-color: var(--Accent);
+    cursor: default;
+  }
 
-.AboutCardTitle {
-  writing-mode: sideways-lr;
-  font-family: var(--family-H3);
-  font-size: var(--size-H3);
-  font-weight: var(--weight-H3);
-  justify-self: flex-end;
-}
+  .AboutCardTitle {
+    writing-mode: sideways-lr;
+    font-family: var(--family-H3);
+    font-size: var(--size-H3);
+    font-weight: var(--weight-H3);
+    justify-self: flex-end;
+  }
 
-.AboutCardIcons {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  grid-column-gap: 35px;
-  grid-row-gap: 35px;
-  width: 250px;
-  padding: 45px 20px 45px 45px;
-}
+  .AboutCardIcons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 35px;
+    grid-row-gap: 35px;
+    width: 250px;
+    padding: 45px 20px 45px 45px;
+  }
 
-.AboutCardImage {
-  height: 60px;
-  width: 60px;
+  .AboutCardImage {
+    height: 60px;
+    width: 60px;
+  }
+}
+@media only screen and (max-width: 1304px) {
+  .AboutCard {
+    height: 304px;
+    width: 304px;
+    background-color: var(--AccentLight);
+    border-radius: 20px;
+    padding: 25px;
+    font-family: var(--family-text-mobile);
+    font-size: 20px;
+    font-weight: var(--weight-text-mobile);
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    cursor: pointer;
+    filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.25));
+    /* uneven gap ensures correct hypernation */
+  }
+
+  .AboutCard.active {
+    background-color: var(--Accent);
+    cursor: default;
+  }
+
+  .AboutCardTitle {
+    writing-mode: sideways-lr;
+    font-family: var(--family-H3);
+    font-size: var(--size-H3);
+    font-weight: var(--weight-H3);
+    justify-self: flex-end;
+  }
+
+  .AboutCardIcons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
+    width: 250px;
+    padding: 45px 20px 45px 45px;
+  }
+
+  .AboutCardImage {
+    height: 50px;
+    width: 50px;
+  }
 }
