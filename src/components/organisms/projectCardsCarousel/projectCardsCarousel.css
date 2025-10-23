@@ -1,35 +1,71 @@
 @import url("../../styles/designTokens.css");
 
-.ProjectCardsCarouselCards {
-  width: 100%;
-  display: flex;
-  gap: 40px;
-  /* flex-wrap: nowrap; */
-  overflow-x: hidden;
-  position: relative;
-  justify-content: center;
+@media only screen and (min-width: 1305px) {
+  .ProjectCardsCarouselCards {
+    width: 100%;
+    display: flex;
+    gap: 40px;
+    overflow-x: hidden;
+    position: relative;
+    padding: 0 calc(50vw - (1308px / 2));
+  }
+
+  .ProjectCardsCarouselBox {
+    display: flex;
+  }
+
+  .ProjectCardsCarouselBox:hover .ProjectCardsCarouselButton {
+    visibility: visible;
+  }
+
+  .ProjectCardsCarouselButton {
+    position: absolute;
+    top: 235px;
+    transform: translateY(-50%);
+    z-index: 10;
+    visibility: hidden;
+  }
+
+  .prevButton {
+    left: 10px;
+  }
+
+  .nextButton {
+    right: 10px;
+  }
 }
 
-.ProjectCardsCarouselBox {
-  display: flex;
-}
+@media only screen and (max-width: 1304px) {
+  .ProjectCardsCarouselCards {
+    width: 100%;
+    display: flex;
+    gap: 40px;
+    overflow-x: hidden;
+    position: relative;
+    padding: 0 20px;
+  }
 
-.ProjectCardsCarouselBox:hover .ProjectCardsCarouselButton {
-  visibility: visible;
-}
+  .ProjectCardsCarouselBox {
+    display: flex;
+  }
 
-.ProjectCardsCarouselButton {
-  position: absolute;
-  top: 235px;
-  transform: translateY(-50%);
-  z-index: 10;
-  visibility: hidden;
-}
+  .ProjectCardsCarouselBox:hover .ProjectCardsCarouselButton {
+    visibility: visible;
+  }
 
-.prevButton {
-  left: 10px;
-}
+  .ProjectCardsCarouselButton {
+    position: absolute;
+    top: 235px;
+    transform: translateY(-50%);
+    z-index: 10;
+    visibility: hidden;
+  }
 
-.nextButton {
-  right: 10px;
+  .prevButton {
+    left: 10px;
+  }
+
+  .nextButton {
+    right: 10px;
+  }
 }
