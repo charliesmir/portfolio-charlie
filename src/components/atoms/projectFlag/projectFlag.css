@@ -3,19 +3,19 @@
 @media only screen and (min-width: 1305px) {
   .ProjectFlag {
     background-color: var(--Primary);
-    height: 555px;
+    height: fit-content;
     width: 370px;
     border-radius: 0 0 370px 370px;
     padding-top: 170px;
   }
   .ProjectFlagText {
     width: 305px;
-    height: 460px;
     margin-left: 35px;
     font-family: var(--family-text-desktop);
     font-size: var(--size-text-desktop);
     font-weight: var(--weight-text-desktop);
     color: var(--White);
+    padding-bottom: 150px;
   }
 
   .ProjectFlagTitle {
@@ -29,24 +29,27 @@
   .ProjectFlagStatus {
     margin-bottom: 15px;
   }
+  .ProjectFlagHighlightsTitle {
+    margin-bottom: 10px;
+  }
 }
 
 @media only screen and (max-width: 1304px) {
   .ProjectFlag {
     background-color: var(--Primary);
-    height: 515px;
+    height: fit-content;
     width: 370px;
     border-radius: 0 0 370px 370px;
     padding-top: 85px;
   }
   .ProjectFlagText {
     width: 305px;
-    height: 460px;
     margin-left: 35px;
     font-family: var(--family-text-mobile);
     font-size: var(--size-text-mobile);
     font-weight: var(--weight-text-mobile);
     color: var(--White);
+    padding-bottom: 150px;
   }
 
   .ProjectFlagTitle {
@@ -59,5 +62,9 @@
 
   .ProjectFlagStatus {
     margin-bottom: 15px;
+  }
+
+  .ProjectFlagHighlightsTitle {
+    margin-bottom: 10px;
   }
 }

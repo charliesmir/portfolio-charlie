@@ -16,10 +16,7 @@ interface Props {
 export const ProjectPageBottomSection = ({ buttons, tools, image }: Props) => {
   return (
     <div className="PPBottomSection ">
-      <CardMedia
-        className="PPBottomSectionImage"
-        image={image || "/images/projectImagePlaceholder.png"}
-      />
+      {image && <CardMedia className="PPBottomSectionImage" image={image} />}
       <div className="PPBottomSectionInfo">
         <ProjectTools images={tools?.images} />
         <ProjectButtonsGrid buttons={buttons} />
