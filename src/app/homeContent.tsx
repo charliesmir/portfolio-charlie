@@ -66,7 +66,7 @@ export default function HomeContent({ sanityImport }: HomeContentProps) {
     sanityImport.aboutCards.map((card, index) => ({
       ...card,
       isActive: index === 0,
-    }))
+    })),
   );
 
   const onAboutCardClick = (cardIndex: number) => {
@@ -74,7 +74,7 @@ export default function HomeContent({ sanityImport }: HomeContentProps) {
       prevCards.map((card, index) => ({
         ...card,
         isActive: index === cardIndex,
-      }))
+      })),
     );
   };
 
@@ -100,14 +100,14 @@ export default function HomeContent({ sanityImport }: HomeContentProps) {
           />
         </div>
       </div>
-      <div className="HomeProjectsFlag">
+      <div className="HomeProjectsFlag" ref={projectsRef}>
         <Flag
           title={navButtons[0].title}
           colorVersion="primary"
           orientationVersion="left"
         />
       </div>
-      <div className="HomeProjects" ref={projectsRef}>
+      <div className="HomeProjects">
         <div className="HomeFilterList">
           <FilterList filterCards={sanityImport.filters} />
         </div>
@@ -120,37 +120,37 @@ export default function HomeContent({ sanityImport }: HomeContentProps) {
           />
         </div>
       </div>
-      <div className="HomeExperienceFlag">
+      <div className="HomeExperienceFlag" ref={experienceRef}>
         <Flag
           title={navButtons[1].title}
           colorVersion="accent"
           orientationVersion="right"
         />
       </div>
-      <div className="HomeExperience" ref={experienceRef}>
+      <div className="HomeExperience">
         <ExperienceBox experienceCards={sanityImport.experienceCards} />
       </div>
-      <div className="HomeEducationFlag">
+      <div className="HomeEducationFlag" ref={educationRef}>
         <Flag
           title={navButtons[2].title}
           colorVersion="backgroundDark"
           orientationVersion="left"
         />
       </div>
-      <div className="HomeEducation" ref={educationRef}>
+      <div className="HomeEducation">
         <EducationDecoration />
         <div className="HomeEducationBox">
           <EducationBox educationCards={sanityImport.educationCards} />
         </div>
       </div>
-      <div className="HomeContactsFlag">
+      <div className="HomeContactsFlag" ref={contactsRef}>
         <Flag
           title={navButtons[3].title}
           colorVersion="primary"
           orientationVersion="right"
         />
       </div>
-      <div className="HomeContacts" ref={contactsRef}>
+      <div className="HomeContacts">
         <div className="HomeContactsContents">
           <ContactsSection
             contactBox={sanityImport.contactBox}
