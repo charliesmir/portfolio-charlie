@@ -18,7 +18,8 @@
   }
 
   .NavigationButtonText {
-    margin-left: 75px;
+    margin-left: calc(50vw - (1308px / 2) + 75px);
+    /* margin-left: 75px; */
     transition: margin-left 0.3s ease; /* Making animation to be more smooth */
   }
 
@@ -31,11 +32,11 @@
   }
 
   .NavigationButtonBox:hover .NavigationButtonText {
-    margin-left: 100px;
+    margin-left: calc(50vw - (1308px / 2) + 100px);
   }
 
   .NavigationButtonBox:active .NavigationButtonText {
-    margin-left: 100px;
+    margin-left: calc(50vw - (1308px / 2) + 100px);
   }
 }
 

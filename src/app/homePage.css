@@ -23,7 +23,8 @@
   .HomeIntro {
     margin-top: 90px;
     margin-bottom: -100px;
-    width: 1308px;
+    /* width: 1308px; */
+    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -35,7 +36,8 @@
   }
 
   .HomeIntroCardBox {
-    margin-right: -40px;
+    /* margin-right: -40px; */
+    margin-right: calc(50vw - (1308px / 2) - 40px);
   }
 
   .HomeProjectsFlag {
