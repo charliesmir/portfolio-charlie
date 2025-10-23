@@ -5,9 +5,11 @@
     width: 100%;
     display: flex;
     gap: 40px;
-    overflow-x: hidden;
+    overflow-x: auto;
     position: relative;
-    padding: 0 calc(50vw - (1308px / 2));
+    padding: 0 20px;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
   }
 
   .ProjectCardsCarouselBox {
@@ -40,9 +42,11 @@
     width: 100%;
     display: flex;
     gap: 40px;
-    overflow-x: hidden;
+    overflow-x: auto;
     position: relative;
     padding: 0 20px;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
   }
 
   .ProjectCardsCarouselBox {
@@ -55,7 +59,7 @@
 
   .ProjectCardsCarouselButton {
     position: absolute;
-    top: 235px;
+    top: 160px;
     transform: translateY(-50%);
     z-index: 10;
     visibility: hidden;
