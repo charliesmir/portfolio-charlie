@@ -30,7 +30,7 @@
     justify-content: space-between;
   }
   .HomeIntroMobileCardBox {
-    visibility: hidden;
+    display: none;
   }
 
   .HomeNavButtons {
@@ -163,7 +163,7 @@
   }
 
   .HomeIntroCardBox {
-    visibility: hidden;
+    display: none;
   }
 
   .HomeProjectsFlag {
@@ -216,7 +216,7 @@
   .HomeEducationBox {
     position: absolute;
     bottom: 120px;
-    right: 20px;
+    left: 20px;
     z-index: 5;
   }
 

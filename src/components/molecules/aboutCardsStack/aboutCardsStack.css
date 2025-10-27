@@ -3,7 +3,6 @@
 .AboutCardsCarousel {
   display: flex;
   flex-direction: row;
-
   width: 1010px;
 }
 .AboutCardBox {
