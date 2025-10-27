@@ -142,6 +142,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    overflow-x: clip;
   }
 
   .HomeHeader {
@@ -216,7 +217,7 @@
   .HomeEducationBox {
     position: absolute;
     bottom: 120px;
-    left: 20px;
+    right: -50px;
     z-index: 5;
   }
 
