@@ -1,0 +1,18 @@
+.MobileAboutCardsSection {
+  display: flex;
+  flex-direction: column;
+}
+
+.SectionNavigationDotBox {
+  align-self: center;
+  margin: 15px 0;
+}
+
+.MobileAboutCardsSectionDecoration {
+  height: 250px;
+  margin-left: 105px;
+  border-radius: 250px 0 0 250px;
+  background-color: var(--Accent);
+  margin-top: -135px;
+  z-index: -1;
+}
