@@ -17,6 +17,7 @@ import { ContactsSection } from "@/components/organisms/contactsSection";
 import { Footer } from "@/components/atoms/footer";
 import { AboutCardProps } from "@/components/atoms/aboutCard";
 import { useRouter } from "next/navigation";
+import { MobileAboutCardsSection } from "@/components/organisms/mobileAboutCardsSection";
 
 interface HomeContentProps {
   sanityImport: SanityMain;
@@ -88,6 +89,15 @@ export default function HomeContent({ sanityImport }: HomeContentProps) {
         />
       </div>
       <div className="HomeIntro">
+        <div className="HomeIntroMobileCardBox">
+          <MobileAboutCardsSection
+            aboutCards={changedAboutCards.map((card, index) => ({
+              ...card,
+              onClick: () => onAboutCardClick(index),
+            }))}
+            dots={{ dots: [] }}
+          />
+        </div>
         <div className="HomeNavButtons">
           <NavigationButtonsBox buttons={navButtons} />
         </div>

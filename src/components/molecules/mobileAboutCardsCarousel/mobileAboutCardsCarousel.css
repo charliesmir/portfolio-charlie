@@ -8,6 +8,8 @@
   padding-left: 20px;
   scroll-behavior: smooth;
   scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  padding-bottom: 15px;
 }
 
 .MobileAboutCardsCarouselBox {

@@ -4,11 +4,11 @@ import {
 } from "@/components/atoms/navigationDot";
 import "./navigationDotBox.css";
 
-interface Props {
+export interface NavigationDotBoxProps {
   dots: NavigationDotProps[];
 }
 
-export const NavigationDotBox = ({ dots }: Props) => {
+export const NavigationDotBox = ({ dots }: NavigationDotBoxProps) => {
   return (
     <div className="NavigationDotBox">
       {dots.map((dot, index) => (

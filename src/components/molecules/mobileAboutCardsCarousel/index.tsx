@@ -2,12 +2,12 @@ import "./mobileAboutCardsCarousel.css";
 import { useRef } from "react";
 import { AboutCard, AboutCardProps } from "@/components/atoms/aboutCard";
 
-interface Props {
+interface MobileAboutCardsProps {
   /** About cards */
   cards: AboutCardProps[];
 }
 
-export const MobileAboutCardsCarousel = ({ cards }: Props) => {
+export const MobileAboutCardsCarousel = ({ cards }: MobileAboutCardsProps) => {
   const carouselRef = useRef<HTMLDivElement>(null);
 
   return (
