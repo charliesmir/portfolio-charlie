@@ -163,7 +163,7 @@
   }
 
   .HomeIntroCardBox {
-    display: none;
+    visibility: hidden;
   }
 
   .HomeProjectsFlag {
