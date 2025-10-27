@@ -67,7 +67,7 @@ export default function HomeContent({ sanityImport }: HomeContentProps) {
     sanityImport.aboutCards.map((card, index) => ({
       ...card,
       isActive: index === 0,
-    })),
+    }))
   );
 
   const onAboutCardClick = (cardIndex: number) => {
@@ -75,7 +75,7 @@ export default function HomeContent({ sanityImport }: HomeContentProps) {
       prevCards.map((card, index) => ({
         ...card,
         isActive: index === cardIndex,
-      })),
+      }))
     );
   };
 
@@ -91,11 +91,9 @@ export default function HomeContent({ sanityImport }: HomeContentProps) {
       <div className="HomeIntro">
         <div className="HomeIntroMobileCardBox">
           <MobileAboutCardsSection
-            aboutCards={changedAboutCards.map((card, index) => ({
+            aboutCards={sanityImport.aboutCards.map((card) => ({
               ...card,
-              onClick: () => onAboutCardClick(index),
             }))}
-            dots={{ dots: [] }}
           />
         </div>
         <div className="HomeNavButtons">

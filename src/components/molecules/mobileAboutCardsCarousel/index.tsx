@@ -9,7 +9,6 @@ interface MobileAboutCardsProps {
 
 export const MobileAboutCardsCarousel = ({ cards }: MobileAboutCardsProps) => {
   const carouselRef = useRef<HTMLDivElement>(null);
-
   return (
     <div className="MobileAboutCardsCarouselBox">
       <div className="MobileAboutCardsCarouselCards" ref={carouselRef}>
