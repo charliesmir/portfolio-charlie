@@ -67,7 +67,7 @@ export default function HomeContent({ sanityImport }: HomeContentProps) {
     sanityImport.aboutCards.map((card, index) => ({
       ...card,
       isActive: index === 0,
-    })),
+    }))
   );
 
   const onAboutCardClick = (cardIndex: number) => {
@@ -75,7 +75,7 @@ export default function HomeContent({ sanityImport }: HomeContentProps) {
       prevCards.map((card, index) => ({
         ...card,
         isActive: index === cardIndex,
-      })),
+      }))
     );
   };
 
