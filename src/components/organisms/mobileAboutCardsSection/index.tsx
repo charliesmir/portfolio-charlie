@@ -1,22 +1,20 @@
-import {
-  MobileAboutCardsProps,
-  MobileAboutCardsCarousel,
-} from "@/components/molecules/mobileAboutCardsCarousel";
+import { MobileAboutCardsCarousel } from "@/components/molecules/mobileAboutCardsCarousel";
 import {
   NavigationDotBoxProps,
   NavigationDotBox,
 } from "@/components/molecules/navigationDotBox";
 import "./mobileAboutCardsSection.css";
+import { AboutCardProps } from "@/components/atoms/aboutCard";
 
 interface Props {
-  cards: MobileAboutCardsProps;
+  aboutCards: AboutCardProps[];
   dots: NavigationDotBoxProps;
 }
 
-export const MobileAboutCardsSection = ({ cards, dots }: Props) => {
+export const MobileAboutCardsSection = ({ aboutCards, dots }: Props) => {
   return (
     <div className="MobileAboutCardsSection">
-      <MobileAboutCardsCarousel {...cards} />
+      <MobileAboutCardsCarousel cards={aboutCards} />
       <div className="SectionNavigationDotBox">
         <NavigationDotBox {...dots} />
       </div>

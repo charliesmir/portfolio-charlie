@@ -29,6 +29,6 @@
     background-color: var(--Primary);
     height: 280px;
     width: 100%;
-    min-width: 300px;
+    min-width: 200px;
   }
 }

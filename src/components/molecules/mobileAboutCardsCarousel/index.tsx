@@ -2,7 +2,7 @@ import "./mobileAboutCardsCarousel.css";
 import { useRef } from "react";
 import { AboutCard, AboutCardProps } from "@/components/atoms/aboutCard";
 
-export interface MobileAboutCardsProps {
+interface MobileAboutCardsProps {
   /** About cards */
   cards: AboutCardProps[];
 }
