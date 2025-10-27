@@ -70,6 +70,15 @@ export default function HomeContent({ sanityImport }: HomeContentProps) {
     }))
   );
 
+  // About cards (local interactive state)
+  const [changedMobileAboutCards, setChangedMobileAboutCards] = useState<
+    AboutCardProps[]
+  >(
+    sanityImport.aboutCards.map((card, index) => ({
+      ...card,
+    }))
+  );
+
   const onAboutCardClick = (cardIndex: number) => {
     setChangedAboutCards((prevCards) =>
       prevCards.map((card, index) => ({
@@ -91,11 +100,9 @@ export default function HomeContent({ sanityImport }: HomeContentProps) {
       <div className="HomeIntro">
         <div className="HomeIntroMobileCardBox">
           <MobileAboutCardsSection
-            aboutCards={changedAboutCards.map((card, index) => ({
+            aboutCards={changedMobileAboutCards.map((card, index) => ({
               ...card,
-              onClick: () => onAboutCardClick(index),
             }))}
-            dots={{ dots: [] }}
           />
         </div>
         <div className="HomeNavButtons">
