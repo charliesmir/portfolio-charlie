@@ -1,8 +1,0 @@
-@import url("../../styles/designTokens.css");
-
-.NavigationDotBox {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  width: 95px;
-}
