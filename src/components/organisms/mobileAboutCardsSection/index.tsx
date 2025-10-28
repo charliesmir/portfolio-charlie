@@ -1,8 +1,4 @@
 import { MobileAboutCardsCarousel } from "@/components/molecules/mobileAboutCardsCarousel";
-import {
-  NavigationDotBoxProps,
-  NavigationDotBox,
-} from "@/components/molecules/navigationDotBox";
 import "./mobileAboutCardsSection.css";
 import { AboutCardProps } from "@/components/atoms/aboutCard";
 
