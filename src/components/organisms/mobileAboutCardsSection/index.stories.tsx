@@ -49,22 +49,6 @@ const mockCards: AboutCardProps[] = [
 
 export const Primary: Story = {
   args: {
-    dots: {
-      dots: [
-        {
-          isActive: true,
-        },
-        {
-          isActive: false,
-        },
-        {
-          isActive: false,
-        },
-        {
-          isActive: false,
-        },
-      ],
-    },
     aboutCards: mockCards,
   },
 };
