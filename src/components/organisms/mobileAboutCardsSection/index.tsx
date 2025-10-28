@@ -8,17 +8,13 @@ import { AboutCardProps } from "@/components/atoms/aboutCard";
 
 interface Props {
   aboutCards: AboutCardProps[];
-  dots?: NavigationDotBoxProps;
 }
 
-export const MobileAboutCardsSection = ({ aboutCards, dots }: Props) => {
+export const MobileAboutCardsSection = ({ aboutCards }: Props) => {
   return (
     <div className="MobileAboutCardsSection">
       <MobileAboutCardsCarousel cards={aboutCards} />
-      {/* <div className="SectionNavigationDotBox">
-        <NavigationDotBox {...dots} />
-      </div> */}
-      <div className="MobileAboutCardsSectionDecoration"></div>
+      <div className="MobileAboutCardsSectionDecoration" />
     </div>
   );
 };
