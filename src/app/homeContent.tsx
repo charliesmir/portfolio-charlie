@@ -18,6 +18,7 @@ import { Footer } from "@/components/atoms/footer";
 import { AboutCardProps } from "@/components/atoms/aboutCard";
 import { useRouter } from "next/navigation";
 import { MobileAboutCardsSection } from "@/components/organisms/mobileAboutCardsSection";
+import { Arrow } from "@/components/atoms/arrows";
 
 interface HomeContentProps {
   sanityImport: SanityMain;
@@ -32,6 +33,7 @@ export default function HomeContent({ sanityImport }: HomeContentProps) {
   const experienceRef = useRef<HTMLDivElement>(null);
   const educationRef = useRef<HTMLDivElement>(null);
   const contactsRef = useRef<HTMLDivElement>(null);
+  const headerRef = useRef<HTMLDivElement>(null);
 
   // Scroll function with smooth animation
   const scrollToSection = (ref: React.RefObject<HTMLElement | null>) => {
@@ -81,7 +83,7 @@ export default function HomeContent({ sanityImport }: HomeContentProps) {
 
   return (
     <div className="HomePage">
-      <div className="HomeHeader">
+      <div className="HomeHeader" ref={headerRef}>
         <TopSection
           name={sanityImport.name}
           profession={sanityImport.profession}
@@ -169,6 +171,9 @@ export default function HomeContent({ sanityImport }: HomeContentProps) {
       </div>
       <div className="LayoutFooter">
         <Footer />
+      </div>
+      <div className="HomeTopButton">
+        <Arrow direction={"top"} onClick={() => scrollToSection(headerRef)} />
       </div>
     </div>
   );

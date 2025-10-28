@@ -130,6 +130,10 @@
   .LayoutFooter {
     width: 100%;
   }
+
+  .HomeTopButton {
+    display: none;
+  }
 }
 
 @media only screen and (max-width: 1304px) {
@@ -248,5 +252,13 @@
 
   .LayoutFooter {
     width: 100%;
+  }
+
+  .HomeTopButton {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    z-index: 999;
+    filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.25));
   }
 }
