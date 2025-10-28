@@ -19,6 +19,7 @@ import { AboutCardProps } from "@/components/atoms/aboutCard";
 import { useRouter } from "next/navigation";
 import { MobileAboutCardsSection } from "@/components/organisms/mobileAboutCardsSection";
 import { Arrow } from "@/components/atoms/arrows";
+import { LoaderAnimation } from "@/components/atoms/loaderAnimation";
 
 interface HomeContentProps {
   sanityImport: SanityMain;
@@ -64,6 +65,8 @@ export default function HomeContent({ sanityImport }: HomeContentProps) {
     },
   ];
 
+  const [loading, setLoading] = useState<boolean>(false);
+
   // About cards (local interactive state)
   const [changedAboutCards, setChangedAboutCards] = useState<AboutCardProps[]>(
     sanityImport.aboutCards.map((card, index) => ({
@@ -80,6 +83,15 @@ export default function HomeContent({ sanityImport }: HomeContentProps) {
       }))
     );
   };
+
+  if (loading) {
+    return (
+      <div className="HomeLoading">
+        <div className="HomeLoadingText">Loading...</div>
+        <LoaderAnimation />
+      </div>
+    );
+  }
 
   return (
     <div className="HomePage">
@@ -125,7 +137,10 @@ export default function HomeContent({ sanityImport }: HomeContentProps) {
           <ProjectCardsCarousel
             cards={sanityImport.projectCards.map((card) => ({
               ...card,
-              onClick: () => router.push(`/projects/${card.slug}`),
+              onClick: () => {
+                setLoading(true);
+                router.push(`/projects/${card.slug}`);
+              },
             }))}
           />
         </div>
