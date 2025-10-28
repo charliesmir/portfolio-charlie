@@ -39,7 +39,6 @@
 
   .TopSectionInfo {
     display: flex;
-    justify-content: space-between;
   }
 
   .TopDecorationBox {
@@ -63,5 +62,22 @@
 
   .ProfileBox {
     margin-right: 35px;
+  }
+
+  @media only screen and (max-width: 385px) {
+    .TextBox {
+      display: flex;
+      flex-direction: column;
+      z-index: 1;
+      padding: 10px 0 0 30px;
+      position: absolute;
+      top: 0;
+      width: 100%;
+    }
+    .TopSectionProfession {
+      align-self: flex-end;
+      padding-right: 70px;
+      padding-bottom: 10px;
+    }
   }
 }
