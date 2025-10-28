@@ -1,3 +1,20 @@
+.ProjectLoading {
+  background-color: var(--BackgroundDark);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+}
+
+.ProjectLoadingText {
+  color: var(--White);
+  font-family: var(--family-H2-desktop);
+  font-size: var(--size-H2-desktop);
+  font-weight: var(--weight-H2-desktop);
+}
+
 .ProjectPage {
   display: flex;
   flex-direction: column;

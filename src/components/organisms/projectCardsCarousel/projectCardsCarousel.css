@@ -16,10 +16,6 @@
     display: flex;
   }
 
-  .ProjectCardsCarouselBox:hover .ProjectCardsCarouselButton {
-    visibility: visible;
-  }
-
   .ProjectCardsCarouselButton {
     position: absolute;
     top: 235px;
@@ -53,10 +49,6 @@
     display: flex;
   }
 
-  .ProjectCardsCarouselBox:hover .ProjectCardsCarouselButton {
-    visibility: visible;
-  }
-
   .ProjectCardsCarouselButton {
     position: absolute;
     top: 160px;
@@ -71,5 +63,17 @@
 
   .nextButton {
     right: 10px;
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .ProjectCardsCarouselBox:hover .ProjectCardsCarouselButton {
+    visibility: visible;
+  }
+}
+
+@media (hover: none) and (pointer: coarse) {
+  .ProjectCardsCarouselButton {
+    visibility: hidden !important;
   }
 }

@@ -18,6 +18,8 @@ import { Footer } from "@/components/atoms/footer";
 import { AboutCardProps } from "@/components/atoms/aboutCard";
 import { useRouter } from "next/navigation";
 import { MobileAboutCardsSection } from "@/components/organisms/mobileAboutCardsSection";
+import { Arrow } from "@/components/atoms/arrows";
+import { LoaderAnimation } from "@/components/atoms/loaderAnimation";
 
 interface HomeContentProps {
   sanityImport: SanityMain;
@@ -32,6 +34,7 @@ export default function HomeContent({ sanityImport }: HomeContentProps) {
   const experienceRef = useRef<HTMLDivElement>(null);
   const educationRef = useRef<HTMLDivElement>(null);
   const contactsRef = useRef<HTMLDivElement>(null);
+  const headerRef = useRef<HTMLDivElement>(null);
 
   // Scroll function with smooth animation
   const scrollToSection = (ref: React.RefObject<HTMLElement | null>) => {
@@ -62,6 +65,8 @@ export default function HomeContent({ sanityImport }: HomeContentProps) {
     },
   ];
 
+  const [loading, setLoading] = useState<boolean>(false);
+
   // About cards (local interactive state)
   const [changedAboutCards, setChangedAboutCards] = useState<AboutCardProps[]>(
     sanityImport.aboutCards.map((card, index) => ({
@@ -79,9 +84,18 @@ export default function HomeContent({ sanityImport }: HomeContentProps) {
     );
   };
 
+  if (loading) {
+    return (
+      <div className="HomeLoading">
+        <div className="HomeLoadingText">Loading...</div>
+        <LoaderAnimation />
+      </div>
+    );
+  }
+
   return (
     <div className="HomePage">
-      <div className="HomeHeader">
+      <div className="HomeHeader" ref={headerRef}>
         <TopSection
           name={sanityImport.name}
           profession={sanityImport.profession}
@@ -123,7 +137,10 @@ export default function HomeContent({ sanityImport }: HomeContentProps) {
           <ProjectCardsCarousel
             cards={sanityImport.projectCards.map((card) => ({
               ...card,
-              onClick: () => router.push(`/projects/${card.slug}`),
+              onClick: () => {
+                setLoading(true);
+                router.push(`/projects/${card.slug}`);
+              },
             }))}
           />
         </div>
@@ -169,6 +186,9 @@ export default function HomeContent({ sanityImport }: HomeContentProps) {
       </div>
       <div className="LayoutFooter">
         <Footer />
+      </div>
+      <div className="HomeTopButton">
+        <Arrow direction={"top"} onClick={() => scrollToSection(headerRef)} />
       </div>
     </div>
   );

@@ -5,7 +5,7 @@
   display: flex;
   gap: 20px;
   overflow-x: scroll;
-  padding-left: 20px;
+  padding: 0 70px;
   scroll-behavior: smooth;
   scroll-snap-type: x mandatory;
   scrollbar-width: none;
@@ -14,8 +14,19 @@
 
 .MobileAboutCardsCarouselBox {
   display: flex;
+  position: relative;
 }
 
-.MobileAboutCarouselBox:hover .MobileAboutCardsCarouselButton {
+.MobileAboutCardsCarouselBox:hover .MobileAboutCardsCarouselButton {
   visibility: visible;
+}
+.MobileAboutCardsCarouselButton:hover {
+  visibility: visible;
+}
+
+.MobileAboutCardsCarouselButton {
+  position: absolute;
+  bottom: -50px;
+  transform: translateY(-50%);
+  margin: 0 55px;
 }

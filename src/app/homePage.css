@@ -1,7 +1,19 @@
 @media only screen and (min-width: 1305px) {
-  .HomePageLeft {
+  .HomeLoading {
+    background-color: var(--BackgroundDark);
+    height: 100vh;
     display: flex;
     flex-direction: column;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .HomeLoadingText {
+    color: var(--White);
+    font-family: var(--family-H2-desktop);
+    font-size: var(--size-H2-desktop);
+    font-weight: var(--weight-H2-desktop);
   }
 
   .HomePage {
@@ -9,6 +21,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    overflow: clip;
     /* width: 1308px; */
   }
 
@@ -134,9 +147,30 @@
   .LayoutFooter {
     width: 100%;
   }
+
+  .HomeTopButton {
+    display: none;
+  }
 }
 
 @media only screen and (max-width: 1304px) {
+  .HomeLoading {
+    background-color: var(--BackgroundDark);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .HomeLoadingText {
+    color: var(--White);
+    font-family: var(--family-H2-desktop);
+    font-size: var(--size-H2-desktop);
+    font-weight: var(--weight-H2-desktop);
+  }
+
   .HomePage {
     display: flex;
     flex-direction: column;
@@ -252,5 +286,13 @@
 
   .LayoutFooter {
     width: 100%;
+  }
+
+  .HomeTopButton {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    z-index: 999;
+    filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.25));
   }
 }

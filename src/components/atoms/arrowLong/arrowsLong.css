@@ -1,0 +1,16 @@
+@import url("../../styles/designTokens.css");
+
+.ArrowLong {
+  height: 20px;
+  width: 35px;
+  cursor: pointer;
+}
+
+.ArrowLongIcon {
+  height: 100%;
+  width: 100%;
+}
+
+.ArrowLongIcon.left {
+  rotate: 180deg;
+}

@@ -1,0 +1,247 @@
+.LoaderAnimation {
+  width: 280px;
+  height: 280px;
+}
+
+.LoaderAnimationBox1 {
+  background-color: var(--Primary);
+  border-radius: 20px;
+  box-sizing: border-box;
+  position: absolute;
+  display: block;
+}
+
+.LoaderAnimationBox2 {
+  background-color: var(--Accent);
+  border-radius: 20px;
+  box-sizing: border-box;
+  position: absolute;
+  display: block;
+}
+
+.LoaderAnimationBox3 {
+  background-color: var(--White);
+  border-radius: 20px;
+  box-sizing: border-box;
+  position: absolute;
+  display: block;
+}
+
+.LoaderAnimationBox1 {
+  width: 280px;
+  height: 120px;
+  margin-top: 160px;
+  margin-left: 0px;
+  animation: abox1 3s 1s forwards ease-in-out infinite;
+}
+
+.LoaderAnimationBox2 {
+  width: 120px;
+  height: 120px;
+  margin-top: 0px;
+  margin-left: 0px;
+  animation: abox2 3s 1s forwards ease-in-out infinite;
+}
+
+.LoaderAnimationBox3 {
+  width: 120px;
+  height: 120px;
+  margin-top: 0px;
+  margin-left: 160px;
+  animation: abox3 3s 1s forwards ease-in-out infinite;
+}
+
+@keyframes abox1 {
+  0% {
+    width: 280px;
+    height: 120px;
+    margin-top: 160px;
+    margin-left: 0px;
+  }
+
+  12.5% {
+    width: 120px;
+    height: 120px;
+    margin-top: 160px;
+    margin-left: 0px;
+  }
+
+  25% {
+    width: 120px;
+    height: 120px;
+    margin-top: 160px;
+    margin-left: 0px;
+  }
+
+  37.5% {
+    width: 120px;
+    height: 120px;
+    margin-top: 160px;
+    margin-left: 0px;
+  }
+
+  50% {
+    width: 120px;
+    height: 120px;
+    margin-top: 160px;
+    margin-left: 0px;
+  }
+
+  62.5% {
+    width: 120px;
+    height: 120px;
+    margin-top: 160px;
+    margin-left: 0px;
+  }
+
+  75% {
+    width: 120px;
+    height: 280px;
+    margin-top: 0px;
+    margin-left: 0px;
+  }
+
+  87.5% {
+    width: 120px;
+    height: 120px;
+    margin-top: 0px;
+    margin-left: 0px;
+  }
+
+  100% {
+    width: 120px;
+    height: 120px;
+    margin-top: 0px;
+    margin-left: 0px;
+  }
+}
+
+@keyframes abox2 {
+  0% {
+    width: 120px;
+    height: 120px;
+    margin-top: 0px;
+    margin-left: 0px;
+  }
+
+  12.5% {
+    width: 120px;
+    height: 120px;
+    margin-top: 0px;
+    margin-left: 0px;
+  }
+
+  25% {
+    width: 120px;
+    height: 120px;
+    margin-top: 0px;
+    margin-left: 0px;
+  }
+
+  37.5% {
+    width: 120px;
+    height: 120px;
+    margin-top: 0px;
+    margin-left: 0px;
+  }
+
+  50% {
+    width: 280px;
+    height: 120px;
+    margin-top: 0px;
+    margin-left: 0px;
+  }
+
+  62.5% {
+    width: 120px;
+    height: 120px;
+    margin-top: 0px;
+    margin-left: 160px;
+  }
+
+  75% {
+    width: 120px;
+    height: 120px;
+    margin-top: 0px;
+    margin-left: 160px;
+  }
+
+  87.5% {
+    width: 120px;
+    height: 120px;
+    margin-top: 0px;
+    margin-left: 160px;
+  }
+
+  100% {
+    width: 120px;
+    height: 120px;
+    margin-top: 0px;
+    margin-left: 160px;
+  }
+}
+
+@keyframes abox3 {
+  0% {
+    width: 120px;
+    height: 120px;
+    margin-top: 0px;
+    margin-left: 160px;
+  }
+
+  12.5% {
+    width: 120px;
+    height: 120px;
+    margin-top: 0px;
+    margin-left: 160px;
+  }
+
+  25% {
+    width: 120px;
+    height: 280px;
+    margin-top: 0px;
+    margin-left: 160px;
+  }
+
+  37.5% {
+    width: 120px;
+    height: 120px;
+    margin-top: 160px;
+    margin-left: 160px;
+  }
+
+  50% {
+    width: 120px;
+    height: 120px;
+    margin-top: 160px;
+    margin-left: 160px;
+  }
+
+  62.5% {
+    width: 120px;
+    height: 120px;
+    margin-top: 160px;
+    margin-left: 160px;
+  }
+
+  75% {
+    width: 120px;
+    height: 120px;
+    margin-top: 160px;
+    margin-left: 160px;
+  }
+
+  87.5% {
+    width: 120px;
+    height: 120px;
+    margin-top: 160px;
+    margin-left: 160px;
+  }
+
+  100% {
+    width: 280px;
+    height: 120px;
+    margin-top: 160px;
+    margin-left: 0px;
+  }
+}

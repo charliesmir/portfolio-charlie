@@ -1,5 +1,6 @@
 import { adapters } from "@/adapters/adapters";
 import ProjectContent from "./projectContent";
+import GlobalNotFound from "@/app/not-found";
 
 const { getSanityProjectPage } = adapters.cms();
 
@@ -13,7 +14,7 @@ export default async function ProjectPage({ params }: Props) {
   const project = await getSanityProjectPage(id);
 
   if (!project) {
-    return <div>Project not found.</div>;
+    return <GlobalNotFound />;
   }
 
   return <ProjectContent project={project} />;
