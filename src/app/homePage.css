@@ -1,14 +1,10 @@
 @media only screen and (min-width: 1305px) {
-  .HomePageLeft {
-    display: flex;
-    flex-direction: column;
-  }
-
   .HomePage {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    overflow: clip;
     /* width: 1308px; */
   }
 
