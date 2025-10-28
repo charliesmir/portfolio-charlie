@@ -104,4 +104,17 @@
   .Circle.left {
     margin: 15px 15px 15px 25px;
   }
+  @media only screen and (max-width: 385px) {
+    .Flag.right {
+      margin-left: 25px;
+      border-radius: 145px 0 0 145px;
+      justify-content: flex-start;
+    }
+
+    .Flag.left {
+      margin-right: 25px;
+      border-radius: 0 145px 145px 0;
+      justify-content: flex-end;
+    }
+  }
 }
