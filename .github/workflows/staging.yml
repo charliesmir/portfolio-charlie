@@ -3,7 +3,7 @@ name: Staging Deployment
 on:
   push:
     tags:
-      - 'v*.*.*'
+      - "v*.*.*"
 
 jobs:
   deploy-staging:
@@ -33,7 +33,6 @@ jobs:
         run: |
           url=$(vercel --token $VERCEL_TOKEN --prebuilt --yes)
           echo "preview_url=$url" >> $GITHUB_OUTPUT
-
 
       - name: Alias Deployment
         env:
