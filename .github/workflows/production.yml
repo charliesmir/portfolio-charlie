@@ -1,7 +1,7 @@
 name: Production Deployment
 
 on:
-  workflow_dispatch:  # Manual trigger
+  workflow_dispatch: # Manual trigger
 
 jobs:
   deploy-production:
@@ -37,4 +37,3 @@ jobs:
           VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
         run: |
           npx vercel alias set ${{ steps.deploy-prod.outputs.prod_url }} portfolio-charlie-eight.vercel.app --token $VERCEL_TOKEN
-

@@ -4,7 +4,7 @@ This project is a code source for personal portfolio created to showcase both de
 
 The website was created in collaboration with another developer, who assisted with CMS integration, CI/CD setup, and technical guidance, demonstrating the designer’s ability to collaborate effectively with developers and work across disciplines.
 
-The project is hosted by [Vercel](https://www.vercel.com/). Here is the link to the website: [Charlie's Portfolio](https://portfolio-charlie-eight.vercel.app/).
+The project is hosted by [Vercel](https://www.vercel.com/). Here is the link to the website: [Charlie's Portfolio](https://www.charliesmir.com/).
 
 ## 🏗️ The Architecture of the App
 
@@ -15,11 +15,64 @@ The project is hosted by [Vercel](https://www.vercel.com/). Here is the link to 
 
 ### 📂 Project structure
 
-TBA
+```
+.
+├─ .github/
+│  └─ workflows/                      # Workflows for GitHub Actions to build and deploy project on Vercel
+│     ├─ production.yml
+│     └─ staging.yml
+├─ .gitignore
+├─ .storybook/                        # Storybook settings
+│  ├─ main.ts
+│  └─ preview.ts
+├─ README.md                          # Readme file you are reading now :)
+├─ eslint.config.mjs
+├─ next.config.ts
+├─ package-lock.json
+├─ package.json                       # Dependencies used in the project
+├─ public/                            # Assets for project
+├─ src/
+│  ├─ adapters/
+│  │  ├─ adapters.ts                  # Fuctions for fetching content from Sanity
+│  │  ├─ clients/
+│  │  │  └─ sanity.ts                 # Sanity client configuration
+│  │  ├─ queries.ts                   # Queries for Sanity usage
+│  │  └─ types.ts                     # Sanity and Local types used in project
+│  ├─ app/
+│  │  ├─ favicon.ico
+│  │  ├─ globals.css                  # General CSS file
+│  │  ├─ homeContent.tsx              # Home Page client component
+│  │  ├─ homePage.css                 # Home Page CSS file
+│  │  ├─ layout.tsx                   # File for setting project layout and metadata generation
+│  │  ├─ not-found.tsx                # 404 error component
+│  │  ├─ notFoundPage.css             # 404 error page CSS file
+│  │  ├─ page.tsx                     # Server component
+│  │  └─ projects/
+│  │     └─ [id]/
+│  │        ├─ page.tsx               # Project Page server component
+│  │        ├─ projectContent.tsx     # Project Page client component
+│  │        └─ projectPage.css        # Project Page CSS file
+│  └─ components/                     # Components created with Storybook following Atomic Design methodology
+│     ├─ atoms/
+│     ├─ molecules/
+│     ├─ organisms/
+│     └─ styles/
+│        └─ designTokens.css          # Design tokens used in CSS files
+└─ tsconfig.json
+
+```
 
 ### 🧭 App Navigation Structure
 
-TBA
+Both desktop and mobile versions are following the same structure with slightly different layouts:
+
+- Home Page: Feed that has the main content split into sections.
+  - Header: Displays the basic info (including name, title and set of skills) and navigation buttons.
+  - Projects: The collection of recent projects with clickable cards which lead to a project page.
+  - Experience: Grid of workplaces with dates and brief description.
+  - Education: List of academic background.
+  - Contacts: Contact information for collaboration, offers and feedback.
+- Project Page: Page with project title, status, description, images, tools and links.
 
 ### 🎨 Design
 
@@ -62,7 +115,7 @@ This project is built using the following technologies:
   Owner of the repositiry, designed the user interface and created the custom components in Storybook.
 
   [GitHub](https://github.com/charliesmir)  
-  [Portfolio](https://portfolio-charlie-eight.vercel.app/)
+  [Portfolio](https://www.charliesmir.com/)
 
 - **GudokVlad**  
   _Technical Architect & Developer_  
@@ -70,3 +123,8 @@ This project is built using the following technologies:
 
   [GitHub](https://github.com/GudokVlad-Pilot)  
   [Portfolio](https://gudokvlad.com/)
+
+> [!IMPORTANT]
+>
+> - All assets (excluding icons) were created by and are intellectual property of **Charlie**.
+> - If you found any violations, please contact us via email to resolve these problems: **charlie.smirnova@gmail.com** or **vladislavpogudin.dev@gmail.com**.
