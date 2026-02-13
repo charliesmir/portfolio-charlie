@@ -2,6 +2,8 @@ import { adapters } from "@/adapters/adapters";
 import ProjectContent from "./projectContent";
 import GlobalNotFound from "@/app/not-found";
 
+export const revalidate = 31536000; // 1 year
+
 const { getSanityProjectPage } = adapters.cms();
 
 interface Props {
