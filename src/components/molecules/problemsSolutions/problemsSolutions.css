@@ -1,0 +1,21 @@
+@media only screen and (min-width: 1305px) {
+  .ProblemsSolutions {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .ProblemsSolutionsFlag {
+    margin-top: -130px;
+  }
+}
+
+@media only screen and (max-width: 1304px) {
+  .ProblemsSolutions {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .ProblemsSolutionsFlag {
+    margin-top: -45px;
+  }
+}

@@ -1,0 +1,64 @@
+@media only screen and (min-width: 1305px) {
+  .ProjectInfoImages {
+    display: flex;
+    flex-direction: column;
+    gap: 150px;
+    width: 1220px;
+    margin: 150px 0;
+  }
+  .ProjectInfoImagesDetail {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    font-family: var(--family-H2-desktop);
+    font-size: var(--size-H2-desktop);
+    font-weight: var(--weight-H2-desktop);
+    color: var(--White);
+  }
+
+  .ProjectInfoDetailImage {
+    width: 750px;
+    height: 430px;
+    object-fit: cover;
+  }
+
+  .ProjectInfoSecondaryImage {
+    width: 1220px;
+    min-height: 530px;
+    object-fit: cover;
+  }
+}
+
+@media only screen and (max-width: 1304px) {
+  .ProjectInfoImages {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 70px;
+    width: 350px;
+    margin: 70px 0;
+  }
+  .ProjectInfoImagesDetail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 45px;
+    font-family: var(--family-H2-mobile);
+    font-size: var(--size-H2-mobile);
+    font-weight: var(--weight-H2-mobile);
+    color: var(--White);
+  }
+
+  .ProjectInfoDetailImage {
+    width: 350px;
+    height: 260px;
+    object-fit: cover;
+  }
+
+  .ProjectInfoSecondaryImage {
+    width: 350px;
+    min-height: 170px;
+    object-fit: cover;
+  }
+}

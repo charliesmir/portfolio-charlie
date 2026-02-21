@@ -26,8 +26,9 @@
     margin-bottom: 35px;
   }
 
-  .ProjectFlagStatus {
+  .ProjectFlagInfo {
     margin-bottom: 15px;
+    white-space: pre-line;
   }
   .ProjectFlagHighlightsTitle {
     margin-bottom: 10px;
@@ -60,8 +61,9 @@
     margin-bottom: 35px;
   }
 
-  .ProjectFlagStatus {
+  .ProjectFlagInfo {
     margin-bottom: 15px;
+    white-space: pre-line;
   }
 
   .ProjectFlagHighlightsTitle {

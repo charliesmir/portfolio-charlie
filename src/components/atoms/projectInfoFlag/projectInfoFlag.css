@@ -1,0 +1,118 @@
+@media only screen and (min-width: 1305px) {
+  .ProjectInfoFlag {
+    height: 300px;
+    display: flex;
+    align-items: center;
+  }
+
+  .ProjectInfoFlag.accent {
+    background-color: var(--Accent);
+    color: var(--BackgroundDark);
+  }
+
+  .ProjectInfoFlag.primary {
+    background-color: var(--Primary);
+    color: var(--White);
+  }
+
+  .ProjectInfoFlag.right {
+    border-radius: 300px 0 0 300px;
+    padding: 0 250px 0 90px;
+    justify-content: flex-start;
+    margin-left: 780px;
+  }
+
+  .ProjectInfoFlag.left {
+    border-radius: 0 300px 300px 0;
+    padding: 0 90px 0 250px;
+    justify-content: flex-end;
+    margin-right: 780px;
+  }
+
+  .ProjectInfoFlagDescription {
+    font-family: var(--family-text-desktop);
+    font-size: var(--size-text-desktop);
+    font-weight: var(--weight-text-desktop);
+    width: 370px;
+  }
+
+  .ProjectInfoFlagImages {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .ProjectInfoFlagImages.right {
+    padding: 0 145px 0 120px;
+  }
+
+  .ProjectInfoFlagImages.left {
+    padding: 0 120px 0 145px;
+  }
+
+  .ProjectInfoFlagImage {
+    height: 50px;
+    width: 50px;
+  }
+}
+
+@media only screen and (max-width: 1304px) {
+  .ProjectInfoFlag {
+    height: 340px;
+    display: flex;
+    align-items: center;
+  }
+
+  .ProjectInfoFlag.accent {
+    background-color: var(--Accent);
+    color: var(--BackgroundDark);
+  }
+
+  .ProjectInfoFlag.primary {
+    background-color: var(--Primary);
+    color: var(--White);
+  }
+
+  .ProjectInfoFlag.right {
+    border-radius: 300px 0 0 300px;
+    justify-content: flex-start;
+    padding-left: 55px;
+    margin-left: 34px;
+  }
+
+  .ProjectInfoFlag.left {
+    border-radius: 0 300px 300px 0;
+    justify-content: flex-end;
+    padding-right: 55px;
+    margin-right: 34px;
+  }
+
+  .ProjectInfoFlagDescription {
+    font-family: var(--family-text-mobile);
+    font-size: var(--size-text-mobile);
+    font-weight: var(--weight-text-mobile);
+    width: 290px;
+  }
+
+  .ProjectInfoFlagImages {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    flex-wrap: wrap;
+  }
+
+  .ProjectInfoFlagImages.right {
+    padding: 0 40px 0 60px;
+  }
+
+  .ProjectInfoFlagImages.left {
+    padding: 0 60px 0 40px;
+  }
+
+  .ProjectInfoFlagImage {
+    height: 50px;
+    width: 50px;
+  }
+}
