@@ -1,0 +1,34 @@
+@media only screen and (min-width: 1305px) {
+  .ProjectInfoSoft {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+  }
+
+  .ProjectInfoSoftTitle {
+    font-family: var(--family-H2-desktop);
+    font-size: var(--size-H2-desktop);
+    font-weight: var(--weight-H2-desktop);
+    color: var(--White);
+    position: absolute;
+    top: 150px;
+    left: 90px;
+  }
+}
+
+@media only screen and (max-width: 1304px) {
+  .ProjectInfoSoft {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .ProjectInfoSoftTitle {
+    font-family: var(--family-H2-mobile);
+    font-size: var(--size-H2-mobile);
+    font-weight: var(--weight-H2-mobile);
+    color: var(--White);
+    align-self: center;
+  }
+}

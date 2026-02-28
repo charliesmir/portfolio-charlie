@@ -14,6 +14,7 @@ export const Primary: Story = {
   args: {
     title: "Banners for RIA union",
     status: "completed",
+    type: "Mobile Application, UX/UI & Development",
     highlights:
       "Integrating existing brand identity. Bright colors and descriptive graphics to catch attention in Kide.app feed",
   },

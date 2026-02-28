@@ -10,20 +10,32 @@ interface Props {
   flag: ProjectFlagProps;
   button: BackHomeButtonProps;
   image?: string;
+  briefText: string;
 }
 
-export const ProjectPageTopSection = ({ flag, button, image }: Props) => {
+export const ProjectPageTopSection = ({
+  flag,
+  button,
+  image,
+  briefText,
+}: Props) => {
   return (
     <div className="PPTopSection">
-      <ProjectFlag {...flag} />
-      <div className="PPTopSectionRight">
-        <div className="PPTopSectionButton">
-          <BackHomeButton {...button} />
+      <div className="PPTopSectionMain">
+        <ProjectFlag {...flag} />
+        <div className="PPTopSectionRight">
+          <div className="PPTopSectionButton">
+            <BackHomeButton {...button} />
+          </div>
+          <CardMedia
+            className="PPTopSectionImage"
+            image={image || "/images/projectImagePlaceholder.png"}
+          />
         </div>
-        <CardMedia
-          className="PPTopSectionImage"
-          image={image || "/images/projectImagePlaceholder.png"}
-        />
+      </div>
+      <div className="PPTopSectionBrief">
+        <div className="PPTopSectionBriefTitle">Brief</div>
+        <div className="PPTopSectionBriefText">{briefText}</div>
       </div>
     </div>
   );
