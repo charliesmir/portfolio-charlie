@@ -62,6 +62,7 @@
     height: 340px;
     display: flex;
     align-items: center;
+    width: 100%;
   }
 
   .ProjectInfoFlag.accent {

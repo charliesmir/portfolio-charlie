@@ -39,11 +39,19 @@ export default function ProjectContent({ project }: Props) {
           },
         }}
         image={project.primaryImage}
+        briefText={project.brief}
       />
       <ProjectPageBottomSection
-        tools={project.tools}
-        image={project.secondaryImage}
         buttons={project.buttons}
+        flagPS={{
+          flagProblems: project.problemsSolutions.flagProblems.description,
+          flagSolutions: project.problemsSolutions.flagSolutions.description,
+        }}
+        images={{
+          detailImage: project.detailImage,
+          secondaryImage: project.secondaryImage,
+        }}
+        flagSoftImages={project.tools.images}
       />
       <div className="LayoutFooter">
         <Footer />

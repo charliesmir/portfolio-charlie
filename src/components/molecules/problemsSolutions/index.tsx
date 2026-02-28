@@ -5,8 +5,8 @@ import {
 import "./problemsSolutions.css";
 
 export interface ProblemsSolutionsProps {
-  flagProblems: ProjectInfoFlagProps;
-  flagSolutions: ProjectInfoFlagProps;
+  flagProblems: string;
+  flagSolutions: string;
 }
 
 export const ProblemsSolutions = ({
@@ -15,9 +15,19 @@ export const ProblemsSolutions = ({
 }: ProblemsSolutionsProps) => {
   return (
     <div className="ProblemsSolutions">
-      <ProjectInfoFlag {...flagProblems} />
+      <ProjectInfoFlag
+        colorVersion={"primary"}
+        orientationVersion={"left"}
+        type={"text"}
+        description={flagProblems}
+      />
       <div className="ProblemsSolutionsFlag">
-        <ProjectInfoFlag {...flagSolutions} />
+        <ProjectInfoFlag
+          colorVersion={"accent"}
+          orientationVersion={"right"}
+          type={"text"}
+          description={flagSolutions}
+        />
       </div>
     </div>
   );

@@ -58,11 +58,22 @@ export interface SanityProjectPage {
     title: string;
     status: string;
     highlights: string;
+    type: string;
   };
-  tools?: {
+  tools: {
     images: { image: string; altText: string }[];
   };
+  problemsSolutions: {
+    flagProblems: {
+      description: string;
+    };
+    flagSolutions: {
+      description: string;
+    };
+  };
+  brief: string;
   primaryImage?: string;
+  detailImage?: string;
   secondaryImage?: string;
   buttons: {
     link: {

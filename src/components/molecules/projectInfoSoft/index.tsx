@@ -1,18 +1,23 @@
 import {
   ProjectInfoFlag,
-  ProjectInfoFlagProps,
+  skillIcons,
 } from "@/components/atoms/projectInfoFlag";
 import "./projectInfoSoft.css";
 
 export interface ProjectInfoSoftProps {
-  flag: ProjectInfoFlagProps;
+  images: skillIcons[];
 }
 
-export const ProjectInfoSoft = ({ flag }: ProjectInfoSoftProps) => {
+export const ProjectInfoSoft = ({ images }: ProjectInfoSoftProps) => {
   return (
     <div className="ProjectInfoSoft">
       <div className="ProjectInfoSoftTitle">Tools</div>
-      <ProjectInfoFlag {...flag} />
+      <ProjectInfoFlag
+        colorVersion={"accent"}
+        orientationVersion={"right"}
+        type={"image"}
+        images={images}
+      />
     </div>
   );
 };

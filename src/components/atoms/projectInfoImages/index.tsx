@@ -1,8 +1,8 @@
 import "./projectInfoImages.css";
 
 export interface ProjectInfoImagesProps {
-  detailImage: string;
-  secondaryImage: string;
+  detailImage?: string;
+  secondaryImage?: string;
 }
 
 export const ProjectInfoImages = ({
@@ -13,9 +13,15 @@ export const ProjectInfoImages = ({
     <div className="ProjectInfoImages">
       <div className="ProjectInfoImagesDetail">
         <div>Detail view</div>
-        <img src={detailImage} className="ProjectInfoDetailImage" />
+        <img
+          src={detailImage || "/images/projectImagePlaceholder.png"}
+          className="ProjectInfoDetailImage"
+        />
       </div>
-      <img src={secondaryImage} className="ProjectInfoSecondaryImage" />
+      <img
+        src={secondaryImage || "/images/projectImagePlaceholder.png"}
+        className="ProjectInfoSecondaryImage"
+      />
     </div>
   );
 };

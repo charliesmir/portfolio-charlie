@@ -36,10 +36,10 @@ export const Tools: Story = {
   args: {
     type: "image",
     images: [
-      "/images/icons/CSS.png",
-      "/images/icons/Illustrator.png",
-      "/images/icons/Indesign.png",
-      "/images/icons/Photoshop.png",
+      { image: "/images/icons/CSS.png", altText: "CSS" },
+      { image: "/images/icons/Illustrator.png", altText: "Illustrator" },
+      { image: "/images/icons/Indesign.png", altText: "Indesign" },
+      { image: "/images/icons/Photoshop.png", altText: "Photoshop" },
     ],
     colorVersion: "accent",
     orientationVersion: "right",

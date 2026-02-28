@@ -1,8 +1,13 @@
 import "./projectInfoFlag.css";
 
+export type skillIcons = {
+  image: string;
+  altText: string;
+};
+
 export interface ProjectInfoFlagProps {
   description?: string;
-  images?: string[];
+  images?: skillIcons[];
   colorVersion: "primary" | "accent";
   orientationVersion: "left" | "right";
   type: "image" | "text";
@@ -25,7 +30,7 @@ export const ProjectInfoFlag = ({
     <div className={`ProjectInfoFlag ${colorVersion} ${orientationVersion}`}>
       <div className="ProjectInfoFlagImages">
         {images?.map((image, index) => (
-          <img key={index} src={image} className="ProjectInfoFlagImage" />
+          <img key={index} src={image.image} className="ProjectInfoFlagImage" />
         ))}
       </div>
     </div>

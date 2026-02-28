@@ -9,6 +9,7 @@
     font-family: var(--family-H2-desktop);
     font-size: var(--size-H2-desktop);
     font-weight: var(--weight-H2-desktop);
+    color: var(--White);
   }
 }
 
@@ -24,5 +25,6 @@
     font-family: var(--family-H2-mobile);
     font-size: var(--size-H2-mobile);
     font-weight: var(--weight-H2-mobile);
+    color: var(--White);
   }
 }

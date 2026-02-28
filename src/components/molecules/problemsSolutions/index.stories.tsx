@@ -12,19 +12,9 @@ type Story = StoryObj<typeof meta>;
 
 export const Solutions: Story = {
   args: {
-    flagProblems: {
-      type: "text",
-      description:
-        "closely with clients and provided assistance on determining needs and tastes of their potential customers, later adapting the designs to the findings ",
-      colorVersion: "primary",
-      orientationVersion: "left",
-    },
-    flagSolutions: {
-      type: "text",
-      description:
-        "closely with clients and provided assistance on determining needs and tastes of their potential customers, later adapting the designs to the findings ",
-      colorVersion: "accent",
-      orientationVersion: "right",
-    },
+    flagProblems:
+      "closely with clients and provided assistance on determining needs and tastes of their potential customers, later adapting the designs to the findings ",
+    flagSolutions:
+      "closely with clients and provided assistance on determining needs and tastes of their potential customers, later adapting the designs to the findings ",
   },
 };
