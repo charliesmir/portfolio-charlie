@@ -12,16 +12,11 @@ type Story = StoryObj<typeof meta>;
 
 export const Tools: Story = {
   args: {
-    flag: {
-      type: "image",
-      images: [
-        "/images/icons/CSS.png",
-        "/images/icons/Illustrator.png",
-        "/images/icons/Indesign.png",
-        "/images/icons/Photoshop.png",
-      ],
-      colorVersion: "accent",
-      orientationVersion: "right",
-    },
+    images: [
+      { image: "/images/icons/CSS.png", altText: "CSS" },
+      { image: "/images/icons/Illustrator.png", altText: "Illustrator" },
+      { image: "/images/icons/Indesign.png", altText: "Indesign" },
+      { image: "/images/icons/Photoshop.png", altText: "Photoshop" },
+    ],
   },
 };
